@@ -14,7 +14,7 @@
 </script>
 
 <!-- Primary SEO -->
-<title>Higher Love | The Only Brotherhood for Conscious Gay Entrepreneurs, Founders, and Leaders </title>
+<title>Higher Love Summit | A Brotherhood for Gay Entrepreneurs, Founders & Community Builders</title>
 <meta name="description" content="An invitation-only gathering for conscious gay entrepreneurs, founders, and community builders. September 18–21, 2026 · Austin, Texas.">
 <meta name="keywords" content="gay founders, gay entrepreneurs, LGBTQ leadership retreat, gay business community, gay men retreat, Higher Love, Re Perez, Austin Texas 2026">
 <meta name="author" content="Re Perez">
@@ -206,6 +206,11 @@
   }
   .nav-links a:hover { color: var(--chamoisee); }
   .nav .btn { padding: 0.7rem 1.5rem; font-size: 0.68rem; }
+  .nav-cta {
+    position: absolute; right: 3rem; top: 50%; transform: translateY(-50%);
+    opacity: 0; pointer-events: none; transition: opacity 0.35s ease;
+  }
+  .nav.scrolled .nav-cta { opacity: 1; pointer-events: auto; }
   /* ════════════
      HERO, your approved version (estate image + Ken Burns)
   ════════════ */
@@ -606,6 +611,7 @@
   @media (max-width: 820px) {
     .nav { padding: 1.2rem 1.5rem; }
     .nav-links { display: none; }
+    .nav-cta { right: 1.5rem; padding: 0.55rem 1rem; font-size: 0.6rem; }
     section { padding: 4.5rem 0; }
     .two-col { grid-template-columns: 1fr; gap: 2.5rem; }
     .host-feature { grid-template-columns: 1fr; gap: 2rem; }
@@ -641,6 +647,7 @@
   <div class="nav-logo">
     <img src="images/logo-1line-white.svg" alt="Higher Love">
   </div>
+  <a href="#application-form" class="nav-cta btn" data-cta="nav">Request an Invitation</a>
 </nav>
 <!-- ══════════════════════════════════
      HERO, your approved estate image
@@ -654,6 +661,7 @@
     <h1>The Most Accomplished Gay Men Are Often The Loneliest In The Room.</h1>
     <p class="hero-sub">We exist to change that.</p>
     <a href="#application-form" class="btn">Request an Invitation</a>
+    <p class="trust-line">An invitation-only brotherhood &amp; annual summit for conscious gay founders · 12 founding seats · Austin · September 2026</p>
   </div>
 </header>
 <!-- ══════════════════════════════════
@@ -732,7 +740,6 @@
       <div class="world"><h3>The Brotherhood</h3><p>Peers, not competitors. Men who see you fully, listen differently, and walk the hard stretches alongside you.</p></div>
       <div class="world"><h3>The Legacy</h3><p>The longer game. Longevity, contribution, and what it means to build a life that outlasts you, held in the company of men asking the same thing.</p></div>
     </div>
-    <p class="letter-lead" style="text-align:center; max-width:820px; margin:3rem auto 0;">Three worlds. One brotherhood. Built so you never have to leave a part of yourself at the door again.</p>
   </div>
 </section>
 <div class="photo-band" style="background-image:url('images/curated-dinner.jpg')"></div>
@@ -796,45 +803,41 @@
       <div class="pillar agenda-day">
         <h3>Day 00</h3>
         <div class="ag-date">September 18</div>
-        <div class="ag-theme">Arrival &amp; Welcome</div>
+        <div class="ag-theme">Arrivals</div>
         <ul class="ag-list">
           <li>Airport transfers</li>
           <li>Estate check-in &amp; settling</li>
           <li>Welcome dinner</li>
-          <li>Opening circle</li>
         </ul>
       </div>
       <div class="pillar agenda-day">
         <h3>Day 01</h3>
         <div class="ag-date">September 19</div>
-        <div class="ag-theme">Head &amp; Body</div>
+        <div class="ag-theme">Mastermind</div>
         <ul class="ag-list">
-          <li>Facilitation with guest business experts</li>
+          <li>Business experts</li>
           <li>Deal flow sessions</li>
-          <li>AI adoption</li>
-          <li>Somatic exercises</li>
+          <li>Hot seats</li>
         </ul>
       </div>
       <div class="pillar agenda-day">
         <h3>Day 02</h3>
         <div class="ag-date">September 20</div>
-        <div class="ag-theme">Heart &amp; Body</div>
+        <div class="ag-theme">Embodiment</div>
         <ul class="ag-list">
           <li>Meditation</li>
           <li>Breathwork</li>
-          <li>Embodiment practices</li>
-          <li>Time in nature</li>
+          <li>Nature activities</li>
         </ul>
       </div>
       <div class="pillar agenda-day">
         <h3>Day 03</h3>
         <div class="ag-date">September 21</div>
-        <div class="ag-theme">Wellness &amp; Restoration</div>
+        <div class="ag-theme">Wellness</div>
         <ul class="ag-list">
           <li>Massage &amp; bodywork</li>
           <li>IV drips &amp; recovery</li>
-          <li>Facilitation with health experts</li>
-          <li>Firepit conversations &amp; closing dinner</li>
+          <li>Closing dinner</li>
         </ul>
       </div>
     </div>
@@ -924,6 +927,10 @@
             <p>Every Founding Member contributes a professional or personal gift to the other founding members.</p>
           </div>
         </div>
+      </div>
+      <div class="guarantee-box">
+        <span class="eyebrow">100% Satisfaction Guarantee</span>
+        <p>Attend the first day of Higher Love and if the Summit isn't the room for you (for whatever reason), simply let us know by the end of day one and we'll happily refund your investment.</p>
       </div>
       <a href="#application-form" class="btn-invest">Request an Invitation</a>
     </div>
@@ -1051,6 +1058,35 @@
       document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
       if (!isOpen) item.classList.add('open');
     });
+  });
+
+  // ── Conversion tracking ──
+  function track(name, params){ if (typeof gtag === 'function') gtag('event', name, params || {}); }
+  // CTA clicks (every "Request an Invitation" + outline + invest buttons)
+  document.querySelectorAll('a.btn, a.btn-invest, a.btn-outline').forEach(function(a){
+    a.addEventListener('click', function(){
+      var loc = a.getAttribute('data-cta')
+        || (a.closest('header') ? 'hero'
+        : (a.closest('.investment') ? 'investment'
+        : (a.closest('.final-cta') ? 'final_cta'
+        : (a.closest('.letter') ? 'letter' : 'other'))));
+      track('cta_click', { cta_location: loc, link_text: (a.textContent || '').trim() });
+    });
+  });
+  // Application form viewed (fires once when the form section scrolls into view)
+  var formSec = document.getElementById('application-form');
+  if (formSec && 'IntersectionObserver' in window) {
+    var seen = false;
+    new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting && !seen){ seen = true; track('form_viewed'); } });
+    }, { threshold: 0.3 }).observe(formSec);
+  }
+  // Application submitted — GoHighLevel posts a message on form submit
+  window.addEventListener('message', function(e){
+    try {
+      var d = typeof e.data === 'string' ? e.data : JSON.stringify(e.data || '');
+      if (/form[-_ ]?submit|formSubmitted|submitted/i.test(d)) track('form_submit');
+    } catch(err) {}
   });
 </script>
 <!-- Application form embed helper (auto-sizes the iframe) -->
