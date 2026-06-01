@@ -246,7 +246,7 @@
      LETTER / INVITATION
   ════════════ */
   .letter { background: var(--section-dark); }
-  .letter-body p { font-size: 30px; line-height: 1.6; margin-bottom: 1.25rem; color: #efeae1; }
+  .letter-body p { font-size: 27px; line-height: 1.55; margin-bottom: 1.25rem; color: #efeae1; }
   .letter-body em { color: #fff; font-style: italic; }
   .letter-head {
     font-family: 'Cormorant Garamond', serif;
@@ -316,6 +316,7 @@
   .venn { width: 100%; height: auto; display: block; }
   .venn circle { mix-blend-mode: screen; }
   .venn-cat { font-family: 'Cormorant Garamond', serif; font-weight: 600; letter-spacing: 0.04em; fill: #fff; text-transform: uppercase; }
+  .venn-center { font-family: 'Cormorant Garamond', serif; font-weight: 700; letter-spacing: 0.06em; fill: #fff; text-transform: uppercase; }
   /* ════════════
      HOST SECTION
   ════════════ */
@@ -405,7 +406,8 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 4rem; font-weight: 600; color: #1a1510; line-height: 1; margin-bottom: 0.4rem;
   }
-  .price-card.standard .price-amount { font-size: 3rem; color: #c0b8b0; text-decoration: line-through; }
+  .price-card.standard { background: #fdf8f2; border-color: #111111; }
+  .price-badge-dark { background: #111111; }
   .price-note { font-family: 'Raleway', sans-serif; font-size: 0.8rem; color: #9a8e80; line-height: 1.5; }
   .price-savings {
     display: inline-block; margin-top: 0.75rem;
@@ -468,7 +470,7 @@
   .faq-item.open .faq-icon { transform: rotate(45deg); }
   .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.25s; }
   .faq-item.open .faq-a { max-height: 1800px; padding-bottom: 1.5rem; }
-  .faq-a p { font-size: 1rem; line-height: 1.85; color: var(--body); font-family: 'EB Garamond', serif; }
+  .faq-a p { font-size: 1.2rem; line-height: 1.8; color: var(--body); font-family: 'EB Garamond', serif; }
   .faq-a p + p { margin-top: 1rem; }
   /* ════════════
      FINAL CTA
@@ -605,27 +607,24 @@
 ══════════════════════════════════ -->
 <section class="letter" id="who">
   <div class="container-narrow fade-in" style="text-align:center;">
-    <h2 class="letter-h1">The Room You Didn't Know Existed. Until Now.</h2>
+    <h2 class="letter-h2">The Room You Didn't Know Existed. Until Now.</h2>
     <div class="letter-body" style="text-align:center; margin-top:1.5rem;">
       <p class="letter-lead" style="text-align:center;">Hi, I'm Re Perez.</p>
       <p>As the founder of Higher Love, I feel it's important to share how this all came to be.</p>
       <p>In November 2025, I was diagnosed with prostate cancer.</p>
       <p>I know what happens when you say the word cancer.</p>
       <p>People project their fear onto you, fill in the story before you've told it, and suddenly you're defined by something you never asked to be defined by.</p>
-      <p>Right now, I am fine. It's low risk.<br>The prognosis is favorable.<br>Even a "good" diagnosis forces you to re-evaluate everything you're doing in your life.</p>
+      <p>I am fine. Even a "good" diagnosis forces you to re-evaluate everything you're doing in your life.</p>
       <p>Shortly after the diagnosis, a brother of mine called me immediately and asked, "How are you?"</p>
       <p>I was walking outside in Austin. I stopped in my tracks. I burst into tears.</p>
       <p>Because for the first time in a very long time, despite having a great network of friends, I felt genuinely alone. That was the moment I understood my own loneliness.</p>
       <p>A health scare doesn't care about your accomplishments, your revenue, your roster, or your reputation. It strips all of that away and asks the only questions that count.</p>
-      <p class="letter-lead" style="text-align:center;">Do you love your life? And if so, can you love higher?</p>
+      <p class="letter-lead" style="text-align:center;">Did you live fully... or live carefully?</p>
       <p>I sat with those questions.</p>
-      <p>Yes, I do love my life. And I am ready to love higher.<br>Within myself. In my relationships. In business.</p>
-      <p>And I want to do that with a brotherhood of conscious gay men who are asking the same questions.</p>
-      <p>For the past 20 years, I've sat in some of the best business masterminds and entrepreneur groups. And yet I was usually the only gay man in the room. Because there was no room built for me.</p>
-      <p>I've explored all gay or LGBTQ+ organizations.</p>
-      <p>The LGBTQ+ professional networks.<br>The gay business associations.</p>
+      <p>After reflecting on my career, I've been blessed to participate in some of the most elite business masterminds and entrepreneur groups. The only thing is that I was usually the only gay man in the room.</p>
+      <p>I've explored all gay or LGBTQ+ organizations. They were fine but they didn't seem to fit my vibe.</p>
       <p>You know what I could not find?</p>
-      <p>Gay men who have done both the inner work and the outer work. Gay men who show up as equals, not competitors. Gay men who come together as peers for intimacy and deep connection, not for the party scene or hooking up.</p>
+      <p>Gay men who gather in brotherhood, as peers, not competitors. Gay men who have done both the inner and outer work. Gay men who seek deep, authentic connection over the usual party scenes.</p>
       <p>I looked for that room. It did not exist. So I decided to build it.</p>
     </div>
   </div>
@@ -638,14 +637,14 @@
   <div class="container-narrow fade-in" style="text-align:center;">
     <h2 class="letter-h2">Three Worlds. One Room.</h2>
     <div class="letter-body" style="text-align:center; margin-top:1.5rem;">
-      <p>So I started asking myself a different question. What am I curious about? What am I passionate about? What brings me great joy? And how do I bring all of those together?</p>
-      <p>Three domains kept showing up.</p>
-      <p>The first is entrepreneurship. Business. Growth. Systems. AI. The cutting edge of what is changing in the world right now. I find this through the business masterminds and entrepreneur groups I am part of, and I am still very much in those rooms. There is real value there. I learn constantly. I stay sharp.</p>
+      <p>I asked myself: what are the top three worlds that have influenced my life... and my business?</p>
+      <p>The first is entrepreneurship. Business. Growth. Systems. AI. The cutting edge of what is changing in the world right now. I find this through the business masterminds and I am still very much in those rooms. There is real value there. I learn constantly. I stay sharp.</p>
       <p>The second is wellness and longevity. As I have gotten older, this has become non-negotiable. Mindfulness. Meditation. Bodywork. Somatic work. The food I eat. The way I move. Working out and staying fit, not for vanity, but for the kind of energy a full, vibrant life requires.</p>
       <p>The third is personal growth and development. For decades, I have immersed myself in understanding who we are and why we think, behave, and feel the way we do. The disciplines that keep the mind sharp and the spirit awake.</p>
+      <p>My thesis for Higher Love is that something magical can be created for conscious gay men if I were to create a room with three worlds combined.</p>
     </div>
     <div class="venn-wrap fade-in" style="margin-top:2.5rem;">
-      <svg class="venn" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Venn diagram: Business Mastermind, Wellness Retreat, and Personal Growth">
+      <svg class="venn" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Venn diagram: Business Mastermind, Wellness Retreat, and Personal Growth meeting at Higher Love">
         <circle cx="200" cy="180" r="140" fill="#a07f56" fill-opacity="0.55"/>
         <circle cx="400" cy="180" r="140" fill="#5D685B" fill-opacity="0.6"/>
         <circle cx="300" cy="350" r="140" fill="#607077" fill-opacity="0.6"/>
@@ -655,12 +654,9 @@
         <text class="venn-cat" x="400" y="197" text-anchor="middle" font-size="18">Retreat</text>
         <text class="venn-cat" x="300" y="344" text-anchor="middle" font-size="18">Personal</text>
         <text class="venn-cat" x="300" y="367" text-anchor="middle" font-size="18">Growth</text>
+        <text class="venn-center" x="300" y="232" text-anchor="middle" font-size="19">Higher</text>
+        <text class="venn-center" x="300" y="255" text-anchor="middle" font-size="19">Love</text>
       </svg>
-    </div>
-    <div class="letter-body" style="text-align:center; margin-top:2rem;">
-      <p class="letter-lead" style="text-align:center;">Sharp mind. Strong body. Awake spirit.</p>
-      <p>When those three converge, something becomes possible that is not available in any one of them alone. A higher frequency of love, in how we live, how we lead, and how we love.</p>
-      <p class="letter-lead" style="text-align:center;">That is the room I am building. Three worlds. One container. Designed exclusively for conscious gay men.</p>
     </div>
   </div>
 </section>
@@ -670,27 +666,17 @@
 ══════════════════════════════════ -->
 <section class="letter" style="background:var(--black);">
   <div class="container-narrow fade-in" style="text-align:center;">
-    <h2 class="letter-h1">Picture This With Me.</h2>
+    <h2 class="letter-h2">Picture This With Me.</h2>
     <div class="letter-body" style="text-align:center; margin-top:1.5rem;">
       <p>A private estate just outside Austin. A private chef who understands what we are doing here. Saunas. Cold plunges. Stunning views. Breathwork, bodywork, meditation, led by world-class facilitators. Three full days of being met, challenged, and restored.</p>
       <p>Now picture all of that built exclusively for conscious gay men who are accomplished, doing the inner work, and ready to go deeper.</p>
-      <p class="letter-lead" style="text-align:center;">That room has not existed. Until now.</p>
     </div>
-  </div>
-</section>
-<div class="photo-band" style="background-image:url('images/firepit-night.jpg')"></div>
-<!-- ══════════════════════════════════
-     INVITATION — PART 3
-══════════════════════════════════ -->
-<section class="letter">
-  <div class="container-narrow fade-in" style="text-align:center;">
-    <h2 class="letter-h2">Why This Happens in Person</h2>
-    <div class="letter-body" style="text-align:center;">
+    <h2 class="letter-h2">Why In-Person?</h2>
+    <div class="letter-body" style="text-align:center; margin-top:1.5rem;">
       <p>The most profound relationships in my life were built in three days, dropped in deep with someone, face to face, no screens.</p>
       <p>In the AI era, nothing beats in-person connection. If you are looking for another online community, or you are not willing to travel for the right room, this isn't the room for you.</p>
       <p>The gay men you meet in September could very well be the brothers you have been looking for. I hope you are one of them.</p>
       <p>If any of this resonates, let's talk.</p>
-      <p>Not a sales call. A conversation to see if this is your room.</p>
     </div>
     <div style="text-align:center; margin-top:2.5rem;">
       <a href="#application-form" class="btn">Request an Invitation</a>
@@ -703,9 +689,8 @@
 <section style="background: var(--section-dark);">
   <div class="container">
     <div class="section-head fade-in">
-      <div class="eyebrow">Qualifying</div>
+      <div class="eyebrow">Member Persona</div>
       <h2>Is This Your Room?</h2>
-      <p>This is not a checklist. It's a mirror. Read it and you'll know.</p>
     </div>
     <div class="two-col fade-in">
       <div>
@@ -737,9 +722,10 @@
       <div>
         <div class="eyebrow">About Your Host</div>
         <div class="host-name">Re Perez</div>
-        <p class="host-tagline">Global Brand Strategist, Founder, Entrepreneur, Community Builder, and Author of <em>Your Brand Should Be Gay, Even If You're Not</em>.</p>
-        <p class="host-bio">Re has spent his life building rooms where remarkable people discover the gifts in one another. A global brand strategist and best-selling author, he became the man who decided this room needed to exist — and built it for the peers he kept looking for.</p>
-        <p class="host-bio">Higher Love is the room he wished he'd had: a place where you bring everything, leave nothing at the door, and stop being the only one.</p>
+        <p class="host-tagline">Brand Strategist, Community Builder, Connector, Author</p>
+        <p class="host-bio">Re brings over 25+ years of experience leading over 1,000+ brand transformations for CEOs, founders, and small-to-midsize businesses.</p>
+        <p class="host-bio">Before stepping into entrepreneurship in 2010, Re cut his teeth at some of the top global brand consultancies in New York City, where he worked on brands including Abbott Nutrition, GE Money, Lilly, Novo Nordisk, TD Ameritrade, and Xerox.</p>
+        <p class="host-bio">Re is also the author of the boldly-titled book <em>Your Brand Should Be Gay (Even If You're Not)</em>. Using real-life case studies and behind-the-scenes stories, he reveals how branding transforms his clients from unknown to celebrity-like status, pre-revenue to multi-million dollar success, outdated to cutting-edge, and embarrassingly inauthentic to unapologetically authentic.</p>
       </div>
     </div>
   </div>
@@ -769,37 +755,35 @@
 <section class="investment">
   <div class="container">
     <div class="investment-inner fade-in">
-      <span class="eyebrow">The Investment</span>
-      <h2>Your Founding Seat</h2>
-      <p class="investment-sub">The first 12 members set the culture of everything that follows.</p>
+      <span class="eyebrow">Membership</span>
+      <h2>Your Investment</h2>
       <div class="pricing-grid">
         <div class="price-card featured">
           <div class="price-badge">Founding Member — First 12 Only</div>
-          <span class="price-label" style="margin-top:1.5rem; display:block;">Your Rate Today</span>
-          <div class="price-amount">$7,500</div>
-          <p class="price-note">Payment plans available.<br>Mention it in your application.</p>
+          <div class="price-amount" style="margin-top:2rem;">$7,500</div>
           <div class="price-savings">Save $17,500</div>
         </div>
         <div class="price-card standard">
-          <span class="price-label">Standard Investment</span>
-          <div class="price-amount">$25,000</div>
-          <p class="price-note" style="color:#c0b8b0;">Value of what's inside this room.<br>Future pricing after founding cohort.</p>
+          <div class="price-badge price-badge-dark">Standard Investment</div>
+          <div class="price-amount" style="margin-top:2rem;">$25,000</div>
         </div>
       </div>
       <div class="value-stack">
-        <span class="value-stack-head">Everything Included in Your Founding Seat</span>
+        <span class="value-stack-head">Includes The Following</span>
         <div class="value-items">
-          <div class="value-item"><span class="check">✓</span> Welcome reception (Sept 18)</div>
-          <div class="value-item"><span class="check">✓</span> 3 full days of programming</div>
-          <div class="value-item"><span class="check">✓</span> Private estate in Austin</div>
+          <div class="value-item"><span class="check">✓</span> Three full days of programming</div>
           <div class="value-item"><span class="check">✓</span> Healthy, delicious, organic meals</div>
-          <div class="value-item"><span class="check">✓</span> Morning wellness &amp; breathwork</div>
           <div class="value-item"><span class="check">✓</span> Facilitated peer advisory sessions</div>
-          <div class="value-item"><span class="check">✓</span> Evening experiences &amp; firepits</div>
-          <div class="value-item"><span class="check">✓</span> Austin excursions</div>
+          <div class="value-item"><span class="check">✓</span> World-class facilitators and guides</div>
+          <div class="value-item"><span class="check">✓</span> Lodging at a private estate</div>
+          <div class="value-item"><span class="check">✓</span> Wellness activities and meditation exercises</div>
+          <div class="value-item"><span class="check">✓</span> 12-Month Membership</div>
+          <div class="value-item"><span class="check">✓</span> Monthly Group Connection Calls</div>
+          <div class="value-item"><span class="check">✓</span> Higher Love Dinners in various cities</div>
+          <div class="value-item"><span class="check">✓</span> Additional Founding Member bonuses</div>
         </div>
       </div>
-      <a href="#application-form" class="btn-invest">Request Your Founding Seat</a>
+      <a href="#application-form" class="btn-invest">Request an Invitation</a>
     </div>
   </div>
 </section>
@@ -810,7 +794,7 @@
   <div class="container-narrow">
     <div class="section-head fade-in">
       <div class="eyebrow">Before You Request</div>
-      <h2>Questions</h2>
+      <h2>Frequently Asked Questions</h2>
     </div>
     <div class="fade-in">
       <div class="faq-item">
