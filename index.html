@@ -468,9 +468,10 @@
   .feature-card { background: #ffffff; border: 1px solid rgba(145,83,53,0.18); padding: 1.7rem 1.6rem; }
   .feature-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; color: #1a1510; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.15; margin-bottom: 0.6rem; }
   .feature-card p { font-family: 'EB Garamond', Georgia, serif; font-size: 1.12rem; line-height: 1.55; color: #5a5048; }
-  .bonus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 1.6rem; text-align: left; }
+  .bonus-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; margin-top: 1.6rem; text-align: left; max-width: 760px; margin-left: auto; margin-right: auto; }
   .bonus-card { background: #1a1510; border: 1px solid #a07f56; padding: 1.9rem 1.6rem; }
-  .bonus-tag { font-family: 'Raleway', sans-serif; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #a07f56; margin-bottom: 0.9rem; }
+  .bonus-tag { font-family: 'Raleway', sans-serif; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #a07f56; margin-bottom: 0.5rem; }
+  .bonus-value { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: #a07f56; line-height: 1; letter-spacing: 0.02em; margin-bottom: 0.8rem; }
   .bonus-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: #f5f0e8; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.2; margin-bottom: 0.6rem; }
   .bonus-card p { font-family: 'EB Garamond', Georgia, serif; font-size: 1.08rem; line-height: 1.55; color: #c9bfb3; }
   /* ── AGENDA (4-COL CALENDAR) ── */
@@ -478,6 +479,8 @@
   .agenda-day { text-align: center; }
   .agenda-day .ag-date { font-family: 'Raleway', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--chamoisee); margin-bottom: 0.9rem; }
   .ag-theme { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--linen); text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.2; margin-bottom: 1rem; }
+  .ag-daydate { font-family: 'Raleway', sans-serif; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--chamoisee); white-space: nowrap; margin-bottom: 0.7rem; }
+  .ag-desc { font-family: 'EB Garamond', Georgia, serif; font-size: 0.98rem; line-height: 1.55; color: var(--body); text-align: left; margin: 0; }
   .ag-list { list-style: none; padding: 0; margin: 0; text-align: left; display: inline-block; }
   .ag-list li { font-family: 'Raleway', sans-serif; font-size: 0.82rem; line-height: 1.45; color: var(--body); padding: 0.5rem 0; border-top: 1px solid var(--line-soft); }
   .ag-list li:first-child { border-top: none; }
@@ -657,11 +660,10 @@
     <img class="kenburns" src="images/hero-option-2-estate.jpg" alt="Hill Country estate at dusk">
   </div>
   <div class="hero-inner fade-in">
-    <div class="eyebrow">For Entrepreneurs, Founders, and Leaders</div>
+    <div class="eyebrow">12 Founding Members · September 18–20, 2026 · Austin, TX</div>
     <h1>The Most Accomplished Gay Men Are Often The Loneliest In The Room.</h1>
     <p class="hero-sub">We exist to change that.</p>
     <a href="#application-form" class="btn">Request an Invitation</a>
-    <p class="trust-line">An invitation-only brotherhood &amp; annual summit for conscious gay founders · 12 founding seats · Austin · September 2026</p>
   </div>
 </header>
 <!-- ══════════════════════════════════
@@ -695,7 +697,7 @@
   <div class="container-narrow">
     <div class="section-head fade-in">
       <div class="eyebrow">The Three Questions</div>
-      <p class="qa-lead">You've spent a career answering the question: &ldquo;What do you do?&rdquo; We ask three questions BEFORE any of that. Questions not typically asked in gay culture.</p>
+      <p class="qa-lead">You've spent a career answering the question: &ldquo;What do you do?&rdquo; We ask three questions BEFORE any of that.</p>
     </div>
     <div class="qa-block fade-in">
       <h3 class="qa-q">Who are you?</h3>
@@ -750,8 +752,7 @@
     <h2 class="letter-h2">The Higher Love Summit</h2>
     <p class="qa-lead" style="margin-top:1rem;">Three and a half days. Twelve men. One private estate outside Austin. September 18&ndash;21, 2026. The founding chapter of the brotherhood.</p>
     <div class="letter-body" style="margin-top:2rem;">
-      <p>A private estate outside Austin. A personal chef who understands what we're doing here. Saunas. Cold plunges. Breathwork, bodywork, and meditation led by world-class facilitators.</p>
-      <p class="letter-lead">Three full days of being met, challenged, and restored.</p>
+      <p>A private estate outside Austin. A personal chef who prepares healthy, nutritious, nourishing meals. Saunas. Cold plunges. Breathwork, bodywork, and meditation led by world-class facilitators.</p>
       <p>No panels. No keynotes. No lanyards.</p>
       <p>The programming is built around the specific men in the room, not a fixed agenda. Days move from mind to body to integration. Some moments will challenge you. Others will restore you completely. There are surprises built into every day. That is by design.</p>
       <p>The most significant relationships of my life were built in three days, face to face, no screens. The eleven men you meet in September may be the brothers you've been looking for your entire career.</p>
@@ -801,44 +802,24 @@
     </div>
     <div class="pillar-grid agenda-grid fade-in">
       <div class="pillar agenda-day">
-        <h3>Day 00</h3>
-        <div class="ag-date">September 18</div>
+        <div class="ag-daydate">Day 00 · September 18</div>
         <div class="ag-theme">Arrivals</div>
-        <ul class="ag-list">
-          <li>Airport transfers</li>
-          <li>Estate check-in &amp; settling</li>
-          <li>Welcome dinner</li>
-        </ul>
+        <p class="ag-desc">You arrive at the estate and settle in as the light softens over the hills. The first evening opens with a welcome dinner, the twelve of you meeting over a slow, intentional meal. No agenda yet, just the beginning of brotherhood.</p>
       </div>
       <div class="pillar agenda-day">
-        <h3>Day 01</h3>
-        <div class="ag-date">September 19</div>
+        <div class="ag-daydate">Day 01 · September 19</div>
         <div class="ag-theme">Mastermind</div>
-        <ul class="ag-list">
-          <li>Business experts</li>
-          <li>Deal flow sessions</li>
-          <li>Hot seats</li>
-        </ul>
+        <p class="ag-desc">The day moves into the work that built you. Guest business experts lead the room through deal flow and strategy, and you take the hot seat as the others sharpen your thinking and challenge what you thought was already big enough.</p>
       </div>
       <div class="pillar agenda-day">
-        <h3>Day 02</h3>
-        <div class="ag-date">September 20</div>
+        <div class="ag-daydate">Day 02 · September 20</div>
         <div class="ag-theme">Embodiment</div>
-        <ul class="ag-list">
-          <li>Meditation</li>
-          <li>Breathwork</li>
-          <li>Nature activities</li>
-        </ul>
+        <p class="ag-desc">The pace shifts from mind to body. Mornings open with meditation and breathwork, and afternoons carry you outdoors into nature. By evening you have dropped out of your head and back into your body.</p>
       </div>
       <div class="pillar agenda-day">
-        <h3>Day 03</h3>
-        <div class="ag-date">September 21</div>
+        <div class="ag-daydate">Day 03 · September 21</div>
         <div class="ag-theme">Wellness</div>
-        <ul class="ag-list">
-          <li>Massage &amp; bodywork</li>
-          <li>IV drips &amp; recovery</li>
-          <li>Closing dinner</li>
-        </ul>
+        <p class="ag-desc">The final day is built for restoration. Bodywork, massage, and IV recovery return you to full capacity, body and mind. It closes with a final dinner together, the kind of night that turns strangers into brothers.</p>
       </div>
     </div>
   </div>
@@ -897,7 +878,7 @@
             <p>Every month we meet virtually to mastermind business or personal matters, deepen your connections with the other founding members, or get the support you need.</p>
           </div>
           <div class="feature-card">
-            <h4>Founding Member Channel</h4>
+            <h4>Founders Private Channel</h4>
             <p>A digital space to connect in between monthly calls. Where we share wins and resources, ask for and provide support, and stay current with one another. No noise. No posturing. Just brotherhood.</p>
           </div>
           <div class="feature-card">
@@ -912,17 +893,14 @@
         <span class="value-stack-head" style="margin-top:3rem;">Founding Member Bonuses</span>
         <div class="bonus-grid">
           <div class="bonus-card">
-            <div class="bonus-tag">Bonus #1 · Value $15,000</div>
+            <div class="bonus-tag">Bonus #1</div>
+            <div class="bonus-value">Value: $15,000</div>
             <h4>Brand Strategy Intensive with Re Perez</h4>
             <p>A 1:1, dedicated brand strategy session for either your business or your personal brand.</p>
           </div>
           <div class="bonus-card">
             <div class="bonus-tag">Bonus #2</div>
-            <h4>Featured Conversation on the Category of One YouTube Channel</h4>
-            <p>A recorded conversation with Re Perez, aired to an audience of entrepreneurs, executives, and brand builders.</p>
-          </div>
-          <div class="bonus-card">
-            <div class="bonus-tag">Bonus #3</div>
+            <div class="bonus-value">Value: $12,000</div>
             <h4>Additional Founding Members&rsquo; Offerings</h4>
             <p>Every Founding Member contributes a professional or personal gift to the other founding members.</p>
           </div>
@@ -930,7 +908,7 @@
       </div>
       <div class="guarantee-box">
         <span class="eyebrow">100% Satisfaction Guarantee</span>
-        <p>Attend the first day of Higher Love and if the Summit isn't the room for you (for whatever reason), simply let us know by the end of day one and we'll happily refund your investment.</p>
+        <p>Attend the first day of Higher Love Summit and if it isn't the room for you, simply let us know by the end of Day One and we'll happily refund your investment.</p>
       </div>
       <a href="#application-form" class="btn-invest">Request an Invitation</a>
     </div>
@@ -942,8 +920,8 @@
 <section id="faq" style="background: var(--section-dark);">
   <div class="container-narrow">
     <div class="section-head fade-in">
-      <div class="eyebrow">Before You Request</div>
-      <h2>Frequently Asked Questions</h2>
+      <div class="eyebrow">FAQs</div>
+      <h2>Got Questions? We Have Answers.</h2>
     </div>
     <div class="fade-in">
       <div class="faq-item">
@@ -974,7 +952,7 @@
 ══════════════════════════════════ -->
 <section class="final-cta">
   <div class="container-narrow fade-in">
-    <h2>You've Built The Success.<br>Now Surround Yourself With Brotherhood To Witness It.</h2>
+    <h2>You've Built The Success.<br>Now Surround Yourself With Brothers To Witness It.</h2>
     <a href="#application-form" class="btn">Request an Invitation</a>
   </div>
 </section>
