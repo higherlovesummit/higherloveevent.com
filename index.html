@@ -462,15 +462,20 @@
   .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-top: 1.6rem; text-align: left; }
   .feature-card { background: #ffffff; border: 1px solid rgba(145,83,53,0.18); padding: 1.7rem 1.6rem; }
   .feature-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; color: #1a1510; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.15; margin-bottom: 0.6rem; }
-  .feature-card p { font-family: 'Raleway', sans-serif; font-size: 0.92rem; line-height: 1.65; color: #5a5048; }
+  .feature-card p { font-family: 'EB Garamond', Georgia, serif; font-size: 1.12rem; line-height: 1.55; color: #5a5048; }
   .bonus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 1.6rem; text-align: left; }
   .bonus-card { background: #1a1510; border: 1px solid #a07f56; padding: 1.9rem 1.6rem; }
   .bonus-tag { font-family: 'Raleway', sans-serif; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #a07f56; margin-bottom: 0.9rem; }
   .bonus-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: #f5f0e8; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.2; margin-bottom: 0.6rem; }
-  .bonus-card p { font-family: 'Raleway', sans-serif; font-size: 0.88rem; line-height: 1.6; color: #c9bfb3; }
+  .bonus-card p { font-family: 'EB Garamond', Georgia, serif; font-size: 1.08rem; line-height: 1.55; color: #c9bfb3; }
   /* ── AGENDA (4-COL CALENDAR) ── */
   .agenda-grid { grid-template-columns: repeat(4, 1fr); }
-  .agenda-day .ag-date { font-family: 'Raleway', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--chamoisee); margin-bottom: 0.7rem; }
+  .agenda-day { text-align: center; }
+  .agenda-day .ag-date { font-family: 'Raleway', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--chamoisee); margin-bottom: 0.9rem; }
+  .ag-theme { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--linen); text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.2; margin-bottom: 1rem; }
+  .ag-list { list-style: none; padding: 0; margin: 0; text-align: left; display: inline-block; }
+  .ag-list li { font-family: 'Raleway', sans-serif; font-size: 0.82rem; line-height: 1.45; color: var(--body); padding: 0.5rem 0; border-top: 1px solid var(--line-soft); }
+  .ag-list li:first-child { border-top: none; }
   .guarantee-box {
     max-width: 580px; margin: 0 auto 2.5rem;
     padding: 1.75rem; border: 1px solid rgba(160,127,86,0.25);
@@ -616,6 +621,7 @@
     .three-worlds { grid-template-columns: 1fr; gap: 1.5rem; }
     .pillar-grid { grid-template-columns: 1fr; }
     .agenda-grid { grid-template-columns: 1fr 1fr; }
+    .ag-list { display: block; }
     .feature-grid { grid-template-columns: 1fr; }
     .bonus-grid { grid-template-columns: 1fr; }
     .host-bio { font-size: 24px; }
@@ -709,7 +715,7 @@
       <p>Maybe you were looking for a room you didn't know existed. Where gay men gathered as peers, not competitors, not an audience, and who have done both the inner and the outer work. Who care about their health, building wealth, and leaving the world a better place than we found it.</p>
       <p>I looked for that room, but could not find it.</p>
       <p class="letter-lead">So I decided to build it.</p>
-      <p>I'd like to invite you to be a founding member and build it with me.</p>
+      <p>I am inviting you to come at the beginning, as a founding member, to help shape the culture and curation of this special room.</p>
     </div>
   </div>
 </section>
@@ -787,10 +793,50 @@
       <h2>The Agenda</h2>
     </div>
     <div class="pillar-grid agenda-grid fade-in">
-      <div class="pillar agenda-day"><h3>Day 00</h3><div class="ag-date">September 18</div><p>Welcome Dinner</p></div>
-      <div class="pillar agenda-day"><h3>Day 01</h3><div class="ag-date">September 19</div><p>Business Mastermind</p></div>
-      <div class="pillar agenda-day"><h3>Day 02</h3><div class="ag-date">September 20</div><p>Heart and Mind Embodiment</p></div>
-      <div class="pillar agenda-day"><h3>Day 03</h3><div class="ag-date">September 21</div><p>Wellness Retreat</p></div>
+      <div class="pillar agenda-day">
+        <h3>Day 00</h3>
+        <div class="ag-date">September 18</div>
+        <div class="ag-theme">Arrival &amp; Welcome</div>
+        <ul class="ag-list">
+          <li>Airport transfers</li>
+          <li>Estate check-in &amp; settling</li>
+          <li>Welcome dinner</li>
+          <li>Opening circle</li>
+        </ul>
+      </div>
+      <div class="pillar agenda-day">
+        <h3>Day 01</h3>
+        <div class="ag-date">September 19</div>
+        <div class="ag-theme">Head &amp; Body</div>
+        <ul class="ag-list">
+          <li>Facilitation with guest business experts</li>
+          <li>Deal flow sessions</li>
+          <li>AI adoption</li>
+          <li>Somatic exercises</li>
+        </ul>
+      </div>
+      <div class="pillar agenda-day">
+        <h3>Day 02</h3>
+        <div class="ag-date">September 20</div>
+        <div class="ag-theme">Heart &amp; Body</div>
+        <ul class="ag-list">
+          <li>Meditation</li>
+          <li>Breathwork</li>
+          <li>Embodiment practices</li>
+          <li>Time in nature</li>
+        </ul>
+      </div>
+      <div class="pillar agenda-day">
+        <h3>Day 03</h3>
+        <div class="ag-date">September 21</div>
+        <div class="ag-theme">Wellness &amp; Restoration</div>
+        <ul class="ag-list">
+          <li>Massage &amp; bodywork</li>
+          <li>IV drips &amp; recovery</li>
+          <li>Facilitation with health experts</li>
+          <li>Firepit conversations &amp; closing dinner</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -822,14 +868,16 @@
       <h2>Your Investment</h2>
       <div class="pricing-grid">
         <div class="price-card featured">
-          <div class="price-badge">Founding Member, First 12 Only</div>
+          <div class="price-badge">Founding Member · Early Bird</div>
           <div class="price-amount" style="margin-top:2rem;">$7,500</div>
+          <p class="price-note">Rate valid through July 15, 2026.</p>
         </div>
         <div class="price-card standard">
-          <div class="price-badge price-badge-dark">Standard Investment</div>
+          <div class="price-badge price-badge-dark">Founding Member · Standard Rate</div>
           <div class="price-amount" style="margin-top:2rem;">$18,500</div>
         </div>
       </div>
+      <p class="invest-footnote" style="text-align:center;">Payment plans available.</p>
       <div class="founding-includes">
         <span class="value-stack-head">What's Included in Your Founding Membership</span>
         <div class="feature-grid">
@@ -838,12 +886,12 @@
             <p>Your membership runs for 12 months, beginning September 18, 2026, the start of the inaugural Higher Love Summit, through September 30, 2027.</p>
           </div>
           <div class="feature-card">
-            <h4>Higher Love Summit Admission</h4>
+            <h4>Higher Love Summit</h4>
             <p>Your place at the inaugural Higher Love Summit, September 2026, held at a private estate just outside Austin.</p>
           </div>
           <div class="feature-card">
-            <h4>Monthly Mastermind Calls</h4>
-            <p>Every month we meet virtually to mastermind business or personal matters, deepen your connections with the other founding members, or get the support you need. On occasion, by member request, we bring in specialty experts and speakers from my network or the networks of other founding members.</p>
+            <h4>Monthly Growth Calls</h4>
+            <p>Every month we meet virtually to mastermind business or personal matters, deepen your connections with the other founding members, or get the support you need.</p>
           </div>
           <div class="feature-card">
             <h4>Private Founding Member Channel</h4>
@@ -854,8 +902,8 @@
             <p>As a Founding Member, you have a level of proximity to Re Perez that will not be replicated as the community grows. You are getting in before that door narrows.</p>
           </div>
           <div class="feature-card">
-            <h4>Priority Speaking Consideration</h4>
-            <p>Founding Members receive first consideration for speaking opportunities at the inaugural Higher Love Summit. Topic, format, and duration are developed collaboratively with Re Perez. Selection is not guaranteed and is subject to overall programming needs and the wants of attendees.</p>
+            <h4>Speaking Opportunities</h4>
+            <p>Founding Members receive first consideration for speaking opportunities at the inaugural Higher Love Summit. Topic, format, and duration are developed collaboratively with Re Perez.</p>
           </div>
         </div>
         <span class="value-stack-head" style="margin-top:3rem;">Founding Member Bonuses</span>
