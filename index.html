@@ -155,14 +155,14 @@
   .btn {
     display: inline-block;
     font-family: 'Raleway', sans-serif;
-    font-size: 0.78rem; font-weight: 600;
-    letter-spacing: 0.22em; text-transform: uppercase;
-    padding: 1.05rem 2.4rem;
-    background: var(--chamoisee); color: #111;
+    font-size: 0.92rem; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    padding: 1.15rem 2.8rem;
+    background: #1a1510; color: #fff;
     border: 1px solid var(--chamoisee);
     transition: all 0.3s ease; cursor: pointer; text-decoration: none;
   }
-  .btn:hover { background: transparent; color: var(--chamoisee); }
+  .btn:hover { background: var(--chamoisee); color: #fff; border-color: var(--chamoisee); }
   .btn-outline {
     display: inline-block;
     font-family: 'Raleway', sans-serif;
@@ -304,17 +304,17 @@
   ════════════ */
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; }
   .col-header {
-    font-family: 'Cormorant Garamond', serif; font-size: 1.6rem;
-    text-transform: uppercase; letter-spacing: 0.05em; color: #fff;
-    padding-bottom: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--line);
+    font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.05em; color: var(--chamoisee);
+    padding-bottom: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(160,127,86,0.4);
   }
-  .col-header.no { color: var(--khaki); }
+  .col-header.no { color: var(--chamoisee); }
   .col-item {
     padding: 1rem 0; border-bottom: 1px solid var(--line-soft);
-    color: #f2ede4; font-size: 24px; line-height: 1.5;
+    color: #f2ede4; font-size: 1.15rem; line-height: 1.5;
   }
-  .col-item::before { content: ",   "; color: var(--chamoisee); }
-  .col-item.no::before { content: "✕  "; color: var(--paynes-gray); }
+  .col-item::before { content: "✓  "; color: var(--chamoisee); font-weight: 700; }
+  .col-item.no::before { content: "✕  "; color: var(--chamoisee); font-weight: 700; }
   /* ════════════
      EXPERIENCE / VENN
   ════════════ */
@@ -339,7 +339,7 @@
   /* ── STATISTICS ── */
   .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 1rem; }
   .stat { text-align: center; }
-  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--chamoisee); line-height: 1.1; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.02em; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--chamoisee); line-height: 1.1; margin-bottom: 1rem; letter-spacing: 0.02em; }
   .stat-text { font-family: 'EB Garamond', serif; font-size: 1.15rem; line-height: 1.6; color: var(--body); }
   .stat-source { text-align: center; margin-top: 3rem; font-family: 'Raleway', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); }
   /* ── QA / THREE QUESTIONS ── */
@@ -418,7 +418,7 @@
   }
   .price-card {
     border: 1px solid rgba(145,83,53,0.2);
-    padding: 2.5rem 2rem; position: relative;
+    padding: 3.4rem 2rem 2.5rem; position: relative;
     background: #fff; text-align: center;
   }
   .price-card.featured { border: 2px solid #111111; background: #fdf8f2; }
@@ -426,8 +426,12 @@
     position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
     background: #a07f56; color: #fff;
     font-family: 'Raleway', sans-serif;
-    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
-    padding: 0.4rem 1.25rem; white-space: nowrap;
+    font-size: 0.63rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 0.4rem 1.1rem; white-space: nowrap;
+    max-width: calc(100% - 1rem);
+  }
+  @media (max-width: 760px) {
+    .price-badge { white-space: normal; line-height: 1.3; max-width: 90%; }
   }
   .price-label {
     font-family: 'Raleway', sans-serif;
@@ -545,8 +549,8 @@
   .application-box { max-width: 720px; margin: 0 auto; text-align: center; }
   .application-box h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); margin-bottom: 0.75rem; }
   .application-intro {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.92rem; color: rgba(255,255,255,0.5); margin-bottom: 2.5rem; line-height: 1.7;
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1.2rem; color: var(--body); margin-bottom: 2.5rem; line-height: 1.7;
   }
   .ghl-form-wrapper { position: relative; min-height: 300px; }
   .ghl-form-loading {
@@ -666,9 +670,8 @@
     <img class="kenburns" src="images/hero-option-2-estate.jpg" alt="Hill Country estate at dusk">
   </div>
   <div class="hero-inner fade-in">
-    <div class="eyebrow">Searching For 12 Founding Members · September 18–21, 2026</div>
-    <h1>The Most Accomplished Gay Men Are Often The Loneliest In The Room.</h1>
-    <p class="hero-sub">We exist to change that.</p>
+    <h1>The Only Brotherhood For Conscious Gay Entrepreneurs, Founders, and Leaders.</h1>
+    <p class="hero-sub">By Application and Invite Only.</p>
     <a href="#application-form" class="btn">Request an Invitation</a>
   </div>
 </header>
@@ -687,7 +690,7 @@
         <p class="stat-text">Gay men report severe loneliness at nearly ten times the rate of straight men.</p>
       </div>
       <div class="stat">
-        <div class="stat-num">Highest-Earning</div>
+        <div class="stat-num">HIGH EARNERS</div>
         <p class="stat-text">Gay male households out-earn every other household type in America.</p>
       </div>
       <div class="stat">
@@ -701,17 +704,25 @@
 <!-- SECTION · THE INVITATION (Founder's Letter) -->
 <section class="letter">
   <div class="container-narrow fade-in" style="text-align:center;">
-    <h2 class="letter-h2">Hi, I'm Re Perez</h2>
+    <h2 class="letter-h2">The Most Accomplished Gay Men Are Often The Loneliest In The Room.</h2>
     <div class="letter-body" style="margin-top:1.5rem;">
+      <p>Hi, I'm Re Perez.</p>
       <p>If you're anything like me, you have a full life, a strong network, and a career you're proud of.</p>
-      <p>You do what most high-performers do and surround yourself with others doing the same. You join business mastermind groups and entrepreneur organizations, like EO, YPO, or Tiger 21.</p>
-      <p>Maybe you've participated in the LGBTQ+ organizations. They were great for a while, but they're missing something, or they're built for a different season in your life.</p>
-      <p>And if you're also into personal growth and development, you might have done things like Landmark, Tony Robbins, Joe Dispenza, or indigenous plant medicine ceremonies.</p>
-      <p>What if I told you that there's a room that exists where gay men gather as peers (not as competitors) and who have done both the inner and outer work.</p>
-      <p>Men who are committed to their health, just as much as they are building wealth. Men who are service and impact-oriented, and want to leave the world a better place than we found it.</p>
+      <p>You do what most peak performers do. You join high-level business mastermind groups and entrepreneur organizations, like EO, YPO, or Tiger 21.</p>
+      <p>For gay specific rooms, you participate in the LGBTQ+ chamber of commerce or non-profit organizations.</p>
+      <p>For personal growth and development, you've done Landmark, Tony Robbins, Joe Dispenza. Or maybe you have a breathwork and meditation practice. Or maybe you've sat with plant medicines and attended ceremonial journeys.</p>
+      <p>One day I wondered ...</p>
+      <p>Is there a community where conscious, evolved, growth-oriented gay men gathered as peers. In brotherhood.</p>
+      <p>To inspire, challenge, and elevate one another.</p>
+      <p>To create higher love within themselves. In their relationships. And in their body of work.</p>
+      <p>Because the men in this room have done both the inner and outer work.</p>
+      <p>Men who are committed to their health, just as much as they are building wealth.</p>
+      <p>Men who genuinely care about being of service and making an impact.</p>
+      <p>Men who desired to leave the world a better place than they found it.</p>
       <p>I looked for that room, but could not find it.</p>
       <p class="letter-lead">So I decided to build it.</p>
-      <p>I am inviting you to be a part of this new type of room, as a founding member (to get value for yourself, of course), but also to help shape the culture of this special room. If that appeals to you, I invite you to request an invitation today.</p>
+      <p>If you're on this page, and resonate with my message, I invite you to join me in building this community, as a founding member.</p>
+      <p>Starting with joining me in-person in Austin, TX this September for my first inaugural Higher Love Summit, where I will host 12 founding members of the brotherhood.</p>
     </div>
   </div>
 </section>
@@ -721,7 +732,7 @@
   <div class="container">
     <div class="section-head fade-in">
       <div class="eyebrow">What Higher Love Is</div>
-      <p class="qa-lead" style="font-style:normal; font-weight:700; font-size:clamp(1.9rem, 4vw, 2.8rem); line-height:1.2; color:#fff; max-width:900px; margin:0 auto; text-transform:uppercase;">Higher Love is a brotherhood where gay entrepreneurs, founders, and leaders gather in friendship. As peers. As chosen family.</p>
+      <p class="qa-lead" style="font-style:normal; font-weight:700; font-size:clamp(1.9rem, 4vw, 2.8rem); line-height:1.2; color:#fff; max-width:900px; margin:0 auto; text-transform:uppercase;">Higher Love is the brotherhood that didn't exist. Until now.</p>
     </div>
   </div>
 </section>
@@ -730,7 +741,7 @@
 <section class="letter" style="background:var(--black);">
   <div class="container-narrow fade-in" style="text-align:center;">
     <p class="qa-lead" style="margin-top:1rem;">To kick-off my vision for this brotherhood, I am hosting a Summit with 12 founding members this September 18&ndash;21, 2026 in Austin, TX.</p>
-    <img src="images/hls-logo-nav.svg" alt="Higher Love Summit" style="display:block; width:100%; max-width:440px; margin:1.5rem auto 0;">
+    <img src="images/hls-logo-nav.svg" alt="Higher Love Summit" style="display:block; width:100%; max-width:440px; margin:3rem auto 1.5rem;">
     <div class="letter-body" style="margin-top:2.5rem;">
       <p>Set in a private, luxurious, 13+ room estate outside Austin, we will be surrounded by nature, pool, hot tub, and sauna. We will have a private chef prepare healthy, delicious, energizing meals. No panels. No keynotes. No lanyards. Just a healthy combination of a business mastermind, a meditative wellness retreat, and personal growth and development.</p>
       <p>The best way to show up is to surrender to the full experience, rather than trying to know every detail of what will unfold. Every touchpoint is intentional. Every experience is designed. And, more importantly, every man is meant to be there.</p>
@@ -747,7 +758,7 @@
 <section style="background: var(--section-dark);">
   <div class="container">
     <div class="section-head fade-in">
-      <h2>Is This Your Room?</h2>
+      <h2 style="text-transform:uppercase;">Is This Your Room?</h2>
     </div>
     <div class="two-col fade-in">
       <div>
@@ -755,7 +766,7 @@
         <div class="col-item">You're building something designed to create a ripple effect impact.</div>
         <div class="col-item">You have an active inner-work practice, such as therapy, coaching, meditation.</div>
         <div class="col-item">You want to surround yourself with peers who challenge you to become the best version of yourself.</div>
-        <div class="col-item">You take care of your mind, heart, and body because it is the most powerful instrument that your mission runs on.</div>
+        <div class="col-item">You take care of your mind, heart, and body, as it's the instrument that helps you fulfill your mission.</div>
         <div class="col-item">You've been invited into a lot of rooms. But never one built for you.</div>
       </div>
       <div>
@@ -827,10 +838,9 @@
   <div class="container">
     <div class="investment-inner fade-in">
       <h2>Your Investment</h2>
-      <p style="font-family:'EB Garamond',Georgia,serif; font-size:1.18rem; line-height:1.6; color:#5a5048; max-width:740px; margin:1.6rem auto 2.8rem;">Your investment covers real costs to host and put on a high-quality in-person experience. What you're actually investing in is harder to price: the men you'll meet, the conversations that don't happen elsewhere, and who you get to become being a part of this community.</p>
-      <div class="pricing-grid">
+      <div class="pricing-grid" style="margin-top:2.8rem;">
         <div class="price-card featured">
-          <div class="price-badge price-badge-dark">Founding Member Rate (At Cost)</div>
+          <div class="price-badge price-badge-dark">Founding Member Annual Membership Rate</div>
           <div class="price-amount" style="margin-top:2rem;">$7,500</div>
         </div>
         <div class="price-card standard">
@@ -838,8 +848,9 @@
           <div class="price-amount" style="margin-top:2rem; color:#b3a89c;">$25,000</div>
         </div>
       </div>
-      <div class="founding-includes">
-        <span class="value-stack-head">What's Included in Your Founding Membership</span>
+      <p style="font-family:'EB Garamond',Georgia,serif; font-size:1.18rem; line-height:1.6; color:#5a5048; max-width:740px; margin:2.8rem auto 0;">Your investment covers real costs to build this community and create a high-quality in-person experience. However, what you're actually investing in is harder to price: the men you'll meet, the conversations that don't happen elsewhere, and who you get to become by surrounding yourself with other high-achieving and heart-centered gay men.</p>
+      <div class="founding-includes" style="margin-top:4rem;">
+        <span class="value-stack-head">Included in Your Investment</span>
         <div class="feature-grid">
           <div class="feature-card">
             <h4>12-Month Membership</h4>
@@ -935,7 +946,7 @@
     <div class="application-box fade-in">
       <div class="eyebrow">Request Your Invitation</div>
       <h2>Apply in 2 Minutes</h2>
-      <p class="application-intro">Your answers help Re prepare for a meaningful conversation. Every application is read personally.</p>
+      <p class="application-intro">Your answers help Re Perez prepare for a meaningful conversation. Every application is read personally.</p>
       <div class="ghl-form-wrapper">
         <div class="ghl-form-loading" id="form-loading">
           <div class="ghl-spinner"></div>
