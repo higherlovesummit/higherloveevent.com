@@ -438,7 +438,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 4rem; font-weight: 600; color: #1a1510; line-height: 1; margin-bottom: 0.4rem;
   }
-  .price-card.standard { background: #f6f1ea; border: 1.5px solid #8c8278; }
+  .price-card.standard { background: #f6f1ea; border: 2px solid #6b6359; }
   .price-badge-dark { background: #111111; }
   .price-note { font-family: 'Raleway', sans-serif; font-size: 0.8rem; color: #9a8e80; line-height: 1.5; }
   .price-savings {
@@ -639,6 +639,12 @@
     .footer-grid { grid-template-columns: 1fr; }
     .logistics-bar { grid-template-columns: 1fr; }
     .letter-body p { font-size: 21px; }
+    .agenda-grid { grid-template-columns: 1fr; gap: 0; }
+    .agenda-day { text-align: left; max-width: 440px; margin: 0 auto; padding: 1.5rem 0; border-top: 1px solid var(--line-soft); }
+    .agenda-day:first-child { border-top: none; padding-top: 0; }
+    .agenda-day .ag-daydate { margin-bottom: 0.45rem; }
+    .ag-theme { font-size: 1.5rem; margin-bottom: 0.6rem; }
+    .ag-desc { font-size: 1.05rem; }
   }
 </style>
 </head>
