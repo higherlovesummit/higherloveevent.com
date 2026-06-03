@@ -615,6 +615,15 @@
   /* ════════════
      RESPONSIVE
   ════════════ */
+  /* ── AGENDA TIMELINE ── */
+  .tl { position: relative; max-width: 640px; margin: 0 auto; padding-left: 74px; }
+  .tl:before { content: ""; position: absolute; left: 28px; top: 8px; bottom: 8px; width: 1px; background: linear-gradient(rgba(160,127,86,0.15), rgba(160,127,86,0.7), rgba(160,127,86,0.15)); }
+  .tl-item { position: relative; padding: 0 0 3rem; }
+  .tl-item:last-child { padding-bottom: 0; }
+  .tl-num { position: absolute; left: -74px; top: -6px; width: 56px; text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: var(--chamoisee); line-height: 1; background: var(--section-dark); padding: 6px 0; }
+  .tl-date { font-family: 'Raleway', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--chamoisee); margin-bottom: 0.4rem; text-align: left; }
+  .tl-theme { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--linen); line-height: 1.1; margin-bottom: 0.6rem; text-align: left; }
+  .tl-desc { font-family: 'EB Garamond', Georgia, serif; font-size: 1.1rem; line-height: 1.55; color: var(--body); margin: 0; text-align: left; }
   /* ── NEW FOUNDER LETTER ── */
   .nf-kick { font-family:'Raleway',sans-serif; font-size:0.78rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--chamoisee); text-align:left; margin:2.4rem 0 0.6rem; }
   .nf-pull { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(1.5rem,2.6vw,1.9rem); line-height:1.3; color:var(--linen); text-align:center; max-width:560px; margin:2.8rem auto; padding:1.8rem 0; border-top:1px solid rgba(160,127,86,0.4); border-bottom:1px solid rgba(160,127,86,0.4); }
@@ -643,8 +652,6 @@
     .stat-grid { grid-template-columns: 1fr; gap: 2rem; }
     .three-worlds { grid-template-columns: 1fr; gap: 1.5rem; }
     .pillar-grid { grid-template-columns: 1fr; }
-    .agenda-grid { grid-template-columns: 1fr 1fr; }
-    .ag-list { display: block; }
     .feature-grid { grid-template-columns: 1fr; }
     .bonus-grid { grid-template-columns: 1fr; }
     .host-bio { font-size: 24px; }
@@ -654,12 +661,9 @@
     .footer-grid { grid-template-columns: 1fr; }
     .logistics-bar { grid-template-columns: 1fr; }
     .letter-body p { font-size: 21px; }
-    .agenda-grid { grid-template-columns: 1fr; gap: 0; }
-    .agenda-day { text-align: left; max-width: 440px; margin: 0 auto; padding: 1.5rem 0; border-top: 1px solid var(--line-soft); }
-    .agenda-day:first-child { border-top: none; padding-top: 0; }
-    .agenda-day .ag-daydate { margin-bottom: 0.45rem; }
-    .ag-theme { font-size: 1.5rem; margin-bottom: 0.6rem; }
-    .ag-desc { font-size: 1.05rem; }
+    .tl { padding-left: 58px; }
+    .tl:before { left: 21px; }
+    .tl-num { left: -58px; width: 42px; font-size: 1.7rem; }
   }
 </style>
 </head>
@@ -734,26 +738,30 @@
       <div class="eyebrow">The Experience</div>
       <h2>The Agenda</h2>
     </div>
-    <div class="pillar-grid agenda-grid fade-in">
-      <div class="pillar agenda-day">
-        <div class="ag-daydate">Day 00 · September 18</div>
-        <div class="ag-theme">Arrivals</div>
-        <p class="ag-desc">You arrive at the estate and settle in as the light softens over the hills. The first evening opens with a welcome dinner, the twelve of you meeting over a slow, intentional meal. No agenda yet, just the beginning of brotherhood.</p>
+    <div class="tl fade-in">
+      <div class="tl-item">
+        <div class="tl-num">00</div>
+        <div class="tl-date">September 18</div>
+        <div class="tl-theme">Arrivals</div>
+        <p class="tl-desc">You arrive at the estate and settle in as the light softens over the hills. The first evening opens with a welcome dinner, the twelve of you meeting over a slow, intentional meal. No agenda yet, just the beginning of brotherhood.</p>
       </div>
-      <div class="pillar agenda-day">
-        <div class="ag-daydate">Day 01 · September 19</div>
-        <div class="ag-theme">Mastermind</div>
-        <p class="ag-desc">The day moves into the work that built you. Guest business experts lead the room through deal flow and strategy, and you take the hot seat as the others sharpen your thinking and challenge what you thought was already big enough.</p>
+      <div class="tl-item">
+        <div class="tl-num">01</div>
+        <div class="tl-date">September 19</div>
+        <div class="tl-theme">Mastermind</div>
+        <p class="tl-desc">The day moves into the work that built you. Guest business experts lead the room through deal flow and strategy, and you take the hot seat as the others sharpen your thinking and challenge what you thought was already big enough.</p>
       </div>
-      <div class="pillar agenda-day">
-        <div class="ag-daydate">Day 02 · September 20</div>
-        <div class="ag-theme">Embodiment</div>
-        <p class="ag-desc">The pace shifts from mind to body. Mornings open with meditation and breathwork, and afternoons carry you outdoors into nature. By evening you have dropped out of your head and back into your body.</p>
+      <div class="tl-item">
+        <div class="tl-num">02</div>
+        <div class="tl-date">September 20</div>
+        <div class="tl-theme">Embodiment</div>
+        <p class="tl-desc">The pace shifts from mind to body. Mornings open with meditation and breathwork, and afternoons carry you outdoors into nature. By evening you have dropped out of your head and back into your body.</p>
       </div>
-      <div class="pillar agenda-day">
-        <div class="ag-daydate">Day 03 · September 21</div>
-        <div class="ag-theme">Wellness</div>
-        <p class="ag-desc">The final day is built for restoration. Bodywork, massage, and IV recovery return you to full capacity, body and mind. It closes with a final dinner together, the kind of night that turns strangers into brothers.</p>
+      <div class="tl-item">
+        <div class="tl-num">03</div>
+        <div class="tl-date">September 21</div>
+        <div class="tl-theme">Wellness</div>
+        <p class="tl-desc">The final day is built for restoration. Bodywork, massage, and IV recovery return you to full capacity, body and mind. It closes with a final dinner together, the kind of night that turns strangers into brothers.</p>
       </div>
     </div>
   </div>
