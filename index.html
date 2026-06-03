@@ -515,19 +515,22 @@
   /* ════════════
      FAQ
   ════════════ */
-  .faq-item { border-bottom: 1px solid var(--line-soft); }
+  .faq-item { border-bottom: 1px solid rgba(160,127,86,0.3); }
   .faq-q {
     width: 100%; background: none; border: none; cursor: pointer; text-align: left;
-    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
-    padding: 1.6rem 0;
-    font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--linen);
-    text-transform: uppercase; letter-spacing: 0.03em;
+    display: flex; align-items: baseline; gap: 1.4rem;
+    padding: 1.7rem 0;
+    font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; color: var(--linen);
+    line-height: 1.25;
   }
+  .faq-num { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--chamoisee); min-width: 1.9rem; flex-shrink: 0; }
+  .faq-qt { flex: 1; }
   .faq-q:hover { color: var(--chamoisee); }
-  .faq-icon { color: var(--chamoisee); font-size: 1.6rem; flex-shrink: 0; transition: transform 0.25s; font-family: 'EB Garamond', serif; font-style: normal; }
+  .faq-icon { color: var(--chamoisee); font-size: 1.6rem; align-self: center; flex-shrink: 0; transition: transform 0.25s; font-family: 'EB Garamond', serif; font-style: normal; }
   .faq-item.open .faq-icon { transform: rotate(45deg); }
   .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.25s; }
-  .faq-item.open .faq-a { max-height: 1800px; padding-bottom: 1.5rem; }
+  .faq-item.open .faq-a { max-height: 1800px; padding-bottom: 1.7rem; }
+  .faq-a p { padding-left: 3.3rem; }
   .faq-a p { font-size: 1.2rem; line-height: 1.8; color: var(--body); font-family: 'EB Garamond', serif; }
   .faq-a p + p { margin-top: 1rem; }
   /* ════════════
@@ -707,6 +710,8 @@
     .footer-grid { grid-template-columns: 1fr; }
     .logistics-bar { grid-template-columns: 1fr; }
     .letter-body p { font-size: 21px; }
+    .faq-a p { padding-left: 0; }
+    .faq-q { font-size: 1.35rem; }
     .tl { padding-left: 58px; }
     .tl:before { left: 21px; }
     .tl-num { left: -58px; width: 42px; font-size: 1.7rem; }
@@ -900,28 +905,28 @@
 <section id="faq" style="background: var(--section-dark);">
   <div class="container-narrow">
     <div class="section-head fade-in">
-      <div class="eyebrow">FAQs</div>
-      <h2>Got Questions? We Have Answers.</h2>
+      <div class="eyebrow">Got Questions? We Have Answers.</div>
+      <h2>Frequently Asked Questions</h2>
     </div>
     <div class="fade-in">
       <div class="faq-item">
-        <button class="faq-q">How does the invitation process work? <span class="faq-icon">+</span></button>
+        <button class="faq-q"><span class="faq-num">01</span><span class="faq-qt">How does the invitation process work?</span> <span class="faq-icon">+</span></button>
         <div class="faq-a"><p>It begins with an application and an interview. We're looking for depth and alignment, not just credentials. If there's a mutual fit, you'll receive a formal invitation with next steps.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Who will be in the room? <span class="faq-icon">+</span></button>
+        <button class="faq-q"><span class="faq-num">02</span><span class="faq-qt">Who will be in the room?</span> <span class="faq-icon">+</span></button>
         <div class="faq-a"><p>Gay men who have built something real and are honest about the cost of it. Men with an active inner life. Men ready to talk about brotherhood and legacy, not just business. Every seat is chosen, not filled.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">What's included in the founding investment? <span class="faq-icon">+</span></button>
+        <button class="faq-q"><span class="faq-num">03</span><span class="faq-qt">What's included in the founding investment?</span> <span class="faq-icon">+</span></button>
         <div class="faq-a"><p>Everything except your airfare. Accommodations, all meals, bodywork, wellness treatments, curated experiences, the full three-day program, and a 12-month membership to the community.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">What actually happens? <span class="faq-icon">+</span></button>
+        <button class="faq-q"><span class="faq-num">04</span><span class="faq-qt">What actually happens?</span> <span class="faq-icon">+</span></button>
         <div class="faq-a"><p>The programming evolves around the attending founding members&rsquo; intentions and requests. There are surprises built into every day, by design. Part of this process is to surrender to fully enjoy the experience.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">What about travel and accommodations? <span class="faq-icon">+</span></button>
+        <button class="faq-q"><span class="faq-num">05</span><span class="faq-qt">What about travel and accommodations?</span> <span class="faq-icon">+</span></button>
         <div class="faq-a"><p>The estate is a private property outside Austin. Accommodations are included. Fly into Austin-Bergstrom (AUS). Arrival September 18, departure September 21.</p></div>
       </div>
     </div>
