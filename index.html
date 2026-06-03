@@ -158,11 +158,11 @@
     font-size: 0.92rem; font-weight: 700;
     letter-spacing: 0.16em; text-transform: uppercase;
     padding: 1.15rem 2.8rem;
-    background: #1a1510; color: #fff;
+    background: var(--chamoisee); color: #111;
     border: 1px solid var(--chamoisee);
     transition: all 0.3s ease; cursor: pointer; text-decoration: none;
   }
-  .btn:hover { background: var(--chamoisee); color: #fff; border-color: var(--chamoisee); }
+  .btn:hover { background: #1a1510; color: #fff; border-color: var(--chamoisee); }
   .btn-outline {
     display: inline-block;
     font-family: 'Raleway', sans-serif;
@@ -640,6 +640,7 @@
     .host-bio { font-size: 24px; }
   }
   @media (max-width: 540px) {
+    .hero { justify-content: flex-start; padding-top: 8rem; min-height: 88vh; }
     .footer-grid { grid-template-columns: 1fr; }
     .logistics-bar { grid-template-columns: 1fr; }
     .letter-body p { font-size: 21px; }
