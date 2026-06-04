@@ -211,6 +211,7 @@
     opacity: 0; pointer-events: none; transition: opacity 0.35s ease;
   }
   .nav.scrolled .nav-cta { opacity: 1; pointer-events: auto; }
+  @media (max-width: 1100px) { .nav-cta { display: none; } }
   /* ════════════
      HERO, your approved version (estate image + Ken Burns)
   ════════════ */
@@ -642,7 +643,7 @@
   .inv-para { font-family: 'EB Garamond', Georgia, serif; font-size: 1.18rem; line-height: 1.6; color: var(--body); max-width: 640px; margin: 0 auto 3.5rem; text-align: center; }
   .inc-head { display: flex; align-items: center; gap: 18px; max-width: 720px; margin: 0 auto 2.4rem; }
   .inc-head .ln { flex: 1; height: 1px; background: rgba(160,127,86,0.35); }
-  .inc-head .tx { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--linen); white-space: nowrap; }
+  .inc-head .tx { font-family: 'Raleway', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--chamoisee); white-space: nowrap; }
   .inv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.9rem 2.8rem; max-width: 780px; margin: 0 auto 3.5rem; text-align: left; }
   .inv-it { display: flex; gap: 0.9rem; }
   .inv-it .ck { color: var(--chamoisee); font-weight: 700; line-height: 1.4; }
@@ -702,6 +703,10 @@
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
     .room-cols { grid-template-columns: 1fr; }
+    .inv-it h4 { font-size: 1.45rem; }
+    .inv-it p { font-size: 1.12rem; }
+    .inv-bn h4 { font-size: 1.5rem; }
+    .inv-bn p { font-size: 1.1rem; }
     .inv-grid { grid-template-columns: 1fr; }
     .inv-bonus { grid-template-columns: 1fr; }
     .value-items { grid-template-columns: 1fr; }
@@ -883,7 +888,7 @@
       <div class="inv-rule"></div>
       <div class="inv-future">Future Annual Membership Rate &nbsp;&middot;&nbsp; <b>$25,000</b></div>
       <p class="inv-para">Your investment covers real costs to build this community and create a high-quality in-person experience. However, what you're actually investing in is harder to price: the men you'll meet, the conversations that don't happen elsewhere, and who you get to become by surrounding yourself with other high-achieving and heart-centered gay men.</p>
-      <div class="inc-head"><span class="ln"></span><span class="tx">Included As A Founding Member</span><span class="ln"></span></div>
+      <div class="inc-head"><span class="ln"></span><span class="tx">Inclusions</span><span class="ln"></span></div>
       <div class="inv-grid">
         <div class="inv-it"><span class="ck">&#10003;</span><div><h4>12-Month Membership</h4><p>Runs September 18, 2026, the start of the inaugural Summit, through September 30, 2027.</p></div></div>
         <div class="inv-it"><span class="ck">&#10003;</span><div><h4>Higher Love Summit</h4><p>Your place at the inaugural Summit, September 2026, at a private estate just outside Austin.</p></div></div>
