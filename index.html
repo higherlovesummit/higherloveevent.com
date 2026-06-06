@@ -680,7 +680,7 @@
   .inv-bn .val { font-family: 'Raleway', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--chamoisee); margin-bottom: 0.7rem; }
   .sticky-cta { display: none; }
   @media (max-width: 820px) {
-    section .btn:not(.nav-cta), .letter .btn { display: none; }
+    .hero .btn, section .btn:not(.nav-cta), .letter .btn { display: none; }
     .sticky-cta { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 90; padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom)); background: rgba(12,10,8,0.93); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-top: 1px solid rgba(160,127,86,0.35); transition: transform 0.3s ease; }
     .sticky-cta .btn { display: block; width: 100%; text-align: center; padding: 1rem 1.5rem; }
     .sticky-cta.hidden { transform: translateY(110%); }
