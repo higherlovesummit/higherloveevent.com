@@ -686,11 +686,6 @@
     .sticky-cta.hidden { transform: translateY(110%); }
     footer { padding-bottom: 6.5rem; }
   }
-  .letter-video { max-width: 640px; margin: 2.4rem auto 1.6rem; }
-  .letter-video video { width: 100%; display: block; background: #000; border: 1px solid rgba(160,127,86,0.4); }
-  .or-read { display: flex; align-items: center; gap: 14px; max-width: 640px; margin: 0 auto 2.6rem; }
-  .or-read .ln { flex: 1; height: 1px; background: rgba(160,127,86,0.3); }
-  .or-read .tx { font-family: 'Raleway', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--chamoisee); white-space: nowrap; }
   /* ── NEW FOUNDER LETTER ── */
   .nf-kick { font-family:'Raleway',sans-serif; font-size:0.78rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--chamoisee); text-align:left; margin:2.4rem 0 0.6rem; }
   .nf-pull { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(1.5rem,2.6vw,1.9rem); line-height:1.3; color:var(--linen); text-align:center; max-width:560px; margin:2.8rem auto; padding:1.8rem 0; border-top:1px solid rgba(160,127,86,0.4); border-bottom:1px solid rgba(160,127,86,0.4); }
@@ -773,30 +768,24 @@
 <section class="letter">
   <div class="container-narrow fade-in" style="text-align:center;">
     <h2 class="letter-h2">Finally, A Room Built For <span style="color:var(--chamoisee);">Gay Men</span> Like You And Me.</h2>
-    <div class="letter-video fade-in">
-      <video controls playsinline preload="metadata">
-        <source src="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/6a22fe25f607d4002b948c0f.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="or-read fade-in"><span class="ln"></span><span class="tx">Or Read Re's Letter Below</span><span class="ln"></span></div>
-    <div class="letter-body" style="margin-top:0;">
-      <p>Hi. I'm Re Perez. Founder of Higher Love.</p>
+    <div class="letter-body" style="margin-top:1.5rem;">
+      <p>Hi, I'm Re Perez, the creator of Higher Love.</p>
       <p>You landed on this page because I personally invited you OR a close friend referred you and thought you might want to check this out.</p>
-      <p>It's something that doesn't exist.</p>
+      
       <p>But first, let me ask you a question.</p>
-      <p>Have you noticed that some of the most accomplished gay men are also the loneliest in the room? Regardless of whether they're willing to admit it.</p>
-      <p>I've noticed. And I've felt that way often.</p>
+      <p>Have you noticed that some of the most accomplished gay men are also the loneliest in the room?</p>
+      <p>I've felt that way often.</p>
       <p>If you're anything like me, you've wondered: where are all the other gay men who can meet you at your level, intellectually, emotionally, and spiritually?</p>
       <p>Let's face it. You have an extraordinary life, a strong network of friends, and a business or profession that you're proud of. And it's important to you who and where you spend your time.</p>
       <div class="nf-kick">Business</div>
       <p>You're a successful entrepreneur, business owner, or leader. You do what most high-achievers do. You join high-level business masterminds and communities like EO, YPO, or Tiger 21. You love these rooms because the conversations are cutting edge and elevated.</p>
       <div class="nf-kick">Personal Growth</div>
-      <p>You're into personal growth and development. Not just from reading books, but being part of transformational experiences. Landmark, Tony Robbins, Joe Dispenza, journeys, and plant medicine ceremonies. You value this because you know that your outer world has a direct correlation to your inner world.</p>
+      <p>You're into personal growth and development. Not just from reading books, but being part of transformational experiences. Tony Robbins, Joe Dispenza, journeys, and plant medicine ceremonies. You value this because you know that your outer world has a direct correlation to your inner world.</p>
       <div class="nf-kick">Wellness</div>
       <p>You're into health, fitness, and wellness. You operate from the mindset that your health is your wealth. Without it, nothing matters. Whatever it is, you take care of mind, body, and spirit.</p>
-      <div class="nf-pull">And what if there was a room that had all three of those worlds merged into one experience?</div>
-      <p>Where business, personal growth, and wellness aren't separate tracks. They're all happening at the same time, with gay men who actually get it.</p>
-      <div class="nf-built">Built exclusively for gay men.<br><span>Entrepreneurs. Founders. Leaders.</span></div>
+      <div class="nf-pull">And what if there was a community where all three of these worlds merged into a fully immersive experience?</div>
+      
+      <div class="nf-built">Built exclusively for <span>gay entrepreneurs, founders, and leaders.</span></div>
       <div class="nf-beat">I looked for that room.<br>I could not find it.<br><b>So I decided to build it.</b><br>I'm calling it Higher Love.</div>
       <p style="margin-top:2.6rem;">Higher Love because the gay men I'm talking about aren't just building businesses. They're building lives of meaning, depth, and impact.</p>
       <p>This September, I'm bringing it to life for the first time.</p>
@@ -1087,9 +1076,6 @@
     new IntersectionObserver(function(es){es.forEach(function(e){bar.classList.toggle('hidden',e.isIntersecting);});},{threshold:0.05}).observe(form);
   }
 })();
-</script>
-<script>
-(function(){var v=document.querySelector('.letter-video video');if(v&&typeof gtag==='function'){v.addEventListener('play',function(){gtag('event','video_play',{event_category:'engagement',event_label:'founder_letter_video'});},{once:true});}})();
 </script>
 </body>
 </html>
