@@ -701,13 +701,11 @@
   .inv-stand { font-size: 1.45rem !important; line-height: 1.6 !important; color: #ffffff !important; }
   .inv-aside { font-style: italic; color: #cfc6ba; }
   .inv-letter .lead { color: var(--chamoisee); font-style: italic; }
-  .inv-rooms { margin: 0.6rem 0 1.6rem; }
-  .inv-rooms .r { display: flex; gap: 1rem; padding: 0.9rem 0; border-top: 1px solid rgba(160,127,86,0.25); }
-  .inv-rooms .r:first-child { border-top: none; padding-top: 0; }
-  .inv-rooms .r .n { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--chamoisee); line-height: 1.4; flex-shrink: 0; }
-  .inv-rooms .r p { font-family: 'EB Garamond', Georgia, serif; font-size: 1.18rem; line-height: 1.55; color: var(--linen); margin: 0; }
-  .inv-beat { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 3vw, 1.85rem); line-height: 1.35; color: var(--linen); text-align: center; margin: 2.2rem auto; max-width: 520px; }
-  .inv-pull { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.7rem, 3.2vw, 2rem); line-height: 1.35; color: var(--chamoisee); text-align: center; max-width: 520px; margin: 2.6rem auto; }
+  .inv-rooms-panel { border: 1px solid rgba(160,127,86,0.45); background: linear-gradient(165deg, rgba(160,127,86,0.08), rgba(160,127,86,0.02)); padding: 1.6rem 1.8rem; margin: 1rem 0 1.8rem; }
+  .inv-rooms-panel p { font-family: 'EB Garamond', Georgia, serif; font-size: 1.18rem; line-height: 1.6; color: #f2ede4; margin: 0; padding: 0.85rem 0; border-top: 1px solid rgba(160,127,86,0.2); }
+  .inv-rooms-panel p:first-child { border-top: none; padding-top: 0; }
+  .inv-rooms-panel p:last-child { padding-bottom: 0; }
+  .inv-hook { font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-size: 1.3rem; line-height: 1.45; color: var(--chamoisee); text-align: center; max-width: 520px; margin: 2.2rem auto; }
   .inv-divider { width: 40px; height: 1px; background: rgba(160,127,86,0.6); margin: 2.6rem auto; }
   /* ── NEW FOUNDER LETTER ── */
   .nf-kick { font-family:'Raleway',sans-serif; font-size:0.78rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--chamoisee); text-align:left; margin:2.4rem 0 0.6rem; }
@@ -738,7 +736,7 @@
     .room-cols { grid-template-columns: 1fr; }
     .inv-letter > p { font-size: 1.18rem; }
     .inv-stand { font-size: 1.3rem !important; }
-    .inv-rooms .r p { font-size: 1.1rem; }
+    .inv-rooms-panel p, .inv-hook { font-size: 1.15rem; }
     .inv-it h4 { font-size: 1.45rem; }
     .inv-it p { font-size: 1.12rem; }
     .inv-bn h4 { font-size: 1.5rem; }
@@ -801,21 +799,21 @@
     <div class="inv-letter">
       <p class="inv-stand">You're reading this because I personally reached out to you, or you were referred by someone I trust. Either way, it's not an accident.</p>
       <p>If you're anything like me&hellip;</p>
-      <div class="inv-rooms">
-        <div class="r"><span class="n">01</span><p>You're in the business and entrepreneurial rooms. EO, YPO, Vistage. The conversations are elevated, the people driven.</p></div>
-        <div class="r"><span class="n">02</span><p>You're in the &ldquo;inner work&rdquo; rooms. The self-mastery programs, somatic retreats, and ceremonies. Where you drop out of your head and into your heart.</p></div>
-        <div class="r"><span class="n">03</span><p>You're in the health, wellness, and longevity rooms. Not for vanity, but because you know your body is the vessel for everything you're building.</p></div>
+      <div class="inv-rooms-panel">
+        <p>You're in <span class="lead">the business and entrepreneurial rooms.</span> EO, YPO, Vistage. The conversations are elevated, the people driven.</p>
+        <p>You're in <span class="lead">the &ldquo;inner work&rdquo; rooms.</span> The self-mastery programs, somatic retreats, and ceremonies. Where you drop out of your head and into your heart.</p>
+        <p>You're in <span class="lead">the health, wellness, and longevity rooms.</span> Not for vanity, but because you know your body is the vessel for everything you're building.</p>
       </div>
       <p>And in nearly every one of them, you're the only gay man. Or one of a few.</p>
-      <div class="inv-beat">Not because you're hiding.<br>That's just the reality of the rooms you choose to be in.</div>
+      <p>Not because you're hiding. That's just the reality of the rooms you choose to be in.</p>
       <p>And the rooms built for gay men? The parties. The bars. The apps. Nothing wrong with any of it. It just doesn't fit who you've become, or who you're becoming.</p>
       <p>So you do the thing you've learned to do. You segment yourself depending on the room. And you walk out a little less &ldquo;seen.&rdquo;</p>
       <p>What if you could be in a room with other gay men who can meet you at your level, intellectually, emotionally, and spiritually? Men who can talk business and strategy, and go just as deep on the things that really matter.</p>
-      <div class="inv-beat">Would that be exciting to you?</div>
+      <p>Would that be exciting to you?</p>
       <p>I know it would be for me. Only problem is, when I went to look for that room, I couldn't find it.</p>
-      <div class="inv-pull">So I decided to build it. I'm calling it Higher Love.</div>
+      <div class="inv-hook">So I decided to build it.<br>I'm calling it Higher Love.</div>
       <p>Higher Love sits where three worlds meet. A business mastermind. A personal growth experience. A health and wellness retreat.</p>
-      <div class="inv-pull">No one has put those three in one room for gay men. Until now.</div>
+      <div class="inv-hook">No one has put those three in one room for gay men. Until now.</div>
     </div>
   </div>
 </section>
@@ -831,7 +829,7 @@
       <p>Some of it will look like work. Some of it will look like nothing you've done before. All of it does one thing: it lets you be fully met, by other gay men who can actually see you.</p>
       <p>If this sounds like something you'd like to be a part of, at the ground floor, then I invite you to request an invitation on this page. You'll answer a few questions and book a 45-minute call with me to see if this is the right room for you.</p>
       <div class="inv-divider"></div>
-      <p class="inv-aside">Before you request your invitation&hellip; a little about me.</p>
+      <div class="inv-hook">Before you request your invitation&hellip; a little about me.</div>
       <p>I've spent 25+ years as a brand strategist helping companies and personal brands become a category of one. I've worked with Fortune 500 companies, as well as thousands of CEOs, founders, and entrepreneurs across numerous industries.</p>
       <p>I've spent decades immersed in personal development, as a participant, a coach, and a program leader. I've also integrated that work to create masterminds and retreats.</p>
       <p>The throughline is always the same. The right people in the right room change everything. I know how to find those people, and I know how to build the room around them.</p>
@@ -841,9 +839,9 @@
       <p>Maybe a conversation with one of the brothers unlocks something in your business you'd been circling for months. Maybe one of them becomes your next partner, in business or in life. Maybe you'll get a client referral, an introduction to a key contact, or a connection to another kindred spirit.</p>
       <p>I believe all that's possible when you curate a group of extraordinary gay men in the same room. But if that's all you measure, you'll miss the larger return.</p>
       <p>The men who do this don't just leave with a deal or a connection. They leave with brothers. A few men who know the whole picture of who you are. The ones you can call at 11pm. The ones who celebrate the win you can't explain to anyone else.</p>
-      <div class="inv-pull">That's the return that compounds. Long after the deals come and go, you still have the room.</div>
+      <div class="inv-hook">That's the return that compounds. Long after the deals come and go, you still have the room.</div>
       <p>And the real &ldquo;hook&rdquo; is simpler than any of it. For the first time, a room where you don't edit yourself. Where you're seen, understood, and met for every part of who you are.</p>
-      <div class="inv-beat">That's the invitation.</div>
+      <div class="inv-hook">That's the invitation.</div>
       <p>For the right man, this becomes the room he points to years from now as the one that changed everything. I'm not looking for &ldquo;bodies&rdquo; to fill the room. I'm searching for gay men who are confident in who they are and ready to be in brotherhood with other gay men.</p>
       <p>If you're that kind of man, I built this room for you (and for me too). So request your invitation, and let's find out together if this is your room.</p>
       <div style="text-align:center; margin-top:2.6rem;"><a href="#application-form" class="btn">Request an Invitation</a></div>
