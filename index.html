@@ -712,6 +712,11 @@
   .inv-feature .m { display: block; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.3rem, 2.4vw, 1.6rem); line-height: 1.4; color: var(--chamoisee); }
   .inv-hook { font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-size: clamp(1.6rem, 3vw, 1.9rem); line-height: 1.4; color: var(--chamoisee); text-align: center; max-width: 520px; margin: 2.2rem auto; }
   .inv-divider { width: 40px; height: 1px; background: rgba(160,127,86,0.6); margin: 2.6rem auto; }
+  /* ── THREE WORLDS VENN ── */
+  .venn-wrap { max-width: 480px; margin: 1.6rem auto 2.2rem; }
+  .venn { width: 100%; display: block; }
+  .venn-c { fill: #ffffff; fill-opacity: 0.03; stroke: #ffffff; stroke-opacity: 0.85; stroke-width: 1.4; }
+  .venn-l { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; fill: var(--linen); }
   /* ── NEW FOUNDER LETTER ── */
   .nf-kick { font-family:'Raleway',sans-serif; font-size:0.78rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--chamoisee); text-align:left; margin:2.4rem 0 0.6rem; }
   .nf-pull { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(1.5rem,2.6vw,1.9rem); line-height:1.3; color:var(--linen); text-align:center; max-width:560px; margin:2.8rem auto; padding:1.8rem 0; border-top:1px solid rgba(160,127,86,0.4); border-bottom:1px solid rgba(160,127,86,0.4); }
@@ -825,7 +830,21 @@
       <p>Would that be of interest to you?</p>
       <p>I know it would be for me. Only problem is, when I went to look for that room, I couldn't find it.</p>
       <div class="inv-hook">So I decided to build it.<br>I'm calling it Higher Love.</div>
-      <p>Higher Love sits where three worlds meet. A business mastermind. A personal growth experience. A health and wellness retreat.</p>
+      <p style="text-align:center;">Higher Love sits where three worlds meet.</p>
+      <div class="venn-wrap">
+        <svg viewBox="0 0 600 560" xmlns="http://www.w3.org/2000/svg" class="venn" role="img" aria-label="Higher Love sits at the intersection of three worlds: business mastermind, a ceremonial experience, and health and wellness retreat.">
+          <circle class="venn-c" cx="235" cy="250" r="155"/>
+          <circle class="venn-c" cx="365" cy="250" r="155"/>
+          <circle class="venn-c" cx="300" cy="370" r="155"/>
+          <image href="images/logo-white.svg" x="225" y="252" width="150" height="62"/>
+          <text class="venn-l" x="165" y="200" text-anchor="middle">Business</text>
+          <text class="venn-l" x="165" y="220" text-anchor="middle">Mastermind</text>
+          <text class="venn-l" x="437" y="200" text-anchor="middle">A Ceremonial</text>
+          <text class="venn-l" x="437" y="220" text-anchor="middle">Experience</text>
+          <text class="venn-l" x="300" y="446" text-anchor="middle">Health &amp; Wellness</text>
+          <text class="venn-l" x="300" y="466" text-anchor="middle">Retreat</text>
+        </svg>
+      </div>
       <div class="inv-hook">No one has put those three in one room for gay men. Until now.</div>
     </div>
   </div>
