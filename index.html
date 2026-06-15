@@ -527,7 +527,7 @@
   
   .sticky-cta { display: none; }
   @media (max-width: 820px) {
-.hero .btn, section .btn:not(.nav-cta), .letter .btn { display: none; }
+section .btn:not(.nav-cta), .letter .btn { display: none; }
     .sticky-cta { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 90; padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom)); background: rgba(12,10,8,0.93); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-top: 1px solid rgba(160,127,86,0.35); transition: transform 0.3s ease; }
     .sticky-cta .btn { display: block; width: 100%; text-align: center; padding: 1rem 1.5rem; }
     .sticky-cta.hidden { transform: translateY(110%); }
@@ -979,13 +979,22 @@
 </script>
 <!-- Application form embed helper (auto-sizes the iframe) -->
 <script src="https://go.categoryofonebranding.com/js/form_embed.js"></script>
-<div class="sticky-cta" id="sticky-cta"><a href="#application-form" class="btn" data-cta="sticky">Request an Invitation</a></div>
+<div class="sticky-cta hidden" id="sticky-cta"><a href="#application-form" class="btn" data-cta="sticky">Request an Invitation</a></div>
 <script>
 (function(){
-  var bar=document.getElementById('sticky-cta'), form=document.getElementById('application-form');
-  if(bar&&form&&'IntersectionObserver' in window){
-    new IntersectionObserver(function(es){es.forEach(function(e){bar.classList.toggle('hidden',e.isIntersecting);});},{threshold:0.05}).observe(form);
+  var bar=document.getElementById('sticky-cta'),
+      room=document.getElementById('the-room'),
+      form=document.getElementById('application-form');
+  if(!bar||!room) return;
+  function update(){
+    var reached = room.getBoundingClientRect().top <= window.innerHeight * 0.6;
+    var atForm = false;
+    if(form){ var fr=form.getBoundingClientRect(); atForm = fr.top < window.innerHeight * 0.9 && fr.bottom > 0; }
+    bar.classList.toggle('hidden', !(reached && !atForm));
   }
+  window.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update);
+  update();
 })();
 </script>
 </body>
