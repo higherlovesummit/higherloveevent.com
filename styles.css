@@ -8,21 +8,24 @@
   --white: #ffffff;
   --chamoisee: #a07f56;
   --khaki: #BCB2A6;
-  --linen: #ede3da;
+  --linen: #cfc6ba;
+  --body: #cfc6ba;
   --ebony: #5D685B;
   --sage: #a4a082;
   --paynes-gray: #607077;
   --cadet-gray: #789094;
   --russet: #915335;
-  --dark-bg: #0a0a0a;
-  --section-dark: #111111;
+  --dark-bg: #0d0b09;
+  --section-dark: #0d0b09;
+  --line: rgba(160,127,86,0.28);
+  --line-soft: rgba(255,255,255,0.10);
 }
 
-html { scroll-behavior: smooth; font-size: 19px; overflow-x: hidden; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
 
 body {
   font-family: 'EB Garamond', Georgia, serif;
-  color: var(--white);
+  color: var(--body);
   background-color: var(--black);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -60,24 +63,26 @@ a:hover { color: var(--khaki); }
    ======================================== */
 .eyebrow {
   font-family: 'Raleway', sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--chamoisee);
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
 }
 
 h1, h2, h3 {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-weight: 700;
-  line-height: 1.15;
+  font-weight: 600;
+  line-height: 1.12;
   text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.03em;
 }
 
-h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); letter-spacing: 0.04em; }
-h2 { font-size: clamp(1.8rem, 4vw, 3rem); letter-spacing: 0.03em; }
-h3 { font-size: clamp(1.4rem, 3vw, 2rem); letter-spacing: 0.02em; }
+h1 { font-size: clamp(2.4rem, 5.5vw, 4.2rem); }
+h2 { font-size: clamp(1.9rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); }
 
 .body-text {
   font-family: 'EB Garamond', Georgia, serif;
@@ -177,7 +182,7 @@ nav {
   background: rgba(0,0,0,0.92);
   backdrop-filter: blur(12px);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   transition: padding 0.3s ease;
 }
@@ -191,7 +196,7 @@ nav .logo svg {
 }
 
 .nav-logo-img {
-  height: 22px;
+  height: 30px;
   width: auto;
   max-width: 320px;
 }
@@ -2097,4 +2102,117 @@ button:focus-visible {
   .section-dark { background: #fff; }
   .section-linen { background: #fff; }
   .form-trust-block::after { content: 'Apply at higherloveevent.com'; display: block; margin-top: 0.5rem; font-size: 0.9rem; color: #666; }
+}
+
+
+/* ========================================
+   ON-BRAND SHARED COMPONENTS (match homepage)
+   ======================================== */
+.hl-hero {
+  text-align: center;
+  padding: 11rem 1.5rem 3rem;
+  position: relative;
+}
+.hl-hero .eyebrow { display: block; }
+.hl-hero h1 { color: #fff; margin: 0 auto; max-width: 760px; }
+.hl-divider { width: 60px; height: 1px; background: var(--chamoisee); opacity: 0.75; margin: 2rem auto 0; }
+
+.choice-section { padding: 1.5rem 1.5rem 6rem; }
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.choice-card {
+  border: 1px solid var(--line);
+  background: rgba(160,127,86,0.04);
+  padding: 3.25rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.choice-card:hover {
+  border-color: rgba(160,127,86,0.5);
+  background: rgba(160,127,86,0.07);
+}
+.choice-diamond {
+  width: 9px; height: 9px;
+  border: 1px solid var(--chamoisee);
+  transform: rotate(45deg);
+  margin: 0 auto 1.6rem;
+}
+.choice-eyebrow {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--chamoisee);
+  margin-bottom: 1.3rem;
+}
+.choice-desc {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--body);
+  margin-bottom: 2.4rem;
+  flex-grow: 1;
+}
+.hl-btn {
+  display: inline-block;
+  align-self: center;
+  margin-top: auto;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 1rem 2.4rem;
+  background: var(--chamoisee); color: #111;
+  border: 1px solid var(--chamoisee);
+  transition: all 0.3s ease; cursor: pointer; text-decoration: none;
+}
+.hl-btn:hover { background: #0d0b09; color: #fff; border-color: var(--chamoisee); }
+
+/* Form placeholder (sponsorship) */
+.form-placeholder-section { padding: 1rem 1.5rem 6rem; }
+.form-placeholder {
+  max-width: 720px;
+  margin: 0 auto;
+  border: 1px dashed rgba(160,127,86,0.4);
+  background: rgba(160,127,86,0.03);
+  padding: 5rem 2rem;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--khaki);
+}
+
+/* Footer (match homepage footer-simple) */
+footer { background: var(--dark-bg); padding: 2.25rem 0 1.75rem; border-top: 1px solid var(--line-soft); }
+.footer-simple { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+.footer-logo-img { height: 38px; width: auto; }
+.footer-simple-right { display: flex; align-items: center; gap: 1.6rem; }
+.footer-simple-right a {
+  color: var(--body); text-decoration: none;
+  font-family: 'Raleway', sans-serif; font-size: 0.78rem; letter-spacing: 0.14em;
+  text-transform: uppercase; transition: color 0.3s;
+}
+.footer-simple-right a:hover { color: var(--chamoisee); }
+.footer-ig { display: inline-flex; align-items: center; }
+.footer-ig svg { width: 20px; height: 20px; fill: #fff; transition: fill 0.3s; }
+.footer-ig:hover svg { fill: var(--chamoisee); }
+.footer-bottom-simple {
+  text-align: center; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line-soft);
+  font-family: 'Raleway', sans-serif; font-size: 0.68rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #ffffff;
+}
+
+@media (max-width: 860px) {
+  .choice-grid { grid-template-columns: 1fr; max-width: 460px; gap: 1.4rem; }
+  .hl-hero { padding: 9rem 1.25rem 2.5rem; }
 }
