@@ -262,10 +262,11 @@
      HERO, your approved version (estate image + Ken Burns)
   ════════════ */
   .hero {
-    min-height: 100vh; display: flex; flex-direction: column;
+    min-height: 106vh; display: flex; flex-direction: column;
     align-items: center; justify-content: center; text-align: center;
-    padding: 8rem 2rem 5rem; position: relative; overflow: hidden;
+    padding: 9rem 2rem 6rem; position: relative; overflow: hidden;
   }
+  .hero .btn { font-size: 1.05rem; letter-spacing: 0.18em; padding: 1.35rem 3.4rem; }
   .hero-media { position: absolute; inset: 0; z-index: 0; }
   .hero-media img, .hero-media video { width: 100%; height: 100%; object-fit: cover; }
   .hero-media .kenburns {
@@ -445,7 +446,7 @@
   /* ════════════
      FOOTER, your approved version
   ════════════ */
-  footer { background: var(--dark-bg); padding: 2.25rem 0 1.75rem; }
+  footer { background: var(--dark-bg); padding: 2.25rem 0 1.75rem; border-top: 1px solid var(--line-soft); }
   .footer-simple { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
   .footer-logo-img { height: 38px; width: auto; }
   .footer-simple-right { display: flex; align-items: center; gap: 1.6rem; }
@@ -503,16 +504,15 @@
 
   /* ── IS THIS YOUR ROOM (PANELS) ── */
   
-  .room-ledger { max-width: 640px; margin: 0 auto; }
+  .room-ledger { max-width: 560px; margin: 0 auto; }
   .rl-lede { font-family: 'Raleway', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin: 0 0 0.3rem; }
   .rl-lede.for { color: var(--chamoisee); }
   .rl-lede.not { color: rgba(207,198,186,0.5); margin-top: 2.8rem; }
-  .rl-row { display: flex; align-items: center; gap: 1.1rem; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
-  .rl-row:last-child { border-bottom: none; }
-  .rl-d { width: 8px; height: 8px; border: 1px solid var(--chamoisee); transform: rotate(45deg); flex: none; }
-  .rl-dash { width: 13px; height: 1px; background: rgba(207,198,186,0.4); flex: none; }
-  .rl-t { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; line-height: 1.35; color: #efe8dd; }
-  .rl-row.no { border-bottom-color: rgba(255,255,255,0.06); }
+  .rl-row { position: relative; padding: 0.85rem 0 0.85rem 2rem; border-top: 1px solid rgba(160,127,86,0.2); }
+  .rl-lede + .rl-row { border-top: none; }
+  .rl-d { position: absolute; left: 0; top: 1.5rem; width: 9px; height: 9px; border: 1px solid var(--chamoisee); transform: rotate(45deg); }
+  .rl-dash { position: absolute; left: 0; top: 1.85rem; width: 13px; height: 1px; background: rgba(207,198,186,0.45); }
+  .rl-t { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; line-height: 1.4; color: #efe8dd; display: block; }
   .rl-row.no .rl-t { font-style: italic; color: rgba(207,198,186,0.5); }
   .hero h1 .amp { color: var(--chamoisee); font-style: italic; }
 
@@ -553,7 +553,7 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   .beyond { max-width: 560px; margin: 0 auto; text-align: center; }
   .beyond-eyebrow { font-family: 'Raleway', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--chamoisee); margin-bottom: 1rem; }
   .beyond-head { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 3vw, 2rem); line-height: 1.25; color: #ffffff; margin-bottom: 1.8rem; }
-  .beyond-list { list-style: none; padding: 0; margin: 0; text-align: left; max-width: 480px; margin: 0 auto; }
+  .beyond-list { list-style: none; padding: 0; margin: 0; text-align: left; max-width: 560px; margin: 0 auto; }
   .beyond-list li { font-family: 'EB Garamond', Georgia, serif; font-size: 1.35rem; line-height: 1.5; color: #cfc6ba; padding: 0.85rem 0 0.85rem 2rem; position: relative; border-top: 1px solid rgba(160,127,86,0.2); }
   .beyond-list li:first-child { border-top: none; }
   .beyond-list li::before { content: ""; position: absolute; left: 0; top: 1.5rem; width: 9px; height: 9px; border: 1px solid var(--chamoisee); transform: rotate(45deg); }
