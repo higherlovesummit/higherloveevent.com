@@ -281,13 +281,13 @@
   }
   .hero-media::after {
     content: ""; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0.85) 100%);
+    background: radial-gradient(ellipse 72% 62% at 50% 50%, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 78%), linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.7) 100%);
   }
   .hero-inner { position: relative; z-index: 2; max-width: 880px; }
   .hero h1 { margin-bottom: 1.6rem; }
   .hero-qualifier { font-family: 'Cormorant Garamond', serif; text-transform: uppercase; font-weight: 600; color: var(--chamoisee); font-size: clamp(1.4rem, 3.2vw, 2.1rem); letter-spacing: 0.02em; line-height: 1.12; max-width: 620px; margin: 0.3rem auto 0; }
   .hero-sub { font-family: 'EB Garamond', Georgia, serif; font-size: clamp(1.08rem, 1.6vw, 1.25rem); line-height: 1.6; color: var(--body); max-width: 640px; margin: 1.6rem auto 0; }
-  .hero-eyebrow-top { font-family: 'Raleway', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--chamoisee); margin-bottom: 1.2rem; }
+  .hero-eyebrow-top { font-family: 'Raleway', sans-serif; font-size: clamp(0.85rem, 1.5vw, 1rem); font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--chamoisee); margin-bottom: 1.3rem; }
   
   /* ════════════
      SECTION HELPERS
