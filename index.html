@@ -550,6 +550,15 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
 
   .inv-hook { font-family: 'EB Garamond', Georgia, serif; font-size: clamp(1.6rem, 3vw, 1.9rem); line-height: 1.4; color: var(--chamoisee); text-align: center; max-width: 520px; margin: 2.2rem auto; }
   .inv-divider { width: 40px; height: 1px; background: rgba(160,127,86,0.6); margin: 2.6rem auto; }
+  .statement-band { background: var(--section-dark); padding: 5.5rem 1.5rem; text-align: center; border-top: 1px solid rgba(160,127,86,0.12); border-bottom: 1px solid rgba(160,127,86,0.12); }
+  .statement-band .sb-diamond { width: 10px; height: 10px; border: 1px solid var(--chamoisee); transform: rotate(45deg); margin: 0 auto 1.5rem; }
+  .statement-band p { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(1.7rem, 3.6vw, 2.4rem); line-height: 1.22; color: #fff; text-transform: uppercase; letter-spacing: 0.02em; max-width: 640px; margin: 0 auto; }
+  .statement-band .sb-rule { width: 48px; height: 1px; background: var(--chamoisee); opacity: 0.7; margin: 1.7rem auto 0; }
+  .divider-diamond { display: flex; align-items: center; justify-content: center; gap: 14px; max-width: 560px; margin: 2.8rem auto; }
+  .divider-diamond .ln { flex: 1; max-width: 150px; height: 1px; }
+  .divider-diamond .ln.l { background: linear-gradient(90deg, transparent, rgba(160,127,86,0.55)); }
+  .divider-diamond .ln.r { background: linear-gradient(270deg, transparent, rgba(160,127,86,0.55)); }
+  .divider-diamond .dot { width: 8px; height: 8px; border: 1px solid var(--chamoisee); transform: rotate(45deg); }
   /* ── THREE WORLDS VENN ── */
   .venn-wrap { max-width: 480px; margin: 1.6rem auto 2.2rem; }
   .venn { width: 100%; display: block; }
@@ -711,26 +720,14 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
         <p>So I decided to build it.</p>
       </div>
       <div class="inv-hook">I'm calling it Higher Love.</div>
-      <p style="text-align:center;">Higher Love sits where three worlds meet.</p>
-      <div class="venn-wrap">
-        <svg viewBox="0 0 600 560" xmlns="http://www.w3.org/2000/svg" class="venn" role="img" aria-label="Higher Love sits at the intersection of three worlds: a business mastermind, a health and wellness retreat, and a personal growth experience.">
-          <circle class="venn-c" cx="235" cy="250" r="155"/>
-          <circle class="venn-c" cx="365" cy="250" r="155"/>
-          <circle class="venn-c" cx="300" cy="370" r="155"/>
-          <image href="images/logo-white.svg" x="225" y="252" width="150" height="62"/>
-          <text class="venn-l" x="165" y="200" text-anchor="middle">Business</text>
-          <text class="venn-l" x="165" y="220" text-anchor="middle">Mastermind</text>
-          <text class="venn-l" x="437" y="200" text-anchor="middle">Health &amp;</text>
-          <text class="venn-l" x="437" y="220" text-anchor="middle">Wellness Retreat</text>
-          <text class="venn-l" x="300" y="446" text-anchor="middle">A Personal Growth</text>
-          <text class="venn-l" x="300" y="466" text-anchor="middle">Experience</text>
-        </svg>
-      </div>
-      <div class="inv-hook">No one has put those three in one room for gay men. Until now.</div>
     </div>
   </div>
 </section>
-<div class="photo-band" style="background-image:url('images/firepit-night.jpg')"></div>
+<div class="statement-band">
+  <div class="sb-diamond"></div>
+  <p>What would your life look like if you experienced Higher Love?</p>
+  <div class="sb-rule"></div>
+</div>
 <section class="letter">
   <div class="inv-wrap fade-in">
     <div class="inv-letter">
@@ -750,7 +747,7 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
       </div>
       <p style="margin-top:3rem;">Some of it will look like work. Some of it will look like nothing you've done before. All of it does one thing: it lets you be fully met, by other gay men who can actually see you.</p>
       <p>If this sounds like something you'd like to be a part of, at the ground floor, then I invite you to request an invitation on this page. You'll answer a few questions and book a 45-minute call with me to see if this is the right room for you.</p>
-      <div class="inv-divider"></div>
+      <div class="divider-diamond"><span class="ln l"></span><span class="dot"></span><span class="ln r"></span></div>
       <h3 class="inv-h3">Why Be A Part Of Higher Love?</h3>
       <p>The fair question you're most likely going to ask: what will you &ldquo;get&rdquo; by being a part of Higher Love?</p>
       <p>The analytical part of you should ask it. So picture a year from now.</p>
@@ -762,7 +759,7 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
       <div class="inv-hook">That's the invitation.</div>
       <p>For the right man, this becomes the room he points to years from now as the one that changed everything. I'm not looking for &ldquo;bodies&rdquo; to fill the room. I'm searching for gay men who are confident in who they are and ready to be in brotherhood with other gay men.</p>
       <p>If you're that kind of man, I built this room for you (and for me too). Request your invitation to find out if this is your room.</p>
-      <div class="inv-divider"></div>
+      <div class="divider-diamond"><span class="ln l"></span><span class="dot"></span><span class="ln r"></span></div>
       <div class="beyond">
         <div class="beyond-eyebrow">Beyond the September Gathering</div>
         <div class="beyond-head">Your founding membership includes:</div>
@@ -779,7 +776,11 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
     </div>
   </div>
 </section>
-<div class="photo-band" style="background-image:url('images/morning-wellness.jpg'); height:clamp(440px, 70vh, 820px);"></div>
+<div class="statement-band">
+  <div class="sb-diamond"></div>
+  <p>Most rooms stay on the surface. This one is built on depth, substance and presence.</p>
+  <div class="sb-rule"></div>
+</div>
 <!-- ══════════════════════════════════
      WHO THIS IS FOR / NOT FOR
 ══════════════════════════════════ -->
@@ -868,7 +869,11 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
 <!-- ══════════════════════════════════
      FINAL CTA
 ══════════════════════════════════ -->
-<div class="photo-band" style="background-image:url('images/promo-rooftop-golden.jpg')"></div>
+<div class="statement-band">
+  <div class="sb-diamond"></div>
+  <p>This Room Isn&rsquo;t For Everyone. But For The Right Man It&rsquo;ll Mean The World To Him.</p>
+  <div class="sb-rule"></div>
+</div>
 <!-- ══════════════════════════════════
      APPLICATION FORM, GHL embed
 ══════════════════════════════════ -->
