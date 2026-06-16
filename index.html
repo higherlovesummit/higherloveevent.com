@@ -503,21 +503,17 @@
 
   /* ── IS THIS YOUR ROOM (PANELS) ── */
   
-  .room-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; max-width: 900px; margin: 0 auto; }
-  .room-panel { padding: 2.4rem 2.1rem; }
-  .room-panel.yes { border: 1px solid rgba(160,127,86,0.55); background: linear-gradient(165deg, rgba(160,127,86,0.10), rgba(160,127,86,0.02)); }
-  .room-panel.no { border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.015); }
-  .room-panel .kick { font-family: 'Raleway', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 1.7rem; }
-  .room-panel.yes .kick { color: var(--chamoisee); }
-  .room-panel.no .kick { color: rgba(207,198,186,0.72); }
-  .room-panel .item { display: flex; gap: 1rem; padding: 1rem 0; border-top: 1px solid rgba(255,255,255,0.08); }
-  .room-panel .item:first-of-type { border-top: none; padding-top: 0; }
-  .room-panel .mark { font-size: 1.1rem; font-weight: 700; line-height: 1.35; }
-  .room-panel.yes .mark { color: var(--chamoisee); }
-  .room-panel.no .mark { color: rgba(207,198,186,0.5); }
-  .room-panel .tx { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; line-height: 1.35; text-align: left; }
-  .room-panel.yes .tx { color: #cfc6ba; }
-  .room-panel.no .tx { color: rgba(207,198,186,0.62); }
+  .room-ledger { max-width: 640px; margin: 0 auto; }
+  .rl-lede { font-family: 'Raleway', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin: 0 0 0.3rem; }
+  .rl-lede.for { color: var(--chamoisee); }
+  .rl-lede.not { color: rgba(207,198,186,0.5); margin-top: 2.8rem; }
+  .rl-row { display: flex; align-items: center; gap: 1.1rem; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .rl-row:last-child { border-bottom: none; }
+  .rl-d { width: 8px; height: 8px; border: 1px solid var(--chamoisee); transform: rotate(45deg); flex: none; }
+  .rl-dash { width: 13px; height: 1px; background: rgba(207,198,186,0.4); flex: none; }
+  .rl-t { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; line-height: 1.35; color: #efe8dd; }
+  .rl-row.no { border-bottom-color: rgba(255,255,255,0.06); }
+  .rl-row.no .rl-t { font-style: italic; color: rgba(207,198,186,0.5); }
   .hero h1 .amp { color: var(--chamoisee); font-style: italic; }
 
   .host-bio-c { font-family: 'EB Garamond', Georgia, serif; font-size: 24px; line-height: 1.6; color: #cfc6ba; max-width: 720px; margin: 0 auto; }
@@ -599,7 +595,6 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
 
     
 
-    .room-cols { grid-template-columns: 1fr; }
     .inv-letter > p { font-size: 1.44rem; }
     .inv-stand { font-size: 1.3rem !important; }
     .inv-room p { font-size: 1.12rem; }
@@ -766,23 +761,19 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
     <div class="section-head fade-in">
       <h2 style="text-transform:uppercase;">Is This Your Room?</h2>
     </div>
-    <div class="room-cols fade-in">
-      <div class="room-panel yes">
-        <div class="kick">This Is For You If&hellip;</div>
-        <div class="item"><span class="mark">&#10003;</span><span class="tx">You are an entrepreneur, founder, or leader.</span></div>
-        <div class="item"><span class="mark">&#10003;</span><span class="tx">You are building something meaningful or impactful.</span></div>
-        <div class="item"><span class="mark">&#10003;</span><span class="tx">You have an active inner-work practice.</span></div>
-        <div class="item"><span class="mark">&#10003;</span><span class="tx">You surround yourself with people who inspire and energize you.</span></div>
-        <div class="item"><span class="mark">&#10003;</span><span class="tx">You take care of your health: mind, body, and spirit.</span></div>
-      </div>
-      <div class="room-panel no">
-        <div class="kick">This Isn't For You If&hellip;</div>
-        <div class="item"><span class="mark">&#10005;</span><span class="tx">You are NOT a leader, whether in life or business.</span></div>
-        <div class="item"><span class="mark">&#10005;</span><span class="tx">Your sole focus in life is making more money.</span></div>
-        <div class="item"><span class="mark">&#10005;</span><span class="tx">You're looking for a party scene or circuit party to perform in.</span></div>
-        <div class="item"><span class="mark">&#10005;</span><span class="tx">You surround yourself with people who wait for life to happen.</span></div>
-        <div class="item"><span class="mark">&#10005;</span><span class="tx">You don't have a healthy relationship with yourself or others.</span></div>
-      </div>
+    <div class="room-ledger fade-in">
+      <p class="rl-lede for">This room is for the man who&hellip;</p>
+      <div class="rl-row"><span class="rl-d"></span><span class="rl-t">Is an entrepreneur, founder, or leader.</span></div>
+      <div class="rl-row"><span class="rl-d"></span><span class="rl-t">Is building something meaningful or impactful.</span></div>
+      <div class="rl-row"><span class="rl-d"></span><span class="rl-t">Keeps an active inner-work practice.</span></div>
+      <div class="rl-row"><span class="rl-d"></span><span class="rl-t">Surrounds himself with people who inspire and energize him.</span></div>
+      <div class="rl-row"><span class="rl-d"></span><span class="rl-t">Cares for his health &mdash; mind, body, and spirit.</span></div>
+      <p class="rl-lede not">And not for the man who&hellip;</p>
+      <div class="rl-row no"><span class="rl-dash"></span><span class="rl-t">Isn&rsquo;t leading, in life or business.</span></div>
+      <div class="rl-row no"><span class="rl-dash"></span><span class="rl-t">Makes earning more money his only focus.</span></div>
+      <div class="rl-row no"><span class="rl-dash"></span><span class="rl-t">Is looking for a party scene to perform in.</span></div>
+      <div class="rl-row no"><span class="rl-dash"></span><span class="rl-t">Surrounds himself with people who wait for life to happen.</span></div>
+      <div class="rl-row no"><span class="rl-dash"></span><span class="rl-t">Has no healthy relationship with himself or others.</span></div>
     </div>
   </section>
 <!-- ══════════════════════════════════
