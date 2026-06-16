@@ -15,8 +15,8 @@
   --paynes-gray: #607077;
   --cadet-gray: #789094;
   --russet: #915335;
-  --dark-bg: #0d0b09;
-  --section-dark: #0d0b09;
+  --dark-bg: #000000;
+  --section-dark: #000000;
   --line: rgba(160,127,86,0.28);
   --line-soft: rgba(255,255,255,0.10);
 }
@@ -2173,7 +2173,7 @@ button:focus-visible {
   border: 1px solid var(--chamoisee);
   transition: all 0.3s ease; cursor: pointer; text-decoration: none;
 }
-.hl-btn:hover { background: #0d0b09; color: #fff; border-color: var(--chamoisee); }
+.hl-btn:hover { background: #000000; color: #fff; border-color: var(--chamoisee); }
 
 /* Form placeholder (sponsorship) */
 .form-placeholder-section { padding: 1rem 1.5rem 6rem; }
