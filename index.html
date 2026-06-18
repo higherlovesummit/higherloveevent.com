@@ -543,6 +543,11 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
 
   .inv-hook { font-family: 'EB Garamond', Georgia, serif; font-size: clamp(1.6rem, 3vw, 1.9rem); line-height: 1.4; color: var(--chamoisee); text-align: center; max-width: 520px; margin: 2.2rem auto; }
   .inv-divider { width: 40px; height: 1px; background: rgba(160,127,86,0.6); margin: 2.6rem auto; }
+  .estate-band { width: 100%; height: clamp(280px, 45vh, 460px); overflow: hidden; }
+  .estate-band img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .estate-gallery { max-width: 900px; margin: 2.4rem auto 0; padding: 0 2rem; }
+  .estate-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 1.4rem; }
+  .estate-grid img { width: 100%; height: 200px; object-fit: cover; display: block; border: 1px solid rgba(160,127,86,0.25); }
   .why-center, .why-center p { text-align: center; }
   .why-center p { font-size: 1.42rem; line-height: 1.7; color: #cfc6ba; margin: 0 0 1.4rem; }
   .why-center .gold-line { color: var(--chamoisee); }
@@ -638,6 +643,10 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
     .invest-note { font-size: 0.92rem; }
     .q-connector { height: 34px; }
     .inv-divider { margin: 2rem auto; }
+    .estate-grid { grid-template-columns: 1fr 1fr; }
+    .estate-grid img { height: 150px; }
+    .estate-band { height: clamp(220px, 40vh, 320px); }
+    .estate-gallery { padding: 0 1.25rem; }
     .beyond-list li, .q-bullets li { font-size: 1.25rem; }
     .hero-qualifier { font-size: 1.4rem; }
     /* ── mobile polish ── */
@@ -761,6 +770,10 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   </div>
 </section>
 <!-- ══════════════════════════════════
+     COMMON AREA BAND
+══════════════════════════════════ -->
+<div class="estate-band"><img src="images/estate-common.webp" alt="The common living area at the Higher Love estate" loading="lazy"></div>
+<!-- ══════════════════════════════════
      IS THIS YOUR ROOM (qualify)
 ══════════════════════════════════ -->
 <section style="background: var(--section-dark);">
@@ -794,6 +807,21 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
       <h3 class="inv-h3">An Invitation To Become A Founding Member</h3>
       <div class="beyond-eyebrow" style="text-align:center; margin-bottom:0.9rem;">The First Gathering</div>
       <p>Higher Love begins in person this September 22&ndash;24, 2026, at a private estate in Austin, TX. We'll explore what brotherhood means for gay men like us and what higher love looks like in each of our lives. We'll do a bit of business masterminding among peers. We'll drop into our hearts and bodies to connect more deeply with ourselves and each other. And we'll share a fully nourishing, immersive experience built for some of the most ambitious, heart-centered gay men. After the in-person gathering, we commit to the brotherhood for at least one year. Long enough to build real brotherhood, but short enough that you're not locked in forever.</p>
+    </div>
+  </div>
+  <div class="estate-gallery fade-in">
+    <p class="beyond-eyebrow" style="text-align:center;">Where It Happens</p>
+    <div class="estate-grid">
+      <img src="images/estate-suite.webp" alt="Stone-fireplace suite with Hill Country view" loading="lazy">
+      <img src="images/estate-pool.webp" alt="Pool and oaks at sunset" loading="lazy">
+      <img src="images/estate-sauna.webp" alt="Glass sauna and cold plunge" loading="lazy">
+      <img src="images/estate-deck.webp" alt="Covered dining deck overlooking the hills" loading="lazy">
+      <img src="images/estate-room.webp" alt="Founding member bedroom suite" loading="lazy">
+      <img src="images/estate-plunge.webp" alt="Cold plunge barrel by the pool" loading="lazy">
+    </div>
+  </div>
+  <div class="inv-wrap fade-in">
+    <div class="inv-letter">
       <div class="divider-diamond"><span class="ln l"></span><span class="dot"></span><span class="ln r"></span></div>
       <div class="beyond">
         <div class="beyond-eyebrow">Beyond the September Gathering</div>
