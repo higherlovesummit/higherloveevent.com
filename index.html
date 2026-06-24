@@ -286,11 +286,11 @@
     background: radial-gradient(ellipse 72% 62% at 50% 50%, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 78%), linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.7) 100%);
   }
   .hero-inner { position: relative; z-index: 2; max-width: 1000px; }
-  .hero h1 { font-size: clamp(2.4rem, 5vw, 3.5rem); max-width: 600px; margin: 0 auto 1.2rem; }
+  .hero h1 { font-size: clamp(2.4rem, 5vw, 3.5rem); max-width: 860px; margin: 0 auto 1.2rem; }
   .hero-qualifier { font-family: 'Cormorant Garamond', serif; text-transform: uppercase; font-weight: 600; color: var(--chamoisee); font-size: clamp(1.4rem, 3.2vw, 2.1rem); letter-spacing: 0.02em; line-height: 1.12; max-width: 620px; margin: 0.3rem auto 0; }
   .hero-watch { font-family: 'Raleway', sans-serif; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.72rem; color: #cfc6ba; display: flex; align-items: center; justify-content: center; gap: 9px; margin: 1.2rem 0 0.6rem; }
   .hero-watch .hero-tri { width: 0; height: 0; border-left: 9px solid #d8b478; border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
-  .hero-video { max-width: 480px; width: 100%; margin: 0 auto; }
+  .hero-video { max-width: 580px; width: 100%; margin: 0 auto; }
   .hero-video video { width: 100%; display: block; border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 18px 50px rgba(0,0,0,0.45); }
   .hero-cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 1.3rem; }
   .hero-cta-row .btn { font-size: 0.85rem; letter-spacing: 0.16em; padding: 1.05rem 2.4rem; margin-top: 0; }
@@ -651,6 +651,7 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
     .container, .container-narrow { padding-left: 1.25rem; padding-right: 1.25rem; }
     .hero { padding-left: 1.25rem; padding-right: 1.25rem; }
     .hero h1 { font-size: clamp(2.3rem, 10.5vw, 2.6rem); }
+    .hero-h1-break { display: none; }
     .hero-eyebrow-top .ey-sep { display: none; }
     .hero-eyebrow-top .ey-l2 { display: block; }
     .host-bio-c { font-size: 20px; }
@@ -677,7 +678,7 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   </div>
   <div class="hero-inner fade-in">
     <div class="hero-eyebrow-top"><span class="ey-l1">September 22&ndash;24, 2026</span><span class="ey-sep">&nbsp;&middot;&nbsp;</span><span class="ey-l2">Austin, TX &middot; Limited to 12 Spots</span></div>
-    <h1>Finally, A Room Built For The Whole Gay Man.</h1>
+    <h1>Finally, A Room Built For<br class="hero-h1-break">The Whole Gay Man.</h1>
     <div class="hero-watch"><span class="hero-tri"></span> Please watch the 4-min video</div>
     <div class="hero-video">
       <video controls preload="metadata" playsinline poster="images/video-poster.jpg">
