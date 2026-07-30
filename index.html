@@ -583,6 +583,31 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
     .host-bio-c { font-size: 20px; }
     .inc-head .tx { white-space: normal; }
   }
+
+  /* ════════════ PROGRAM TIMELINE ════════════ */
+  .prog-sec { background: var(--section-dark); padding: 5.5rem 0; }
+  .prog-head { text-align: center; margin-bottom: 3.4rem; }
+  .prog-head h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); letter-spacing: 0.03em; margin: 0.9rem 0 0; line-height: 1.08; }
+  .prog-head .prog-sub { color: var(--body); font-size: 1.08rem; margin-top: 1rem; max-width: 560px; margin-left: auto; margin-right: auto; }
+  .prog-tl { max-width: 560px; margin: 0 auto; position: relative; padding-left: 2.5rem; }
+  .prog-tl::before { content: ""; position: absolute; left: 5px; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+  .prog-row { position: relative; padding: 0 0 2.1rem; }
+  .prog-row:last-child { padding-bottom: 0; }
+  .prog-node { position: absolute; left: -2.5rem; top: 4px; width: 11px; height: 11px; border: 1px solid var(--chamoisee); transform: rotate(45deg); background: var(--section-dark); }
+  .prog-row.anchor .prog-node { width: 14px; height: 14px; left: calc(-2.5rem - 1.5px); top: 2px; background: var(--chamoisee); }
+  .prog-date { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #fff; letter-spacing: 0.02em; line-height: 1.1; }
+  .prog-row.anchor .prog-date { color: #d8b478; font-size: 1.7rem; }
+  .prog-meta { margin-top: 0.35rem; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .prog-mtitle { font-family: 'EB Garamond', serif; font-size: 1.02rem; color: var(--body); }
+  .prog-tag { font-family: 'Raleway', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+  .prog-tag.inperson { color: #000; background: #d8b478; padding: 3px 9px; }
+  .prog-tag.virtual { color: var(--chamoisee); border: 1px solid var(--line); padding: 3px 9px; }
+  .prog-timenote { text-align: center; font-family: 'Raleway', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #d8b478; margin-top: 2.2rem; }
+  @media (max-width: 540px) {
+    .prog-tl { padding-left: 2rem; }
+    .prog-date { font-size: 1.3rem; }
+    .prog-row.anchor .prog-date { font-size: 1.45rem; }
+  }
 </style>
 </head>
 <body>
@@ -722,7 +747,7 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
 <section class="letter">
   <div class="inv-wrap fade-in">
     <div class="inv-letter">
-      <h3 class="inv-h3">An Invitation To Join Our First Annual Gathering</h3>
+      <h3 class="inv-h3">An Invitation To Join Our First Gathering</h3>
       <div class="beyond-eyebrow" style="text-align:center; margin-bottom:0.9rem;">The First Gathering</div>
       <p>Higher Love begins in person this September 22&ndash;24, 2026, at a private estate in Austin, TX. We'll explore what brotherhood means for gay men like us and what higher love looks like in each of our lives. We'll do a bit of business masterminding among peers. We'll drop into our hearts and bodies to connect more deeply with ourselves and each other. And we'll share a fully nourishing, immersive experience built for some of the most ambitious, heart-centered gay men.</p>
       <p style="margin-top:3rem;">If this sounds like something you'd like to be a part of, then I invite you to request an invitation below. You'll answer a few questions and schedule a friendly call with me to see if this is the right room for you.</p>
@@ -740,6 +765,29 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
       <img src="images/estate-room.webp" alt="Founding member bedroom suite" loading="lazy">
       <img src="images/estate-plunge.webp" alt="Cold plunge barrel by the pool" loading="lazy">
     </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     THE PROGRAM, timeline
+══════════════════════════════════ -->
+<section class="prog-sec">
+  <div class="container">
+    <div class="prog-head fade-in">
+      <p class="beyond-eyebrow" style="text-align:center;">The Program</p>
+      <h2>More Than A 3-Day Experience.<br>A Brotherhood.</h2>
+      <p class="prog-sub">It begins in Austin and continues through the end of March 2027.</p>
+    </div>
+    <div class="prog-tl fade-in">
+      <div class="prog-row anchor"><span class="prog-node"></span><div class="prog-date">September 21&ndash;24, 2026</div><div class="prog-meta"><span class="prog-tag inperson">In Person &middot; Austin, TX</span><span class="prog-mtitle">Founder&rsquo;s Summit</span></div></div>
+      <div class="prog-row"><span class="prog-node"></span><div class="prog-date">October 21, 2026</div><div class="prog-meta"><span class="prog-tag virtual">Virtual</span><span class="prog-mtitle">Monthly Gathering</span></div></div>
+      <div class="prog-row"><span class="prog-node"></span><div class="prog-date">November 24, 2026</div><div class="prog-meta"><span class="prog-tag virtual">Virtual</span><span class="prog-mtitle">Monthly Gathering</span></div></div>
+      <div class="prog-row"><span class="prog-node"></span><div class="prog-date">December 22, 2026</div><div class="prog-meta"><span class="prog-tag virtual">Virtual</span><span class="prog-mtitle">Monthly Gathering</span></div></div>
+      <div class="prog-row"><span class="prog-node"></span><div class="prog-date">January 20, 2027</div><div class="prog-meta"><span class="prog-tag virtual">Virtual</span><span class="prog-mtitle">Monthly Gathering</span></div></div>
+      <div class="prog-row"><span class="prog-node"></span><div class="prog-date">February 16, 2027</div><div class="prog-meta"><span class="prog-tag virtual">Virtual</span><span class="prog-mtitle">Monthly Gathering</span></div></div>
+      <div class="prog-row"><span class="prog-node"></span><div class="prog-date">March 23, 2027</div><div class="prog-meta"><span class="prog-tag virtual">Virtual</span><span class="prog-mtitle">Monthly Gathering</span></div></div>
+    </div>
+    <p class="prog-timenote">All virtual gatherings &middot; 4&ndash;6 PM PT / 7&ndash;9 PM ET</p>
   </div>
 </section>
 <!-- ══════════════════════════════════
