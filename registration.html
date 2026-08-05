@@ -1,8 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include "pricing-head-meta.html" %}
-{% include "pricing-styles.html" %}
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You're Officially Invited | Higher Love</title>
+<meta name="description" content="Your official invitation to Higher Love. Join the Founder's Summit as a guest, or become a founding member of the brotherhood.">
+<link rel="canonical" href="https://higherloveevent.com/registration">
+<meta property="og:type" content="website">
+<meta property="og:title" content="You're Officially Invited | Higher Love">
+<meta property="og:description" content="Join the Founder's Summit as a guest, or become a founding member of the Higher Love Brotherhood.">
+<meta property="og:image" content="https://higherloveevent.com/images/og-higher-love-common-2026.jpg">
+<meta property="og:url" content="https://higherloveevent.com/registration">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="You're Officially Invited | Higher Love">
+<meta name="twitter:description" content="Join the Founder's Summit as a guest, or become a founding member of the Higher Love Brotherhood.">
+<meta name="twitter:image" content="https://higherloveevent.com/images/og-higher-love-common-2026.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0a'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='%23a07f56' font-family='Georgia' font-size='18' font-weight='bold'%3EHL%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --chamoisee:#a07f56; --gold:#d8b478; --body:#cfc6ba; --line:rgba(160,127,86,0.28); --line-soft:rgba(255,255,255,0.09); }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#000;color:#fff;font-family:'EB Garamond',serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h3{font-family:'Cormorant Garamond',serif;text-transform:uppercase;font-weight:600;}
+  .container{max-width:960px;margin:0 auto;padding:0 2rem;}
+  .eyebrow{font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);text-shadow:0 1px 8px rgba(0,0,0,0.6);}
+  .rhero{position:relative;overflow:hidden;text-align:center;padding:3rem 2rem 2rem;}
+  .rhero-media{position:absolute;inset:0;z-index:0;}
+  .rhero-media img{width:100%;height:100%;object-fit:cover;}
+  .rhero-media::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 72% 62% at 50% 50%, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 78%), linear-gradient(180deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.78) 100%);}
+  .rhero-inner{position:relative;z-index:2;max-width:820px;margin:0 auto;}
+  .rlogo{width:190px;height:auto;margin:0 auto 2rem;display:block;}
+  .rhero h1{font-size:clamp(2rem,4.6vw,3.05rem);letter-spacing:0.03em;line-height:1.08;margin:1rem auto 0;max-width:760px;}
+  .rhero .letter{max-width:600px;margin:1.7rem auto 0;color:var(--body);font-size:1.12rem;}
+  .sec{padding:2rem 0 4.5rem;}
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;max-width:860px;margin:0 auto;align-items:stretch;}
+  @media(max-width:760px){ .opts{grid-template-columns:1fr;gap:2rem;} }
+  .card{border:1px solid var(--gold);padding:2.4rem 2rem 2rem;display:flex;flex-direction:column;position:relative;background:linear-gradient(180deg,rgba(160,127,86,0.10),rgba(0,0,0,0));}
+  .ribbon{position:absolute;top:-11px;left:50%;transform:translateX(-50%);font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#000;background:var(--gold);padding:4px 14px;white-space:nowrap;}
+  .card h3{font-size:1.75rem;letter-spacing:0.02em;line-height:1.0;color:#fff;margin:0.4rem 0 0;min-height:3.4rem;}
+  .price{margin:1.5rem 0 0.2rem;}
+  .price .now{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:600;color:var(--gold);line-height:1;}
+  .price .lbl{font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-top:0.5rem;}
+  .incl{list-style:none;margin:1.5rem 0 0;padding:1.4rem 0 0;border-top:1px solid var(--line-soft);min-height:16.75rem;}
+  .incl li{position:relative;padding-left:1.3rem;margin-bottom:0.7rem;color:var(--body);font-size:0.85rem;line-height:1.4;}
+  .incl li::before{content:"";position:absolute;left:0;top:0.4rem;width:7px;height:7px;border:1px solid var(--chamoisee);transform:rotate(45deg);}
+  .btn{display:block;text-align:center;font-family:'Raleway',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:1.05rem 1.2rem;text-decoration:none;border:1px solid var(--gold);background:var(--gold);color:#000;transition:all .25s;margin-top:1.6rem;}
+  .btn:hover{background:#e6c68c;}
+  .guest-note{margin-top:auto;padding-top:1.4rem;font-style:italic;font-size:0.88rem;line-height:1.6;color:rgba(207,198,186,0.85);}
+  .plan-slot{margin-top:auto;padding-top:1.4rem;text-align:center;}
+  .plan-link{font-family:'Raleway',sans-serif;font-size:0.64rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--chamoisee);}
+  .pricing-note{text-align:center;font-family:'Raleway',sans-serif;font-size:0.66rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8a8a8a;margin-top:2.8rem;}
+  .rfoot{border-top:1px solid var(--line-soft);padding:2.4rem 2rem;}
+  .rfoot-inner{max-width:960px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center;}
+  .rfoot-logo{width:120px;height:auto;opacity:0.9;}
+  .rfoot-links{display:flex;gap:1.6rem;font-family:'Raleway',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;}
+  .rfoot-links a{color:var(--chamoisee);text-decoration:none;}
+  .rfoot-links a:hover{color:var(--gold);}
+  .rfoot-copy{font-family:'Raleway',sans-serif;font-size:0.62rem;letter-spacing:0.08em;color:#6b6b6b;}
+</style>
 </head>
-{% include "body-open-nav.html" %}
-{% include "pricing-content.html" %}
-{% include "footer-scripts.html" %}
+<body>
+
+<header class="rhero">
+  <div class="rhero-media"><img src="/images/hero-common.webp" alt="The common living area at the Higher Love estate"></div>
+  <div class="rhero-inner">
+    <a href="/" aria-label="Higher Love home"><img class="rlogo" src="/images/logo-1line-white.svg" alt="Higher Love"></a>
+    <div class="eyebrow">Your Invitation</div>
+    <h1>You Are Officially Invited</h1>
+    <div class="letter"><p>If you&rsquo;re on this page, it&rsquo;s because you are officially invited to join us as a guest or as a founding member of the first-of-its-kind brotherhood. Register below.</p></div>
+  </div>
+</header>
+
+<main class="sec"><div class="container">
+  <div class="opts">
+
+    <div class="card">
+      <div class="ribbon">The Summit</div>
+      <h3>Attend As<br>A Guest</h3>
+      <div class="price">
+        <div class="now">$3,500</div>
+        <div class="lbl">Early-Bird Price</div>
+      </div>
+      <ul class="incl">
+        <li>Higher Love Summit &middot; Sept 22&ndash;24 &middot; Austin, TX</li>
+        <li>Lodging, sleeping arrangements</li>
+        <li>Healthy, nourishing, catered meals</li>
+        <li>Higher Love Founding Member Candidate</li>
+      </ul>
+      <a class="btn" href="https://buy.stripe.com/9B6fZg1OS4vQ2Da6RV7g40o" target="_blank" rel="noopener">Secure My Seat</a>
+      <p class="guest-note">Come as a guest and feel the brotherhood firsthand before you decide if this is your room. If it&rsquo;s a fit, you can upgrade to full membership at the Summit, at the Brotherhood price in effect then, since early-bird pricing ends August 20.</p>
+    </div>
+
+    <div class="card">
+      <div class="ribbon">The Brotherhood</div>
+      <h3>Become A<br>Founding Member</h3>
+      <div class="price">
+        <div class="now">$7,500</div>
+        <div class="lbl">Early-Bird Price</div>
+      </div>
+      <ul class="incl">
+        <li>Higher Love Summit &middot; Sept 22&ndash;24 &middot; Austin, TX</li>
+        <li>Lodging, sleeping arrangements</li>
+        <li>Healthy, nourishing, catered meals</li>
+        <li>Founding Member Status</li>
+        <li>Higher Love Brotherhood Membership</li>
+        <li>2-Hour Brand Strategy Session w/Re Perez</li>
+        <li>Founding Member Exclusive Benefits</li>
+      </ul>
+      <a class="btn" href="https://buy.stripe.com/28E6oGalogey7Xu7VZ7g40m" target="_blank" rel="noopener">Become A Founding Member</a>
+      <div class="plan-slot"><span class="plan-link">Payment plans available</span></div>
+    </div>
+
+  </div>
+
+  <p class="pricing-note">Pricing subject to increase effective August 21, 2026</p>
+</div></main>
+
+<footer class="rfoot">
+  <div class="rfoot-inner">
+    <a href="/" aria-label="Higher Love home"><img class="rfoot-logo" src="/images/logo-white.svg" alt="Higher Love"></a>
+    <div class="rfoot-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+    <div class="rfoot-copy">&copy; 2026 Higher Love, a creation by Category of One Branding, LLC &middot; All Rights Reserved</div>
+  </div>
+</footer>
+
+</body>
+</html>
