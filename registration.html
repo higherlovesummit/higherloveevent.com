@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{ --chamoisee:#a07f56; --gold:#d8b478; --body:#cfc6ba; --line:rgba(160,127,86,0.28); --line-soft:rgba(255,255,255,0.09); }
+  :root{ --chamoisee:#a07f56; --gold:#d8b478; --body:#cfc6ba; --line:rgba(160,127,86,0.28); --line-soft:rgba(255,255,255,0.09); --dark-bg:#000; }
   *{margin:0;padding:0;box-sizing:border-box;}
   body{background:#000;color:#fff;font-family:'EB Garamond',serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
   h1,h3{font-family:'Cormorant Garamond',serif;text-transform:uppercase;font-weight:600;}
@@ -53,13 +53,16 @@
   .plan-slot{margin-top:auto;padding-top:1.4rem;text-align:center;}
   .plan-link{font-family:'Raleway',sans-serif;font-size:0.64rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--chamoisee);}
   .pricing-note{text-align:center;font-family:'Raleway',sans-serif;font-size:0.66rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8a8a8a;margin-top:2.8rem;}
-  .rfoot{border-top:1px solid var(--line-soft);padding:2.4rem 2rem;}
-  .rfoot-inner{max-width:960px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center;}
-  .rfoot-logo{width:120px;height:auto;opacity:0.9;}
-  .rfoot-links{display:flex;gap:1.6rem;font-family:'Raleway',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;}
-  .rfoot-links a{color:var(--chamoisee);text-decoration:none;}
-  .rfoot-links a:hover{color:var(--gold);}
-  .rfoot-copy{font-family:'Raleway',sans-serif;font-size:0.62rem;letter-spacing:0.08em;color:#6b6b6b;}
+  footer { background: var(--dark-bg); padding: 2.25rem 0 1.75rem; border-top: 1px solid var(--line-soft); }
+  .footer-simple { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-logo-img { height: 38px; width: auto; }
+  .footer-simple-right { display: flex; align-items: center; gap: 1.6rem; }
+  .footer-simple-right a { color: var(--body); text-decoration: none; font-family: 'Raleway', sans-serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; transition: color 0.3s; }
+  .footer-simple-right a:hover { color: var(--chamoisee); }
+  .footer-ig { display: inline-flex; align-items: center; }
+  .footer-ig svg { width: 20px; height: 20px; fill: #fff; transition: fill 0.3s; }
+  .footer-ig:hover svg { fill: var(--chamoisee); }
+  .footer-bottom-simple { text-align: center; margin-top: 1.25rem; padding-top: 0; font-family: 'Raleway', sans-serif; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: #ffffff; }
 </style>
 </head>
 <body>
@@ -70,7 +73,7 @@
     <a href="/" aria-label="Higher Love home"><img class="rlogo" src="/images/logo-1line-white.svg" alt="Higher Love"></a>
     <div class="eyebrow">Your Invitation</div>
     <h1>You Are Officially Invited</h1>
-    <div class="letter"><p>If you&rsquo;re on this page, it&rsquo;s because you are officially invited to join us as a guest or as a founding member of the first-of-its-kind brotherhood. Register below.</p></div>
+    <div class="letter"><p>If you&rsquo;re on this page, it&rsquo;s because you are officially invited to join us as a guest or as a founding member. Register below.</p></div>
   </div>
 </header>
 
@@ -119,11 +122,19 @@
   <p class="pricing-note">Pricing subject to increase effective August 21, 2026</p>
 </div></main>
 
-<footer class="rfoot">
-  <div class="rfoot-inner">
-    <a href="/" aria-label="Higher Love home"><img class="rfoot-logo" src="/images/logo-white.svg" alt="Higher Love"></a>
-    <div class="rfoot-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
-    <div class="rfoot-copy">&copy; 2026 Higher Love, a creation by Category of One Branding, LLC &middot; All Rights Reserved</div>
+<footer>
+  <div class="container">
+    <div class="footer-simple">
+      <a href="/" aria-label="Higher Love home"><img src="/images/logo-white.svg" alt="Higher Love" class="footer-logo-img"></a>
+      <div class="footer-simple-right">
+        <a href="https://www.instagram.com/the.re.perez/" target="_blank" rel="noopener" class="footer-ig" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38C1.36 2.67.94 3.34.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12.66.66 1.33 1.08 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.12-1.38.66-.66 1.08-1.33 1.38-2.12.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.38-2.12C21.33 1.36 20.66.94 19.86.63 19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+        </a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom-simple">&copy; 2026 Higher Love, a creation by Category of One Branding, LLC &middot; All Rights Reserved</div>
   </div>
 </footer>
 
