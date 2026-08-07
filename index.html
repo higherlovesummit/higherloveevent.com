@@ -621,6 +621,23 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   .si-embed { max-width: 520px; margin: 0 auto; }
   .si-embed iframe { width: 100%; height: 492px; border: none; border-radius: 3px; }
   @media (max-width: 540px) { .si-sec { padding: 4rem 0; } }
+  /* ════════════ TESTIMONIALS, What People Are Saying ════════════ */
+  .tst-sec { padding: 5.5rem 0; background: var(--section-dark); }
+  .tst-head { text-align: center; max-width: 640px; margin: 0 auto 3rem; }
+  .tst-head h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); letter-spacing: 0.03em; margin: 0.9rem 0 0; }
+  .tst-head p { color: var(--body); margin-top: 1rem; }
+  .tst-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; max-width: 960px; margin: 0 auto; }
+  .tst-vid { position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; border: 1px solid var(--line); cursor: pointer; background: #111; }
+  .tst-vid img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.82); transition: filter .3s; }
+  .tst-vid:hover img { filter: brightness(1); }
+  .tst-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 54px; height: 54px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; padding-left: 4px; box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
+  .tst-namebar { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.3rem 1.1rem 0.9rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); }
+  .tst-nm { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #fff; text-transform: uppercase; letter-spacing: 0.02em; }
+  .tst-rl { font-family: 'Raleway', sans-serif; font-size: 0.58rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-top: 0.2rem; }
+  .tst-q { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: var(--body); line-height: 1.4; margin: 1.2rem 0 0.9rem; }
+  .tst-an { display: block; font-family: 'Raleway', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #fff; }
+  .tst-ar { display: block; font-family: 'Raleway', sans-serif; font-size: 0.62rem; letter-spacing: 0.08em; color: #8a8a8a; margin-top: 0.2rem; }
+  @media (max-width: 760px) { .tst-grid { grid-template-columns: 1fr; gap: 2.4rem; max-width: 420px; } }
 </style>
 </head>
 <body>
@@ -829,6 +846,54 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
     </div>
   </div>
 </section>
+
+<!-- ══════════════════════════════════
+     TESTIMONIALS, What People Are Saying
+══════════════════════════════════ -->
+<section class="tst-sec">
+  <div class="container">
+    <div class="tst-head fade-in">
+      <div class="eyebrow">What People Are Saying</div>
+      <h2>In Good Company</h2>
+      <p>Hear from men who have experienced Re Perez&rsquo;s curated rooms.</p>
+    </div>
+    <div class="tst-grid fade-in">
+      <div class="tst-card">
+        <div class="tst-vid" data-id="FkvaVtLkRU8" onclick="tstPlay(this)">
+          <img src="https://img.youtube.com/vi/FkvaVtLkRU8/hqdefault.jpg" alt="Dr. Anthony Balduzzi testimonial" loading="lazy">
+          <div class="tst-play"><svg width="20" height="22" viewBox="0 0 28 32"><path d="M28 16L0 32V0L28 16Z" fill="#000"/></svg></div>
+          <div class="tst-namebar"><div class="tst-nm">Dr. Anthony Balduzzi</div><div class="tst-rl">Founder &middot; Fit Father Project &amp; Fit Mother Project</div></div>
+        </div>
+        <blockquote class="tst-q">&ldquo;I originally thought I wanted to go to a workshop. What I left with was connections, new friends, and a deeper sense of purpose. That&rsquo;s truly priceless.&rdquo;</blockquote>
+        <div><span class="tst-an">Dr. Anthony Balduzzi</span><span class="tst-ar">Founder &middot; Fit Father Project &amp; Fit Mother Project</span></div>
+      </div>
+      <div class="tst-card">
+        <div class="tst-vid" data-id="bZEmezOcKbk" onclick="tstPlay(this)">
+          <img src="https://img.youtube.com/vi/bZEmezOcKbk/hqdefault.jpg" alt="Thomas Ruggiero testimonial" loading="lazy">
+          <div class="tst-play"><svg width="20" height="22" viewBox="0 0 28 32"><path d="M28 16L0 32V0L28 16Z" fill="#000"/></svg></div>
+          <div class="tst-namebar"><div class="tst-nm">Thomas Ruggiero</div><div class="tst-rl">Executive &amp; Entrepreneur</div></div>
+        </div>
+        <blockquote class="tst-q">&ldquo;I&rsquo;ve known Re Perez for 15 years and worked with him in every capacity. Every single time, he goes that next level. It just makes everything better.&rdquo;</blockquote>
+        <div><span class="tst-an">Thomas Ruggiero</span><span class="tst-ar">Executive &amp; Entrepreneur</span></div>
+      </div>
+      <div class="tst-card">
+        <div class="tst-vid" data-id="1oV0NexnMYY" onclick="tstPlay(this)">
+          <img src="https://img.youtube.com/vi/1oV0NexnMYY/hqdefault.jpg" alt="Mike Budny testimonial" loading="lazy">
+          <div class="tst-play"><svg width="20" height="22" viewBox="0 0 28 32"><path d="M28 16L0 32V0L28 16Z" fill="#000"/></svg></div>
+          <div class="tst-namebar"><div class="tst-nm">Mike Budny</div><div class="tst-rl">Entrepreneur &amp; CEO</div></div>
+        </div>
+        <blockquote class="tst-q">&ldquo;I&rsquo;ve attended every type of personal growth event you can imagine. If you&rsquo;re on the fence and a little nervous, that&rsquo;s a good thing. Lean in.&rdquo;</blockquote>
+        <div><span class="tst-an">Mike Budny</span><span class="tst-ar">Entrepreneur &amp; CEO</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+function tstPlay(el){var id=el.getAttribute('data-id');var f=document.createElement('iframe');
+f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+f.setAttribute('allow','autoplay; encrypted-media');f.setAttribute('allowfullscreen','');
+f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0;';el.innerHTML='';el.appendChild(f);}
+</script>
 <!-- ══════════════════════════════════
      FINAL CTA
 ══════════════════════════════════ -->
