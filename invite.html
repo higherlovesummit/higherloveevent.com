@@ -161,6 +161,9 @@
   .price .bh-eb .bh-full{color:var(--body);}
   .price .eb-ded{font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--body);margin-top:0.3rem;}
   .price .eb-ded + .now, .price .eb-ded + .bh-eb{margin-top:0.55rem;}
+  .price .price-div{display:flex;align-items:center;justify-content:center;gap:12px;margin:1.3rem 0;}
+  .price .price-div .ln{width:44px;height:1px;background:var(--chamoisee);}
+  .price .price-div .dia{width:7px;height:7px;border:1px solid var(--chamoisee);transform:rotate(45deg);}
 </style>
 </head>
 <body>
@@ -184,7 +187,7 @@
       <div class="price">
         <div class="std-eb">Standard Rate</div>
         <div class="std-price">$5,500</div>
-        <div class="price-gap"></div>
+        <div class="price-div"><span class="ln"></span><span class="dia"></span><span class="ln"></span></div>
         <div class="eb-eb">Early Bird Rate &middot; Save $2,000</div>
         <div class="eb-ded">Through 11:59pm CT, Aug 20, 2026</div>
         <div class="now">$3,500</div>
@@ -215,7 +218,7 @@
           <div class="bh-term">for 9 months</div>
           <div class="bh-full">(or $15,000 pay-in-full)</div>
         </div>
-        <div class="price-gap"></div>
+        <div class="price-div"><span class="ln"></span><span class="dia"></span><span class="ln"></span></div>
         <div class="eb-eb">Early Bird Rate &middot; Save 50%</div>
         <div class="eb-ded">Through 11:59pm CT, Aug 20, 2026</div>
         <div class="bh-eb">
