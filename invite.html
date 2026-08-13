@@ -104,7 +104,7 @@
   }
   /* price anchoring */
   .price .reg{font-family:'Cormorant Garamond',serif;font-size:2.1rem;color:#fff;text-decoration:line-through;text-decoration-color:rgba(216,180,120,0.85);text-decoration-thickness:2px;line-height:1;margin-bottom:0.25rem;}
-  .price .save{font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-top:0.6rem;}
+  .price .save{font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fff;margin-top:0.6rem;}
   .incl-sub{list-style:none;margin:0.55rem 0 0.2rem;padding:0;}
   .incl-sub li{position:relative;padding-left:1.1rem;margin-bottom:0.35rem;font-size:1rem;color:var(--gold);line-height:1.45;}
   .incl-sub li::before{content:"";position:absolute;left:0;top:0.5rem;width:5px;height:5px;background:var(--chamoisee);border-radius:50%;}
@@ -141,6 +141,11 @@
   .cta-stack .btn{margin-top:0;font-size:0.74rem;letter-spacing:0.08em;padding:1rem 0.7rem;line-height:1.25;}
   .btn.ghost{background:transparent;color:#fff;}
   .btn.ghost:hover{background:rgba(160,127,86,0.14);color:#fff;border-color:var(--chamoisee);}
+  .price .std-eb{font-family:'Raleway',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;}
+  .price .std-price{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:#9a9a9a;line-height:1.1;margin-top:0.15rem;}
+  .price .price-gap{height:1.1rem;}
+  .price .eb-eb{font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.12rem;}
+  .price .ded{font-family:'Raleway',sans-serif;font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;color:#7a7a7a;margin-top:0.5rem;}
 </style>
 </head>
 <body>
@@ -162,10 +167,13 @@
       <div class="ribbon">The Retreats</div>
       <h3>Attend As<br>A Guest</h3>
       <div class="price">
-        <div class="reg">$5,500</div>
+        <div class="std-eb">Standard Rate</div>
+        <div class="std-price">$5,500</div>
+        <div class="price-gap"></div>
+        <div class="eb-eb">Early Bird Rate</div>
         <div class="now">$3,500</div>
-        <div class="lbl">Early Bird (Save $2,000)</div>
-        <div class="save">Through 11:59pm CT, Aug 20, 2026</div>
+        <div class="save">Save $2,000</div>
+        <div class="ded">Through 11:59pm CT, Aug 20, 2026</div>
       </div>
       <ul class="incl">
         <li>One (1) In-Person Retreat
@@ -186,11 +194,14 @@
       <div class="ribbon">The Brotherhood</div>
       <h3>Become A<br>Founding Member</h3>
       <div class="price">
-        <div class="reg">$15,000</div>
+        <div class="std-eb">Standard Rate</div>
+        <div class="std-price">$15,000</div>
+        <div class="price-gap"></div>
+        <div class="eb-eb">Early Bird Rate</div>
         <div class="now">$7,500</div>
-        <div class="lbl">Early Bird (Save 50%)</div>
         <div class="pay-alt">Or 9 monthly payments of $1,000</div>
-        <div class="save">Through 11:59pm CT, Aug 20, 2026</div>
+        <div class="save">Save 50%</div>
+        <div class="ded">Through 11:59pm CT, Aug 20, 2026</div>
       </div>
       <ul class="incl">
         <li>One (1) In-Person Retreat
