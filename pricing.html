@@ -147,6 +147,18 @@
   .price .eb-eb{font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.12rem;}
   .price .ded{font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--body);margin-top:0.55rem;}
   .price .std-pay{font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:600;letter-spacing:0.05em;color:#8a8a8a;margin-top:0.3rem;}
+  .price .bh-num{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1;}
+  .price .bh-std .bh-num{font-size:2.4rem;color:#9a9a9a;}
+  .price .bh-eb .bh-num{font-size:3rem;color:var(--gold);}
+  .price .bh-permo{font-family:'Raleway',sans-serif;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;}
+  .price .bh-std .bh-permo{font-size:0.78rem;color:#8a8a8a;}
+  .price .bh-eb .bh-permo{font-size:0.9rem;color:var(--gold);}
+  .price .bh-term{font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-top:0.35rem;}
+  .price .bh-std .bh-term{color:#8a8a8a;}
+  .price .bh-eb .bh-term{color:var(--body);}
+  .price .bh-full{font-family:'EB Garamond',serif;font-style:italic;font-size:0.92rem;margin-top:0.3rem;}
+  .price .bh-std .bh-full{color:#7a7a7a;}
+  .price .bh-eb .bh-full{color:var(--body);}
 </style>
 </head>
 <body>
@@ -196,12 +208,18 @@
       <h3>Become A<br>Founding Member</h3>
       <div class="price">
         <div class="std-eb">Standard Rate</div>
-        <div class="std-price">$15,000</div>
-        <div class="std-pay">Or 9 monthly payments of $2,000</div>
+        <div class="bh-std">
+          <div><span class="bh-num">$2,000</span><span class="bh-permo">&nbsp;/mo</span></div>
+          <div class="bh-term">for 9 months</div>
+          <div class="bh-full">(or $15,000 pay-in-full)</div>
+        </div>
         <div class="price-gap"></div>
         <div class="eb-eb">Early Bird Rate</div>
-        <div class="now">$7,500</div>
-        <div class="pay-alt">Or 9 monthly payments of $1,000</div>
+        <div class="bh-eb">
+          <div><span class="bh-num">$1,000</span><span class="bh-permo">&nbsp;/mo</span></div>
+          <div class="bh-term">for 9 months</div>
+          <div class="bh-full">(or $7,500 pay-in-full)</div>
+        </div>
         <div class="save">Save 50%</div>
         <div class="ded">Through 11:59pm CT, Aug 20, 2026</div>
       </div>
