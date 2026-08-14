@@ -479,6 +479,8 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   .estate-band { width: 100%; height: clamp(280px, 45vh, 460px); overflow: hidden; }
   .estate-band img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .estate-gallery { max-width: 900px; margin: 2.4rem auto 0; padding: 0 2rem; }
+  .venue-bleed { position: relative; width: 100%; min-height: clamp(360px, 52vh, 520px); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+  .vb-line { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; color: var(--gold); font-size: clamp(1.6rem, 3.4vw, 2.4rem); line-height: 1.3; text-shadow: 0 2px 14px rgba(0,0,0,0.7); max-width: 720px; }
   .estate-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 1.4rem; }
   .estate-grid img { width: 100%; height: 200px; object-fit: cover; display: block; border: 1px solid rgba(160,127,86,0.25); }
   .why-center, .why-center p { text-align: center; }
@@ -529,6 +531,8 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
 
   .btn-ghost { background: transparent; color: #fff; border: 1px solid #fff; }
   .btn-ghost:hover { background: #000; color: #fff; border-color: #fff; }
+  .btn-outline { background: transparent; color: #fff; border: 1px solid #fff; }
+  .btn-outline:hover { background: #fff; color: #111; border-color: #fff; }
   /* ── NEW FOUNDER LETTER ── */
 
   .nf-built span { color:var(--chamoisee); }
@@ -680,7 +684,7 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
     <img class="kenburns" src="images/hero-common.webp" alt="The common living area at the Higher Love estate">
   </div>
   <div class="hero-inner fade-in">
-    <div class="hero-eyebrow-top">By Referral And Invitation Only</div>
+    <div class="hero-eyebrow-top">By Referral And Invitation<span class="ey-sep"> &middot; </span><span class="ey-l2">Limited Seats</span></div>
     <h1>Finally, A Room Built For <br class="hero-h1-break">The Intentional Gay Man.</h1>
     <div class="hero-watch">Please watch the 4-min video Below <span class="hero-tri"></span></div>
     <div class="hero-video">
@@ -689,8 +693,7 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
       </video>
     </div>
     <div class="hero-cta-row">
-      <a href="#application-form" class="btn" data-cta="hero">Request an Invitation</a>
-      <a href="#stay-informed" class="btn btn-ghost" data-cta="waitlist">Get On The List</a>
+      <a href="#application-form" class="btn btn-outline" data-cta="hero">Request an Invitation</a>
     </div>
   </div>
 </header>
@@ -709,8 +712,10 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
     </div>
   </div>
 </section>
-<!-- estate band (interior) -->
-<div class="estate-band"><img src="images/estate-common.webp" alt="The common living area at the Higher Love estate" loading="lazy"></div>
+<!-- venue full-bleed 1 -->
+<div class="venue-bleed" style="background-image:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.62)),url(images/estate-common.webp)">
+  <div class="vb-line">&ldquo;Where the armor comes off.&rdquo;</div>
+</div>
 <!-- ══════════════════════════════════
      WHY BE A PART (build desire)
 ══════════════════════════════════ -->
@@ -728,31 +733,27 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
     </div>
   </div>
 </section>
+<!-- venue full-bleed 2 -->
+<div class="venue-bleed" style="background-image:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.62)),url(images/estate-pool.webp)">
+  <div class="vb-line">September 22&ndash;24, 2026 &middot; Austin, Texas</div>
+</div>
 <!-- ══════════════════════════════════
      AN INVITATION (offer + ask)
 ══════════════════════════════════ -->
 <section class="letter">
   <div class="inv-wrap fade-in">
     <div class="inv-letter">
-      <h3 class="inv-h3">An Invitation To Join Our First Gathering</h3>
+      <h3 class="inv-h3">Our First Gathering</h3>
       <p>Higher Love begins in person this September 22&ndash;24, 2026, at a private estate in Austin, TX. We'll explore what brotherhood means for gay men like us and what higher love looks like in each of our lives. We'll do a bit of business masterminding among peers. We'll drop into our hearts and bodies to connect more deeply with ourselves and each other. And we'll share a fully nourishing, immersive experience built for some of the most ambitious, heart-centered gay men.</p>
       <p style="margin-top:3rem;">If this sounds like something you'd like to be a part of, then I invite you to request an invitation below. You'll answer a few questions and schedule a friendly call with me to see if this is the right room for you.</p>
       <div style="text-align:center; margin-top:2.2rem;"><a href="#application-form" class="btn" data-cta="offer">Request an Invitation</a></div>
-      <p class="invest-note invest-note-gold" style="margin-top:2rem;">Note: There is an investment to partake in this community. If it's aligned, we'll discuss those options during our call together.</p>
-    </div>
-  </div>
-  <div class="estate-gallery fade-in">
-    <h2 class="inv-h3" style="margin-top:0;">Where It Happens</h2>
-    <div class="estate-grid">
-      <img src="images/estate-suite.webp" alt="Stone-fireplace suite with Hill Country view" loading="lazy">
-      <img src="images/estate-pool.webp" alt="Pool and oaks at sunset" loading="lazy">
-      <img src="images/estate-sauna.webp" alt="Glass sauna and cold plunge" loading="lazy">
-      <img src="images/estate-deck.webp" alt="Covered dining deck overlooking the hills" loading="lazy">
-      <img src="images/estate-room.webp" alt="Founding member bedroom suite" loading="lazy">
-      <img src="images/estate-plunge.webp" alt="Cold plunge barrel by the pool" loading="lazy">
     </div>
   </div>
 </section>
+<!-- venue full-bleed 3 -->
+<div class="venue-bleed" style="background-image:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.62)),url(images/estate-suite.webp)">
+  <div class="vb-line">&ldquo;Where you&rsquo;ll stay.&rdquo;</div>
+</div>
 <!-- ══════════════════════════════════
      ABOUT YOUR HOST
 ══════════════════════════════════ -->
@@ -766,6 +767,10 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
     </div>
   </div>
 </section>
+<!-- venue full-bleed 4 -->
+<div class="venue-bleed" style="background-image:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.62)),url(images/estate-sauna.webp)">
+  <div class="vb-line">Room to drop in.</div>
+</div>
 
 <!-- ══════════════════════════════════
      TESTIMONIALS, What People Are Saying
