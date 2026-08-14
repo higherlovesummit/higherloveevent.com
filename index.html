@@ -632,8 +632,12 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   .tst-sec { padding: 5.5rem 0; background: var(--section-dark); }
   .tst-head { text-align: center; max-width: 640px; margin: 0 auto 3rem; }
   .tst-head h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); letter-spacing: 0.03em; margin: 0.9rem 0 0; }
-  .tst-head p { color: var(--body); margin-top: 1rem; }
-  .tst-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; max-width: 960px; margin: 0 auto; }
+  .tst-head p { font-family: 'EB Garamond', Georgia, serif; font-size: 1.42rem; line-height: 1.7; color: var(--body); margin-top: 1rem; }
+  .tst-rows { display: flex; flex-direction: column; gap: 3.6rem; max-width: 1000px; margin: 0 auto; }
+  .tst-row { display: flex; align-items: center; gap: 3.2rem; }
+  .tst-row.rev { flex-direction: row-reverse; }
+  .tst-vidcol { flex: 1 1 54%; }
+  .tst-txtcol { flex: 1 1 46%; }
   .tst-vid { position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; border: 1px solid var(--line); cursor: pointer; background: #111; }
   .tst-vid img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.82); transition: filter .3s; }
   .tst-vid:hover img { filter: brightness(1); }
@@ -641,10 +645,10 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   .tst-namebar { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.3rem 1.1rem 0.9rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); }
   .tst-nm { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #fff; text-transform: uppercase; letter-spacing: 0.02em; }
   .tst-rl { font-family: 'Raleway', sans-serif; font-size: 0.58rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-top: 0.2rem; }
-  .tst-q { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: var(--body); line-height: 1.4; margin: 1.2rem 0 0.9rem; }
+  .tst-q { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.6rem; color: var(--body); line-height: 1.4; margin: 0 0 1.2rem; }
   .tst-an { display: block; font-family: 'Raleway', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #fff; }
   .tst-ar { display: block; font-family: 'Raleway', sans-serif; font-size: 0.62rem; letter-spacing: 0.08em; color: #8a8a8a; margin-top: 0.2rem; }
-  @media (max-width: 760px) { .tst-grid { grid-template-columns: 1fr; gap: 2.4rem; max-width: 420px; } }
+  @media (max-width: 760px) { .tst-row, .tst-row.rev { flex-direction: column; gap: 1.4rem; } .tst-txtcol { text-align: center; } .tst-q { font-size: 1.42rem; } }
   .why2 { max-width: 620px; margin: 0 auto; text-align: center; }
   .why2-label { font-family: 'Raleway', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--chamoisee); }
   .why2-h { font-family: 'Cormorant Garamond', serif; font-weight: 600; text-transform: uppercase; color: #fff; line-height: 1.12; letter-spacing: 0.03em; font-size: clamp(1.9rem, 4vw, 3rem); margin: 1.1rem auto 2.2rem; }
@@ -769,37 +773,45 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
 <section class="tst-sec">
   <div class="container">
     <div class="tst-head fade-in">
-      <div class="eyebrow">What People Are Saying</div>
-      <h2>In Good Company</h2>
-      <p>I don&rsquo;t just host these rooms. I sit in them too. Hear from a few of the straight men who&rsquo;ve experienced my retreats (that have historically been co-ed).</p>
+      <h2>Testimonials</h2>
+      <p>Hear from a few straight men who&rsquo;ve experienced retreats hosted by Re Perez.</p>
     </div>
-    <div class="tst-grid fade-in">
-      <div class="tst-card">
-        <div class="tst-vid" data-id="FkvaVtLkRU8" onclick="tstPlay(this)">
-          <img src="https://img.youtube.com/vi/FkvaVtLkRU8/hqdefault.jpg" alt="Dr. Anthony Balduzzi testimonial" loading="lazy">
-          <div class="tst-play"><svg width="20" height="22" viewBox="0 0 28 32"><path d="M28 16L0 32V0L28 16Z" fill="#000"/></svg></div>
-          <div class="tst-namebar"><div class="tst-nm">Dr. Anthony Balduzzi</div><div class="tst-rl">Founder &middot; Fit Father Project &amp; Fit Mother Project</div></div>
+    <div class="tst-rows fade-in">
+      <div class="tst-row">
+        <div class="tst-vidcol">
+          <div class="tst-vid" data-id="FkvaVtLkRU8" onclick="tstPlay(this)">
+            <img src="https://img.youtube.com/vi/FkvaVtLkRU8/hqdefault.jpg" alt="Dr. Anthony Balduzzi testimonial" loading="lazy">
+            <div class="tst-play"><svg width="20" height="22" viewBox="0 0 28 32"><path d="M28 16L0 32V0L28 16Z" fill="#000"/></svg></div>
+          </div>
         </div>
-        <blockquote class="tst-q">&ldquo;I originally thought I wanted to go to a workshop. What I left with was connections, new friends, and a deeper sense of purpose. That&rsquo;s truly priceless.&rdquo;</blockquote>
-        <div><span class="tst-an">Dr. Anthony Balduzzi</span><span class="tst-ar">Founder &middot; Fit Father Project &amp; Fit Mother Project</span></div>
+        <div class="tst-txtcol">
+          <blockquote class="tst-q">&ldquo;I originally thought I wanted to go to a workshop. What I left with was connections, new friends, and a deeper sense of purpose. That&rsquo;s truly priceless.&rdquo;</blockquote>
+          <div><span class="tst-an">Dr. Anthony Balduzzi</span><span class="tst-ar">Founder &middot; Fit Father Project &amp; Fit Mother Project</span></div>
+        </div>
       </div>
-      <div class="tst-card">
-        <div class="tst-vid" data-id="bZEmezOcKbk" onclick="tstPlay(this)">
-          <img src="https://img.youtube.com/vi/bZEmezOcKbk/hqdefault.jpg" alt="Thomas Ruggiero testimonial" loading="lazy">
-          <div class="tst-play"><svg width="20" height="22" viewBox="0 0 28 32"><path d="M28 16L0 32V0L28 16Z" fill="#000"/></svg></div>
-          <div class="tst-namebar"><div class="tst-nm">Thomas Ruggiero</div><div class="tst-rl">Executive &amp; Entrepreneur</div></div>
+      <div class="tst-row rev">
+        <div class="tst-vidcol">
+          <div class="tst-vid" data-id="bZEmezOcKbk" onclick="tstPlay(this)">
+            <img src="https://img.youtube.com/vi/bZEmezOcKbk/hqdefault.jpg" alt="Thomas Ruggiero testimonial" loading="lazy">
+            <div class="tst-play"><svg width="20" height="22" viewBox="0 0 28 32"><path d="M28 16L0 32V0L28 16Z" fill="#000"/></svg></div>
+          </div>
         </div>
-        <blockquote class="tst-q">&ldquo;I&rsquo;ve known Re Perez for 15 years and worked with him in every capacity. Every single time, he goes that next level. It just makes everything better.&rdquo;</blockquote>
-        <div><span class="tst-an">Thomas Ruggiero</span><span class="tst-ar">Executive &amp; Entrepreneur</span></div>
+        <div class="tst-txtcol">
+          <blockquote class="tst-q">&ldquo;I&rsquo;ve known Re Perez for 15 years and worked with him in every capacity. Every single time, he goes that next level. It just makes everything better.&rdquo;</blockquote>
+          <div><span class="tst-an">Thomas Ruggiero</span><span class="tst-ar">Executive &amp; Entrepreneur</span></div>
+        </div>
       </div>
-      <div class="tst-card">
-        <div class="tst-vid" data-id="1oV0NexnMYY" onclick="tstPlay(this)">
-          <img src="https://img.youtube.com/vi/1oV0NexnMYY/hqdefault.jpg" alt="Mike Budny testimonial" loading="lazy">
-          <div class="tst-play"><svg width="20" height="22" viewBox="0 0 28 32"><path d="M28 16L0 32V0L28 16Z" fill="#000"/></svg></div>
-          <div class="tst-namebar"><div class="tst-nm">Mike Budny</div><div class="tst-rl">Entrepreneur &amp; CEO</div></div>
+      <div class="tst-row">
+        <div class="tst-vidcol">
+          <div class="tst-vid" data-id="1oV0NexnMYY" onclick="tstPlay(this)">
+            <img src="https://img.youtube.com/vi/1oV0NexnMYY/hqdefault.jpg" alt="Mike Budny testimonial" loading="lazy">
+            <div class="tst-play"><svg width="20" height="22" viewBox="0 0 28 32"><path d="M28 16L0 32V0L28 16Z" fill="#000"/></svg></div>
+          </div>
         </div>
-        <blockquote class="tst-q">&ldquo;I&rsquo;ve attended every type of personal growth event you can imagine. If you&rsquo;re on the fence and a little nervous, that&rsquo;s a good thing. Lean in.&rdquo;</blockquote>
-        <div><span class="tst-an">Mike Budny</span><span class="tst-ar">Entrepreneur &amp; CEO</span></div>
+        <div class="tst-txtcol">
+          <blockquote class="tst-q">&ldquo;I&rsquo;ve attended every type of personal growth event you can imagine. If you&rsquo;re on the fence and a little nervous, that&rsquo;s a good thing. Lean in.&rdquo;</blockquote>
+          <div><span class="tst-an">Mike Budny</span><span class="tst-ar">Entrepreneur &amp; CEO</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -819,7 +831,6 @@ f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0;';el.
 <section class="application-section" id="application-form">
   <div class="container">
     <div class="application-box fade-in">
-      <div class="eyebrow">Let's Have a Conversation</div>
       <h2>Request an Invitation</h2>
       
       <div class="ghl-form-wrapper">
@@ -846,9 +857,8 @@ f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0;';el.
 <section class="si-sec" id="stay-informed">
   <div class="container">
     <div class="si-head fade-in">
-      <div class="eyebrow">Let&rsquo;s Keep In Touch</div>
       <h2>Stay Informed</h2>
-      <p>Not quite ready, but interested in receiving updates on Higher Love? Enter your information below and we&rsquo;ll keep you updated.</p>
+      <p>Interested, but not ready to commit? Receive updates on Higher Love as the community builds.</p>
     </div>
     <div class="si-embed fade-in">
       <iframe src="https://link.categoryofonebranding.com/widget/form/hIpSppGixTqNz76szvuk" id="inline-hIpSppGixTqNz76szvuk" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Higher Love Subscribers" data-height="492" data-layout-iframe-id="inline-hIpSppGixTqNz76szvuk" data-form-id="hIpSppGixTqNz76szvuk" title="Higher Love Subscribers"></iframe>
