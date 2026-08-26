@@ -601,7 +601,7 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   }
 
   /* ════════════ PROGRAM TIMELINE ════════════ */
-  .prog-sec { background: var(--section-dark); padding: 5.5rem 0; }
+  .prog-sec { background: var(--section-dark); padding: 7rem 0; }
   .prog-head { text-align: center; margin-bottom: 3rem; }
   .prog-head h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); letter-spacing: 0.03em; margin: 0.9rem 0 0; line-height: 1.08; }
   .prog-head .prog-sub { color: var(--body); font-size: 1.08rem; margin-top: 1rem; max-width: 560px; margin-left: auto; margin-right: auto; }
@@ -625,6 +625,36 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   .prog-tag { font-family: 'Raleway', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
   .prog-tag.inperson { color: #000; background: #d8b478; padding: 3px 9px; }
   .prog-tag.virtual { color: var(--chamoisee); border: 1px solid var(--line); padding: 3px 8px; }
+  /* ── PRICING cards (ported from /investment) ── */
+  .price-h { text-align:center; margin-bottom:2.6rem; }
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;max-width:860px;margin:0 auto;align-items:stretch;}
+  .card{border:1px solid var(--chamoisee);padding:2.4rem 2rem 2rem;display:flex;flex-direction:column;position:relative;background:transparent;}
+  .ribbon{position:absolute;top:-11px;left:50%;transform:translateX(-50%);font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#000;background:var(--gold);padding:4px 14px;white-space:nowrap;}
+  .card h3{font-family:'Cormorant Garamond',serif;font-weight:600;text-transform:uppercase;font-size:1.75rem;letter-spacing:0.02em;line-height:1.0;color:#fff;margin:0.4rem 0 0;min-height:3.4rem;}
+  .price{margin:1.5rem 0 0.2rem;}
+  .price .now{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:600;color:var(--gold);line-height:1;}
+  .incl{list-style:none;margin:1.5rem 0 0;padding:1.4rem 0 0;border-top:1px solid var(--line-soft);min-height:16.75rem;}
+  .incl li{position:relative;padding-left:1.3rem;margin-bottom:0.8rem;color:var(--body);font-size:1.15rem;line-height:1.55;}
+  .incl li::before{content:"";position:absolute;left:0;top:0.4rem;width:7px;height:7px;border:1px solid var(--chamoisee);transform:rotate(45deg);}
+  .incl-sub{list-style:none;margin:0.55rem 0 0.2rem;padding:0;}
+  .incl-sub li{position:relative;padding-left:1.1rem;margin-bottom:0.35rem;font-size:1rem;color:var(--gold);line-height:1.45;}
+  .incl-sub li::before{content:"";position:absolute;left:0;top:0.5rem;width:5px;height:5px;background:var(--chamoisee);border-radius:50%;}
+  .guest-note{margin-top:auto;padding-top:1.4rem;font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1rem;line-height:1.65;color:rgba(207,198,186,0.85);}
+  .pbtn{display:block;text-align:center;font-family:'Raleway',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:1.05rem 1.2rem;text-decoration:none;border:1px solid var(--gold);background:var(--gold);color:#111;transition:all 0.3s ease;margin-top:1.6rem;}
+  .pbtn:hover{background:#000;color:#fff;border-color:var(--gold);}
+  .prog-eyebrow{font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:var(--chamoisee);text-align:center;}
+  @media(max-width:760px){
+    .opts{grid-template-columns:1fr;gap:1.5rem;max-width:430px;}
+    .card{padding:2.1rem 1.6rem 1.9rem;}
+    .card h3{font-size:2rem;min-height:0;}
+    .price .now{font-size:3.3rem;}
+    .incl{min-height:0;margin-top:1.3rem;padding-top:1.2rem;}
+    .incl li{font-size:1rem;line-height:1.5;padding-left:1.4rem;}
+    .incl li::before{top:0.5rem;}
+    .incl-sub li{font-size:0.95rem;line-height:1.45;}
+    .pbtn{font-size:0.95rem;padding:1.25rem 1.2rem;letter-spacing:0.12em;}
+    .guest-note{font-size:1.02rem;line-height:1.65;}
+  }
   .prog-timenote { text-align: center; font-family: 'Raleway', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #d8b478; margin-top: 2.6rem; }
   @media (max-width: 680px) {
     .prog-cols { grid-template-columns: 1fr; gap: 2rem; }
@@ -831,6 +861,83 @@ f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbran
 f.setAttribute('allow','autoplay; encrypted-media');f.setAttribute('allowfullscreen','');
 f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0;';el.innerHTML='';el.appendChild(f);}
 </script>
+<!-- ══════════════════════════════════
+     THE INVESTMENT (pricing)
+══════════════════════════════════ -->
+<section class="letter">
+  <div class="container">
+    <h2 class="price-h fade-in">The Investment</h2>
+    <div class="opts fade-in">
+      <div class="card">
+        <div class="ribbon">The Retreats</div>
+        <h3>Attend As<br>A Guest</h3>
+        <div class="price"><div class="now">$3,500</div></div>
+        <ul class="incl">
+          <li>One (1) In-Person Retreat
+            <ul class="incl-sub">
+              <li>September 22&ndash;24, 2026</li>
+              <li>January 26&ndash;28, 2027</li>
+              <li>April 22&ndash;24, 2027</li>
+            </ul>
+          </li>
+          <li>Sleeping Arrangements</li>
+          <li>Healthy, nutritious meals</li>
+          <li>Candidate for Higher Love Brotherhood</li>
+        </ul>
+        <p class="guest-note">Attend Higher Love Retreat as a guest and feel the brotherhood firsthand before you commit to the year as a founding member. If it&rsquo;s a fit, you can upgrade to Higher Love Brotherhood at the rate offered at that time.</p>
+      </div>
+      <div class="card">
+        <div class="ribbon">The Brotherhood</div>
+        <h3>Become A<br>Founding Member</h3>
+        <div class="price"><div class="now">$7,500</div></div>
+        <ul class="incl">
+          <li>One (1) In-Person Retreat
+            <ul class="incl-sub">
+              <li>September 22&ndash;24, 2026</li>
+              <li>January 26&ndash;28, 2027</li>
+              <li>April 22&ndash;24, 2027</li>
+            </ul>
+          </li>
+          <li>Additional Retreats @ $3,500 each</li>
+          <li>Sleeping Arrangements</li>
+          <li>Healthy, nutritious meals</li>
+          <li>Founding Member Status</li>
+          <li>Annual Membership</li>
+          <li>Monthly Gatherings</li>
+          <li>Brand Strategy Session w/Re Perez</li>
+          <li>Exclusive Member Benefits</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══════════════════════════════════
+     KEY DATES (intentional gatherings)
+══════════════════════════════════ -->
+<section class="prog-sec">
+  <div class="container">
+    <div class="prog-head fade-in">
+      <p class="prog-eyebrow">Key Dates</p>
+      <h2>Intentional Gatherings</h2>
+      <p class="prog-sub">It begins in Austin and continues through the end of August 2027.</p>
+    </div>
+    <div style="max-width:460px;margin:0 auto;" class="fade-in">
+      <div class="prog-tl">
+        <div class="prog-row anchor"><span class="prog-node"></span><div class="prog-date">September 22&ndash;24, 2026</div><div class="prog-meta"><span class="prog-tag inperson">In Person &middot; Austin, TX</span><span class="prog-mtitle">Founder&rsquo;s Retreat</span></div></div>
+        <div class="prog-row"><span class="prog-node"></span><div class="prog-date">October 21, 2026</div><div class="prog-meta"><span class="prog-tag virtual">Virtual</span></div></div>
+        <div class="prog-row"><span class="prog-node"></span><div class="prog-date">November 24, 2026</div><div class="prog-meta"><span class="prog-tag virtual">Virtual</span></div></div>
+        <div class="prog-row anchor"><span class="prog-node"></span><div class="prog-date">January 26&ndash;28, 2027</div><div class="prog-meta"><span class="prog-tag inperson">In Person &middot; Austin, TX</span><span class="prog-mtitle">Founder&rsquo;s Retreat</span></div></div>
+        <div class="prog-row"><span class="prog-node"></span><div class="prog-date">February 16, 2027</div><div class="prog-meta"><span class="prog-tag virtual">Virtual</span></div></div>
+        <div class="prog-row"><span class="prog-node"></span><div class="prog-date">March 23, 2027</div><div class="prog-meta"><span class="prog-tag virtual">Virtual</span></div></div>
+        <div class="prog-row anchor"><span class="prog-node"></span><div class="prog-date">April 22&ndash;24, 2027</div><div class="prog-meta"><span class="prog-tag inperson">In Person &middot; Location TBD</span><span class="prog-mtitle">Founder&rsquo;s Retreat</span></div></div>
+        <div class="prog-row"><span class="prog-node"></span><div class="prog-date">May 26, 2027</div><div class="prog-meta"><span class="prog-tag virtual">Virtual</span></div></div>
+        <div class="prog-row"><span class="prog-node"></span><div class="prog-date">June 23, 2027</div><div class="prog-meta"><span class="prog-tag virtual">Virtual</span></div></div>
+        <div class="prog-row"><span class="prog-node"></span><div class="prog-date">July 28, 2027</div><div class="prog-meta"><span class="prog-tag virtual">Virtual</span></div></div>
+        <div class="prog-row"><span class="prog-node"></span><div class="prog-date">August 25, 2027</div><div class="prog-meta"><span class="prog-tag virtual">Virtual</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- venue full-bleed 4 (before application) -->
 <div class="venue-bleed" style="background-image:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.62)),url(images/outdoor.webp)">
   <div class="vb-line">&ldquo;Those who can be counted on, will be counted in.&rdquo;</div>
