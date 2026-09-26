@@ -52,6 +52,12 @@ function loginResponse(wrong) {
 export async function onRequest(context) {
   const { request, env } = context;
   const url = new URL(request.url);
+
+  // /investment was merged into the homepage — send it there
+  if (url.pathname === "/investment" || url.pathname === "/investment/" || url.pathname.startsWith("/investment/")) {
+    return Response.redirect(new URL("/", url).toString(), 301);
+  }
+
   const password = env.CFP_PASSWORD;
 
   // Gate is active only when CFP_PASSWORD is set (fail-open so the site keeps working until you set it)
