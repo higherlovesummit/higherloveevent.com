@@ -164,6 +164,20 @@
   .price .price-div{display:flex;align-items:center;gap:10px;margin:1.3rem 0;}
   .price .price-div .dia{width:7px;height:7px;border:1px solid var(--chamoisee);transform:rotate(45deg);flex-shrink:0;}
   .price .price-div .ln{flex:1;height:1px;background:var(--chamoisee);}
+  .ret-h{font-family:'Cormorant Garamond',serif;font-weight:600;text-transform:uppercase;color:#fff;letter-spacing:0.03em;font-size:clamp(1.9rem,4vw,2.7rem);text-align:center;margin:0 0 0.5rem;}
+  .ret-lim{display:flex;align-items:center;justify-content:center;gap:10px;font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin:0 auto 2.4rem;}
+  .ret-lim .d{width:6px;height:6px;border:1px solid var(--gold);transform:rotate(45deg);}
+  .ret-capt{text-align:center;font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:1rem;}
+  .ret-incl{list-style:none;margin:0 auto;padding:0;max-width:430px;}
+  .ret-incl li{position:relative;padding-left:1.3rem;margin-bottom:0.7rem;color:var(--body);font-size:1.08rem;line-height:1.5;}
+  .ret-incl li::before{content:"";position:absolute;left:0;top:0.45rem;width:7px;height:7px;border:1px solid var(--chamoisee);transform:rotate(45deg);}
+  .ret-opts{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:600px;margin:2.6rem auto 0;}
+  .ret-card{border:1px solid var(--chamoisee);padding:2.2rem 1.6rem;text-align:center;display:flex;flex-direction:column;align-items:center;}
+  .ret-opt-eyb{font-family:'Raleway',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--chamoisee);margin-bottom:0.55rem;}
+  .ret-lbl{font-family:'Raleway',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);}
+  .ret-card .now{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--gold);line-height:1;font-size:3rem;margin-top:0.5rem;}
+  .ret-card .btn{width:100%;margin-top:1.6rem;}
+  @media(max-width:640px){.ret-opts{grid-template-columns:1fr;gap:1.2rem;max-width:400px;}}
 </style>
 </head>
 <body>
@@ -179,46 +193,32 @@
 </header>
 
 <main class="sec"><div class="container">
-  <div class="opts">
-
-    <div class="card">
-      <h3>Attend A<br>Higher Love<br>Retreat</h3>
-      <div class="price">
-        <div class="now">$5,500</div>
-      </div>
-      <ul class="incl">
-        <li>One (1) In-Person Retreat</li>
-        <li>Sleeping Arrangements</li>
-        <li>Healthy, nutritious meals</li>
-        <li>Retreat materials</li>
-        <li>One (1) Massage Session</li>
-        <li>One (1) Private Watsu Session</li>
-        <li>Candidate for Higher Love Brotherhood</li>
-      </ul>
-      <a class="btn" href="https://buy.stripe.com/9B6fZg1OS4vQ2Da6RV7g40o" target="_blank" rel="noopener">Secure Your Seat</a>
-      <p class="guest-note">Attend Higher Love Retreat as a guest and feel the brotherhood firsthand before you commit to the year as a member. If it&rsquo;s a fit, you can upgrade to Higher Love Brotherhood at the rate offered at that time.</p>
+  <h2 class="ret-h">Attend A Higher Love Retreat</h2>
+  <div class="ret-lim"><span class="d"></span>Limited Spots Per Retreat<span class="d"></span></div>
+  <div class="ret-capt">What&rsquo;s Included</div>
+  <ul class="ret-incl">
+    <li>One (1) In-Person Retreat</li>
+    <li>Sleeping Arrangements</li>
+    <li>Healthy, nutritious meals</li>
+    <li>Retreat materials</li>
+    <li>One (1) Massage Session</li>
+    <li>One (1) Private Watsu Session</li>
+    <li>Candidate for Higher Love Brotherhood</li>
+  </ul>
+  <div class="ret-opts">
+    <div class="ret-card">
+      <div class="ret-opt-eyb">Option A</div>
+      <div class="ret-lbl">Pay In Full</div>
+      <div class="now">$4,500</div>
+      <a class="btn" href="#" target="_blank" rel="noopener">Pay In Full</a>
     </div>
-
-    <div class="card">
-      <h3>Join The<br>Higher Love<br>Brotherhood</h3>
-      <div class="price">
-        <div class="now">$15,000</div>
-      </div>
-      <ul class="incl">
-        <li>Two (2) In-Person Retreats Per Year</li>
-        <li>Additional Retreats @ $3,500 each</li>
-        <li>Sleeping Arrangements</li>
-        <li>Healthy, nutritious meals</li>
-        <li>Private Members Only Group Channel</li>
-        <li>Annual Membership</li>
-        <li>Monthly Gatherings</li>
-        <li>Exclusive Member Benefits</li>
-      </ul>
-      <a class="btn" href="https://buy.stripe.com/28E6oGalogey7Xu7VZ7g40m" target="_blank" rel="noopener">Become A Member</a>
+    <div class="ret-card">
+      <div class="ret-opt-eyb">Option B</div>
+      <div class="ret-lbl">Four Monthly Payments</div>
+      <div class="now">$1,350</div>
+      <a class="btn" href="#" target="_blank" rel="noopener">Start Payment Plan</a>
     </div>
-
   </div>
-
 </div></main>
 
 
