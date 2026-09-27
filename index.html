@@ -614,10 +614,11 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   .ret-incl li::before{content:"";position:absolute;left:0;top:0.45rem;width:7px;height:7px;border:1px solid var(--chamoisee);transform:rotate(45deg);}
   .ret-opts{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;max-width:720px;margin:2.6rem auto 0;}
   .ret-card{border:1px solid var(--chamoisee);padding:3rem 2rem;text-align:center;display:flex;flex-direction:column;justify-content:center;}
-  .ret-opt-eyb{font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--chamoisee);margin-bottom:0.7rem;}
+  .ret-opt-eyb{font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--chamoisee);margin-bottom:0.9rem;}
   .ret-lbl{font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);}
   .ret-planline{font-family:'Raleway',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--body);margin-top:0.55rem;margin-bottom:0.15rem;}
-  .ret-card .now{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--gold);line-height:1;font-size:3.8rem;margin-top:0.6rem;}
+  .ret-card .now{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--gold);line-height:1;font-size:3.8rem;margin-top:0;}
+  .ret-card .ret-lbl{margin-top:0.9rem;}
   .ret-planline + .now{margin-top:0;}
   @media(max-width:640px){.ret-opts{grid-template-columns:1fr;gap:1.2rem;max-width:400px;}}
   .opts{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;max-width:860px;margin:0 auto;align-items:stretch;}
@@ -684,6 +685,8 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   .q-sep .l { width: 40px; height: 1px; background: var(--line-soft); }
   .q-pivot-line { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: clamp(1.7rem, 3.6vw, 2.3rem); line-height: 1.3; color: var(--gold); text-align: center; max-width: 560px; margin: 2.6rem auto; }
   .where-p { font-family: 'EB Garamond', Georgia, serif; font-size: var(--copy); line-height: 1.7; color: var(--body); text-align: left; max-width: 560px; margin: 0 auto; }
+  .payoff-sec{background:var(--section-dark);padding:6rem 2rem;text-align:center;}
+  .payoff-line{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;color:var(--gold);font-size:clamp(2rem,4.6vw,3rem);line-height:1.25;max-width:760px;margin:0 auto;}
 </style>
 </head>
 <body>
@@ -722,11 +725,12 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
 ══════════════════════════════════ -->
 <section class="letter" id="the-room" style="padding-bottom:2rem;">
   <div class="inv-wrap fade-in">
-    <h2 class="letter-h2" style="margin-bottom:0.6rem;">A room where the other men meet you at your level &mdash; intellectually, emotionally, and spiritually.</h2>
+    <h2 class="letter-h2" style="margin-bottom:0.6rem;">Does This Sound Like You?</h2>
         <p class="where-p">Are you a visionary, founder, or leader who&rsquo;s committed to your own personal growth and spiritual development? And seeking something more than the usual rooms for men (the parties, bars, or apps)?</p>
-    <p class="q-pivot-line">If that sounds like you, I&rsquo;d like to invite you to the only place where conscious men gather where they are met with other conscious men at their level.</p>
+    <p class="q-pivot-line">If so, Higher Love is something that didn&rsquo;t exist before&hellip;until now. It&rsquo;s a place where conscious men gather with other conscious men at their level.</p>
     <div class="inv-letter">
       <p class="where-p">Imagine a room where the business conversation and the intimate one happen in the same space, the armor comes off, and you connect without having to prove anything. Where every man energizes you, inspires you, and challenges you. And where, for once, you&rsquo;re fully seen for all of who you are.</p>
+      <p class="where-p">A room where the other men meet you at your level &mdash; intellectually, emotionally, and spiritually.</p>
       <div class="inv-hook" style="font-style:italic;">Higher Love Is That Room</div>
     </div>
   </div>
@@ -831,18 +835,17 @@ f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0;';el.
 ══════════════════════════════════ -->
 <section class="letter">
   <div class="container">
-    <h2 class="price-h fade-in" style="margin-bottom:0.5rem;">Attend A Higher Love Retreat</h2>
-    <div class="ret-lim fade-in"><span class="d"></span>Limited Spots Per Retreat<span class="d"></span></div>
+    <h2 class="price-h fade-in" style="margin-bottom:0.5rem;">The Investment</h2>
     <div class="ret-opts fade-in">
       <div class="ret-card">
         <div class="ret-opt-eyb">Option A</div>
-        <div class="ret-lbl">Pay In Full</div>
         <div class="now">$4,500</div>
+        <div class="ret-lbl">Pay In Full</div>
       </div>
       <div class="ret-card">
         <div class="ret-opt-eyb">Option B</div>
-        <div class="ret-lbl">Four Monthly Payments</div>
         <div class="now">$1,350</div>
+        <div class="ret-lbl">Four Monthly Payments</div>
       </div>
     </div>
   </div>
@@ -856,6 +859,12 @@ f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0;';el.
 <!-- ══════════════════════════════════
      APPLICATION, Google Calendar scheduling
 ══════════════════════════════════ -->
+<!-- ══════════════════════════════════
+     PAYOFF LINE
+══════════════════════════════════ -->
+<section class="payoff-sec fade-in">
+  <p class="payoff-line">&ldquo;The Deeper You Go, The Higher You Love&rdquo;</p>
+</section>
 <section class="application-section" id="application-form">
   <div class="container">
     <div class="application-box fade-in">
