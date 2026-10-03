@@ -194,6 +194,7 @@
   }
   .hero-inner { position: relative; z-index: 2; max-width: 1000px; }
   .hero h1 { font-size: clamp(2.4rem, 5vw, 3.5rem); max-width: 860px; margin: 0 auto 1.2rem; text-wrap: balance; }
+  .hero-sub { font-family: 'EB Garamond', Georgia, serif; font-size: 1.3rem; line-height: 1.6; color: #e7dcc8; max-width: 640px; margin: 0 auto 0.4rem; text-shadow: 0 1px 10px rgba(0,0,0,0.6); }
   .br-m { display: none; }
   .hero-qualifier { font-family: 'Cormorant Garamond', serif; text-transform: uppercase; font-weight: 600; color: var(--chamoisee); font-size: clamp(1.4rem, 3.2vw, 2.1rem); letter-spacing: 0.02em; line-height: 1.12; max-width: 620px; margin: 0.3rem auto 0; }
   .hero-watch { font-family: 'Raleway', sans-serif; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.72rem; color: #cfc6ba; display: flex; align-items: center; justify-content: center; gap: 9px; margin: 1.2rem 0 0.6rem; }
@@ -571,6 +572,7 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
     .container, .container-narrow { padding-left: 1.25rem; padding-right: 1.25rem; }
     .hero { padding-left: 1.25rem; padding-right: 1.25rem; padding-top: 7rem; min-height: 86vh; }
     .hero h1 { font-size: clamp(1.85rem, 8.5vw, 2.15rem); }
+    .hero-sub { font-size: 1.05rem; max-width: 340px; }
     .hero-h1-break { display: inline; }
     .br-m { display: inline; }
     .h1-comma { display: none; }
@@ -711,7 +713,8 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   </div>
   <div class="hero-inner fade-in">
     <div class="hero-eyebrow-top">By Invitation Only</div>
-    <h1>Finally, An Intentional Room For Men Who Love Men.</h1>
+    <h1>Finally, An Intentional Room<br>For Men Who Love Men.</h1>
+    <p class="hero-sub">A 4-day immersive retreat where you are not just seen, but fully met intellectually, emotionally, and spiritually by other men at your level.</p>
     <div class="hero-watch">Please watch the 4-min video Below <span class="hero-tri"></span></div>
     <div class="hero-video">
       <video controls preload="metadata" playsinline webkit-playsinline poster="images/video-poster.jpg">
