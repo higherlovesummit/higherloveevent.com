@@ -171,8 +171,9 @@
   .ret-incl{list-style:none;margin:0 auto;padding:0;max-width:430px;}
   .ret-incl li{position:relative;padding-left:1.3rem;margin-bottom:0.7rem;color:var(--body);font-size:1.08rem;line-height:1.5;}
   .ret-incl li::before{content:"";position:absolute;left:0;top:0.45rem;width:7px;height:7px;border:1px solid var(--chamoisee);transform:rotate(45deg);}
-  .ret-opts{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;max-width:720px;margin:2.6rem auto 0;}
-  .ret-card{border:1px solid var(--chamoisee);padding:3rem 2rem;text-align:center;display:flex;flex-direction:column;justify-content:center;}
+  .ret-opts{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;max-width:720px;margin:2.6rem auto 0;align-items:stretch;}
+  .ret-card{border:1px solid var(--chamoisee);padding:3rem 2rem;text-align:center;display:flex;flex-direction:column;justify-content:center;position:relative;}
+  .ret-tab{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:#000;font-family:'Raleway',sans-serif;font-size:0.74rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;padding:6px 20px;white-space:nowrap;}
   .ret-opt-eyb{font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--chamoisee);margin-bottom:0.9rem;}
   .ret-lbl{font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);}
   .ret-card .now{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--gold);line-height:1;font-size:3.8rem;margin-top:0;}
@@ -198,15 +199,15 @@
 <main class="sec"><div class="container">
   <div class="ret-opts">
     <div class="ret-card">
-      <div class="ret-opt-eyb">Option A</div>
-      <div class="ret-reg">$4,500</div>
-      <div class="now">$4,000</div>
+      <div class="ret-tab">Option A</div>
+      <div class="ret-reg">$5,500</div>
+      <div class="now">$4,500</div>
       <div class="ret-lbl">Early Bird / Pay In Full</div>
       <div class="ret-eb-note">Valid through 11:59 PM CST, October 31st, 2026.</div>
     </div>
     <div class="ret-card">
-      <div class="ret-opt-eyb">Option B</div>
-      <div class="now">$1,500</div>
+      <div class="ret-tab">Option B</div>
+      <div class="now">$1,650</div>
       <div class="ret-lbl">Three Monthly Payments</div>
     </div>
   </div>
