@@ -615,19 +615,21 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   .ret-incl{list-style:none;margin:0 auto;padding:0;max-width:430px;}
   .ret-incl li{position:relative;padding-left:1.3rem;margin-bottom:0.7rem;color:var(--body);font-size:1.08rem;line-height:1.5;}
   .ret-incl li::before{content:"";position:absolute;left:0;top:0.45rem;width:7px;height:7px;border:1px solid var(--chamoisee);transform:rotate(45deg);}
-  .ret-opts{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;max-width:720px;margin:2.6rem auto 0;align-items:stretch;}
-  .ret-card{border:1px solid var(--chamoisee);padding:3rem 2rem;text-align:center;display:flex;flex-direction:column;justify-content:center;position:relative;}
-  .ret-tab{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:#000;font-family:'Raleway',sans-serif;font-size:0.74rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;padding:6px 20px;white-space:nowrap;}
+  .ret-opts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.2rem;max-width:860px;margin:2.6rem auto 0;align-items:stretch;}
+  .ret-card{border:1px solid var(--chamoisee);padding:3rem 1.4rem;text-align:center;display:flex;flex-direction:column;justify-content:center;position:relative;}
+  .ret-tab{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:#000;font-family:'Raleway',sans-serif;font-size:0.64rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;white-space:nowrap;}
   .ret-opt-eyb{font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--chamoisee);margin-bottom:0.9rem;}
   .ret-lbl{font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);}
   .ret-planline{font-family:'Raleway',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--body);margin-top:0.55rem;margin-bottom:0.15rem;}
-  .ret-card .now{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--gold);line-height:1;font-size:3.8rem;margin-top:0;}
+  .ret-card .now{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--gold);line-height:1;font-size:3.1rem;margin-top:0.3rem;}
   .ret-card .ret-lbl{margin-top:0.9rem;}
   .ret-reg{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:#fff;text-decoration:line-through;text-decoration-color:rgba(216,180,120,0.85);text-decoration-thickness:2px;line-height:1;margin-bottom:0.35rem;}
   .ret-eb-note{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:0.92rem;color:var(--body);margin-top:0.7rem;line-height:1.35;max-width:240px;margin-left:auto;margin-right:auto;}
   .ret-note{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:0.92rem;color:#fff;line-height:1.45;text-align:center;max-width:520px;margin:1.6rem auto 0;}
+  .ret-val{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:0.84rem;color:var(--body);line-height:1.4;margin-top:1rem;max-width:200px;margin-left:auto;margin-right:auto;}
+  .ret-feat{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset;}
   .ret-planline + .now{margin-top:0;}
-  @media(max-width:640px){.ret-opts{grid-template-columns:1fr;gap:1.2rem;max-width:400px;}}
+  @media(max-width:760px){.ret-opts{grid-template-columns:1fr;gap:1.2rem;max-width:400px;}}
   .opts{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;max-width:860px;margin:0 auto;align-items:stretch;}
   .card{border:1px solid var(--chamoisee);padding:2.4rem 2rem 2rem;display:flex;flex-direction:column;position:relative;background:transparent;}
   .ribbon{position:absolute;top:-11px;left:50%;transform:translateX(-50%);font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#000;background:var(--gold);padding:4px 14px;white-space:nowrap;}
@@ -850,18 +852,23 @@ f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0;';el.
   <div class="container">
     <h2 class="price-h fade-in" style="margin-bottom:0.5rem;">The Investment</h2>
     <div class="ret-opts fade-in">
-      <div class="ret-card">
-        <div class="ret-tab">Option A</div>
-        <div class="now">$4,500</div>
-        <div class="ret-lbl">Pay In Full</div>
+      <div class="ret-card ret-feat">
+        <div class="ret-tab">Super Early-Bird</div>
+        <div class="now">$3,500</div>
+        <div class="ret-val">Valid through October 31, 2026</div>
       </div>
       <div class="ret-card">
-        <div class="ret-tab">Option B</div>
-        <div class="now">$1,350</div>
-        <div class="ret-lbl">Four Monthly Payments</div>
+        <div class="ret-tab">Early-Bird</div>
+        <div class="now">$4,500</div>
+        <div class="ret-val">Valid from November 1, 2026 to December 31, 2026</div>
+      </div>
+      <div class="ret-card">
+        <div class="ret-tab">Standard</div>
+        <div class="now">$5,500</div>
+        <div class="ret-val">Begins January 1, 2027</div>
       </div>
     </div>
-    <div class="ret-note">Note: The rates above reflect early bird pricing, available through October 31, 2026. Rates subject to change.</div>
+    <div class="ret-note">Note: Payment plans available in either 3 or 4 monthly payments.</div>
   </div>
 </section>
 <!-- venue full-bleed 4 (before application) -->
