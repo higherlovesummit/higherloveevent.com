@@ -664,6 +664,16 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   }
   /* ════════════ TESTIMONIALS, What People Are Saying ════════════ */
   .tst-sec { padding: 7rem 0; background: var(--section-dark); }
+  .tst2-rows { display:flex; flex-direction:column; gap:3.8rem; max-width:1000px; margin:0 auto; }
+  .tst2-row { display:grid; grid-template-columns:300px 1fr; gap:3.2rem; align-items:center; }
+  .tst2-row.rev { grid-template-columns:1fr 300px; }
+  .tst2-row.rev .tst2-img { order:2; }
+  .tst2-img { aspect-ratio:4/5; overflow:hidden; border:1px solid var(--chamoisee); }
+  .tst2-img img { width:100%; height:100%; object-fit:cover; display:block; }
+  .tst2-mark { font-family:'Cormorant Garamond',serif; color:var(--gold); font-size:3.4rem; line-height:0.3; height:1.5rem; }
+  .tst2-q { font-family:'EB Garamond',Georgia,serif; font-size:var(--copy); line-height:1.7; color:var(--body); margin:0; }
+  .tst2-name { font-family:'Cormorant Garamond',serif; font-weight:600; color:var(--gold); font-size:1.8rem; margin-top:1.1rem; }
+  @media(max-width:640px){ .tst2-row,.tst2-row.rev{ grid-template-columns:1fr; gap:1.4rem; } .tst2-row.rev .tst2-img{ order:0; } .tst2-img{ max-width:320px; margin:0 auto; } }
   .tst-head { text-align: center; max-width: 640px; margin: 0 auto 3rem; }
   .tst-head h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); letter-spacing: 0.03em; margin: 0; }
   .tst-head p { font-family: 'EB Garamond', Georgia, serif; font-size: var(--copy); line-height: 1.7; color: var(--body); margin-top: 1rem; }
@@ -797,54 +807,36 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   <div class="container">
     <div class="tst-head fade-in">
       <h2>Testimonials</h2>
-      <p>Below are a few testimonials from men who&rsquo;ve experienced Re Perez&rsquo;s retreats.</p>
+      <p>Hear from men who&rsquo;ve experienced Higher Love.</p>
     </div>
-    <div class="tst-rows fade-in">
-      <div class="tst-row">
-        <div class="tst-vidcol">
-          <div class="tst-vid" data-id="FkvaVtLkRU8" onclick="tstPlay(this)">
-            <img src="https://img.youtube.com/vi/FkvaVtLkRU8/hqdefault.jpg" alt="Dr. Anthony Balduzzi testimonial" loading="lazy">
-            <div class="tst-play"><svg width="20" height="22" viewBox="0 0 28 32"><path d="M28 16L0 32V0L28 16Z" fill="#000"/></svg></div>
-          </div>
-        </div>
-        <div class="tst-txtcol">
-          <blockquote class="tst-q">&ldquo;I originally thought I wanted to go to a workshop. What I left with was connections, new friends, and a deeper sense of purpose. That&rsquo;s truly priceless.&rdquo;</blockquote>
-          <div><span class="tst-an">Dr. Anthony Balduzzi</span></div>
+    <div class="tst2-rows fade-in">
+      <div class="tst2-row">
+        <div class="tst2-img"><img src="images/testimonial-jumpei.webp" alt="Jumpei, Higher Love attendee" loading="lazy"></div>
+        <div class="tst2-text">
+          <div class="tst2-mark">&ldquo;</div>
+          <p class="tst2-q">I love men, but gay culture has nothing to do with who I am. I&rsquo;ve learned from Tony Robbins, Bob Proctor, and Joe Dispenza, and in all of those rooms I had never met a man I could speak to at that level. The investment was big for me, and I said yes to investing in myself because this group embodies who I am becoming. What I can only get at Higher Love is honest, heart to heart conversation with no agenda. As a man who loves other men, I had never been met that way.</p>
+          <div class="tst2-name">Jumpei</div>
         </div>
       </div>
-      <div class="tst-row rev">
-        <div class="tst-vidcol">
-          <div class="tst-vid" data-id="bZEmezOcKbk" onclick="tstPlay(this)">
-            <img src="https://img.youtube.com/vi/bZEmezOcKbk/hqdefault.jpg" alt="Thomas Ruggiero testimonial" loading="lazy">
-            <div class="tst-play"><svg width="20" height="22" viewBox="0 0 28 32"><path d="M28 16L0 32V0L28 16Z" fill="#000"/></svg></div>
-          </div>
-        </div>
-        <div class="tst-txtcol">
-          <blockquote class="tst-q">&ldquo;I&rsquo;ve known Re Perez for 15 years and worked with him in every capacity. Every single time, he goes that next level. It just makes everything better.&rdquo;</blockquote>
-          <div><span class="tst-an">Thomas Ruggiero</span></div>
+      <div class="tst2-row rev">
+        <div class="tst2-img"><img src="images/testimonial-christopher.webp" alt="Christopher, Higher Love attendee" loading="lazy"></div>
+        <div class="tst2-text">
+          <div class="tst2-mark">&ldquo;</div>
+          <p class="tst2-q">I&rsquo;ve done Vipassana, plant medicine ceremonies, and emotional intelligence training. The price was my biggest hesitation. I said yes to attending Higher Love because the vision and values aligned, and I knew this would be a worthwhile investment in myself. The growth started well before the retreat did, and it paid off in a huge way. What I got that I can&rsquo;t get anywhere else is a brotherhood where I am fully embraced for who I am.</p>
+          <div class="tst2-name">Christopher</div>
         </div>
       </div>
-      <div class="tst-row">
-        <div class="tst-vidcol">
-          <div class="tst-vid" data-id="1oV0NexnMYY" onclick="tstPlay(this)">
-            <img src="https://img.youtube.com/vi/1oV0NexnMYY/hqdefault.jpg" alt="Mike Budny testimonial" loading="lazy">
-            <div class="tst-play"><svg width="20" height="22" viewBox="0 0 28 32"><path d="M28 16L0 32V0L28 16Z" fill="#000"/></svg></div>
-          </div>
-        </div>
-        <div class="tst-txtcol">
-          <blockquote class="tst-q">&ldquo;I&rsquo;ve attended every type of personal growth event you can imagine. If you&rsquo;re on the fence and a little nervous, that&rsquo;s a good thing. Lean in.&rdquo;</blockquote>
-          <div><span class="tst-an">Mike Budny</span></div>
+      <div class="tst2-row">
+        <div class="tst2-img"><img src="images/testimonial-desi.webp" alt="Desi, Higher Love attendee" loading="lazy"></div>
+        <div class="tst2-text">
+          <div class="tst2-mark">&ldquo;</div>
+          <p class="tst2-q">I have a deep, soulful spiritual practice. My only hesitation was time, because I&rsquo;m trying to do less rather than take on more. I said yes to attending Higher Love because I believe in what it is about. What I found was a level of self-mastery I haven&rsquo;t been surrounded by anywhere else, with men so brilliant, studied, and wise that it was like learning 12 hours a day. I didn&rsquo;t know how much I needed it until I received it.</p>
+          <div class="tst2-name">Desi</div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<script>
-function tstPlay(el){var id=el.getAttribute('data-id');var f=document.createElement('iframe');
-f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1';
-f.setAttribute('allow','autoplay; encrypted-media');f.setAttribute('allowfullscreen','');
-f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0;';el.innerHTML='';el.appendChild(f);}
-</script>
 <!-- ══════════════════════════════════
      THE INVESTMENT (pricing)
 ══════════════════════════════════ -->
