@@ -674,6 +674,24 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   .tst2-q { font-family:'EB Garamond',Georgia,serif; font-size:var(--copy); line-height:1.7; color:var(--body); margin:0; }
   .tst2-name { font-family:'Cormorant Garamond',serif; font-weight:600; color:var(--gold); font-size:1.8rem; margin-top:1.1rem; }
   @media(max-width:640px){ .tst2-row,.tst2-row.rev{ grid-template-columns:1fr; gap:1.4rem; } .tst2-row.rev .tst2-img{ order:0; } .tst2-img{ max-width:320px; margin:0 auto; } }
+  .faq-sec { padding:7rem 0; background:var(--section-dark); }
+  .faq-head { text-align:center; max-width:720px; margin:0 auto 3rem; }
+  .faq-eyebrow { font-family:'Raleway',sans-serif; font-size:0.8rem; font-weight:700; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); }
+  .faq-h2 { font-size:clamp(1.9rem,4vw,2.7rem); letter-spacing:0.03em; margin:0.8rem 0 0; }
+  .faq-wrap { max-width:820px; margin:0 auto; }
+  .faq-item { border-top:1px solid var(--line-soft); }
+  .faq-item:last-child { border-bottom:1px solid var(--line-soft); }
+  .faq-q { list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1.5rem; padding:1.6rem 0.25rem; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:1.55rem; color:#fff; }
+  .faq-q::-webkit-details-marker { display:none; }
+  .faq-ico { position:relative; width:16px; height:16px; flex:none; }
+  .faq-ico::before,.faq-ico::after { content:""; position:absolute; background:var(--gold); top:50%; left:50%; transform:translate(-50%,-50%); }
+  .faq-ico::before { width:16px; height:2px; }
+  .faq-ico::after { width:2px; height:16px; transition:transform .2s; }
+  .faq-item[open] .faq-ico::after { transform:translate(-50%,-50%) scaleY(0); }
+  .faq-a { padding:0 0.25rem 1.7rem; max-width:720px; }
+  .faq-a p { font-family:'EB Garamond',Georgia,serif; font-size:var(--copy); line-height:1.7; color:var(--body); margin:0 0 0.9rem; }
+  .faq-a p:last-child { margin-bottom:0; }
+  @media(max-width:640px){ .faq-q{ font-size:1.3rem; } }
   .tst-head { text-align: center; max-width: 640px; margin: 0 auto 3rem; }
   .tst-head h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); letter-spacing: 0.03em; margin: 0; }
   .tst-head p { font-family: 'EB Garamond', Georgia, serif; font-size: var(--copy); line-height: 1.7; color: var(--body); margin-top: 1rem; }
@@ -865,6 +883,7 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
 </section>
 <!-- venue full-bleed 4 (before application) -->
 <div class="venue-bleed" style="background-image:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.62)),url(images/outdoor.webp)">
+  <div class="vb-line">At Higher Love, we set the labels down and come as men first.</div>
 </div>
 <!-- ══════════════════════════════════
      FINAL CTA
@@ -872,6 +891,59 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
 <!-- ══════════════════════════════════
      APPLICATION, Google Calendar scheduling
 ══════════════════════════════════ -->
+<!-- ══════════════════════════════════
+     FAQ
+══════════════════════════════════ -->
+<section class="faq-sec">
+  <div class="container">
+    <div class="faq-head fade-in">
+      <div class="faq-eyebrow">Before You Say Yes</div>
+      <h2 class="faq-h2">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-wrap fade-in">
+      <details class="faq-item">
+        <summary class="faq-q"><span>What do you mean by “men who love men”?</span><span class="faq-ico"></span></summary>
+        <div class="faq-a"><p>Ultimately, we mean men who are romantically, sensually, and sexually attracted to other men. Most of us have been called gay. Some of us say bi, or fluid. And some of us have never used a label at all.</p><p>The word “gay” built a whole world: a look, a nightlife, a set of rules for belonging. For some men, that world is home. For many of us, it never quite reflected who we are. So here, we set the labels down and come as men first.</p><p>If that’s you, whatever you call yourself, you’re in the right place. If it’s not, this isn’t your room, and we say that with respect. Straight men have always had brotherhood. We built this so “men who love men” could have it too.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q"><span>Who else will be there, and how do you choose?</span><span class="faq-ico"></span></summary>
+        <div class="faq-a"><p>Men who lead. Founders, entrepreneurs, and leaders who have built something, or are in the middle of building it. Every man here is a leader in his life, his business, or both. He also has a real personal growth and spiritual practice, and he brings it into his everyday life and work.</p><p>Every man fills out an application and has a private conversation with one or two of our founding members before a seat is offered. We’re selective on purpose. This isn’t about filling seats. It’s about protecting the room for every man who says yes.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q"><span>I’ve never felt at home in all-gay spaces. Will I fit here?</span><span class="faq-ico"></span></summary>
+        <div class="faq-a"><p>You’re in good company. Most of us would tell you the same thing. We’ve been the only one in the boardroom and the men’s circle, and the only one looking for depth at the party. This room was built by men who felt exactly that way. Being into men is what we have in common. It isn’t the whole of who we are, and here it doesn’t have to be.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q"><span>What actually happens over the 4 days?</span><span class="faq-ico"></span></summary>
+        <div class="faq-a"><p>Less than you’re used to, on purpose. There is a plan and an intention behind every day: group conversations, individual sessions, long dinners, time in the pool, and conversations around the fire pit. There’s also an element of surprise. You won’t get a minute-by-minute agenda, because the invitation is to surrender and receive rather than have everything lined up. You’ll have plenty of space to connect with the other men and to simply be.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q"><span>What’s included?</span><span class="faq-ico"></span></summary>
+        <div class="faq-a"><p>Everything, from the moment you arrive. All you have to do is get yourself to Austin. Your lodging and sleeping arrangements, healthy and delicious meals with dinner prepared by a private chef each night, and every group and individual session on the schedule are taken care of. A few optional add-ons, like bodywork and IV drips, are available if you’d like them. Tell us about any dietary needs when you apply, and we’ll look after you.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q"><span>When and where is the retreat?</span><span class="faq-ico"></span></summary>
+        <div class="faq-a"><p>The retreat begins Monday, March 8, 2027, at 7 p.m. with a welcome dinner, and ends Friday, March 12, with departures by 11 a.m. It’s held at a luxury private estate about 40 to 45 minutes outside Austin, Texas. If you’re flying in, plan to land in Austin by 5 p.m. on Monday, and book your flight home for 2 p.m. or later on Friday. We’ll share the exact address one week before the retreat.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q"><span>Will I have my own room?</span><span class="faq-ico"></span></summary>
+        <div class="faq-a"><p>The estate has a mix of private and shared rooms. Private rooms are first come, first served, so the sooner you register, the better your chances. Either way, this is a communal retreat by design, and you’ll be comfortable wherever you land.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q"><span>Can I stay connected to work while I’m there?</span><span class="faq-ico"></span></summary>
+        <div class="faq-a"><p>If you can put work away for these few days, do. You’ll get far more from the experience. We also understand that you lead something, and a call here and there may be unavoidable. There’s room for that. At certain moments we’ll ask everyone to put phones away. Think of it as permission to be fully here.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q"><span>Is this a sexual retreat?</span><span class="faq-ico"></span></summary>
+        <div class="faq-a"><p>No. We also don’t pretend sex doesn’t exist. Sex and sexuality are held as sacred here, and we talk about them like grown men, without shame. They’re never the point of the room. Every man holds his own energy and asks before he touches. What you can count on is real affection between men that isn’t leading anywhere.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q"><span>What’s your cancellation policy?</span><span class="faq-ico"></span></summary>
+        <div class="faq-a"><p>When you commit, we commit. Your investment reserves your place at this retreat, and we secure the estate, the chef, and every detail well in advance. For that reason, your registration is non-refundable.</p><p>We also know life happens. In a true emergency, we’ll review your situation case by case and may offer a credit toward a future retreat. Registrations can’t be transferred to another person, because every man in the room has come through the application process.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
 <section class="application-section" id="application-form">
   <div class="container">
     <div class="application-box fade-in">
