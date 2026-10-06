@@ -307,24 +307,6 @@
   /* ════════════
      FAQ
   ════════════ */
-  .faq-item { border-bottom: 1px solid rgba(160,127,86,0.3); }
-  .faq-q {
-    width: 100%; background: none; border: none; cursor: pointer; text-align: left;
-    display: flex; align-items: baseline; gap: 1.4rem;
-    padding: 1.7rem 0;
-    font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; color: var(--linen);
-    line-height: 1.25;
-  }
-  .faq-num { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--chamoisee); min-width: 1.9rem; flex-shrink: 0; }
-  .faq-qt { flex: 1; }
-  .faq-q:hover { color: var(--chamoisee); }
-  .faq-icon { color: var(--chamoisee); font-size: 1.6rem; align-self: center; flex-shrink: 0; transition: transform 0.25s; font-family: 'EB Garamond', serif; font-style: normal; }
-  .faq-item.open .faq-icon { transform: rotate(45deg); }
-  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.25s; }
-  .faq-item.open .faq-a { max-height: 1800px; padding-bottom: 1.7rem; }
-  .faq-a p { padding-left: 3.3rem; }
-  .faq-a p { font-size: 1.2rem; line-height: 1.8; color: var(--body); font-family: 'EB Garamond', serif; }
-  .faq-a p + p { margin-top: 1rem; }
   /* ════════════
      FINAL CTA
   ════════════ */
@@ -548,9 +530,7 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
 .hero { justify-content: flex-start; padding-top: 5rem; min-height: 72vh; }
 
     .letter-body p { font-size: 21px; }
-    .faq-a p { padding-left: 0; }
     .faq-q { font-size: 1.3rem; }
-    .faq-num { min-width: 1.5rem; }
     /* new editorial elements on phones */
     .inv-room p { font-size: 1.18rem; }
     .q-text { max-width: 300px; }
