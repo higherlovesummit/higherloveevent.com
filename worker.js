@@ -22,12 +22,13 @@ function loginPage(wrong) {
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{height:100%;}
 body{font-family:'EB Garamond',serif;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px 24px;background:radial-gradient(ellipse 72% 62% at 50% 50%,rgba(0,0,0,0.72) 0%,rgba(0,0,0,0.30) 78%),linear-gradient(180deg,rgba(0,0,0,0.34) 0%,rgba(0,0,0,0.80) 100%),url(${BG});background-size:cover;background-position:center;}
-.inner{max-width:720px;width:100%;text-align:center;}
+.inner{max-width:820px;width:100%;text-align:center;}
 .logo{width:260px;max-width:70vw;margin:0 auto 40px;display:block;}
 .eyb{font-family:'Raleway',sans-serif;font-size:0.9rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;text-shadow:0 1px 8px rgba(0,0,0,0.7);}
-h1{font-family:'Cormorant Garamond',serif;font-weight:600;text-transform:uppercase;color:#fff;letter-spacing:0.01em;line-height:1.1;font-size:clamp(2.6rem,4.6vw,3.6rem);margin:0 auto 1.4rem;text-shadow:0 2px 14px rgba(0,0,0,0.6);}
+h1{font-family:'Cormorant Garamond',serif;font-weight:600;text-transform:uppercase;color:#fff;letter-spacing:0.01em;line-height:1.1;font-size:clamp(2.6rem,4.6vw,3.4rem);margin:0 auto 1.4rem;text-shadow:0 2px 14px rgba(0,0,0,0.6);}
+.l3{white-space:nowrap;}
 .sub{font-family:'EB Garamond',serif;font-size:1.4rem;line-height:1.55;color:#e7dcc8;max-width:720px;margin:0 auto;text-shadow:0 1px 10px rgba(0,0,0,0.6);}
-.instr{font-family:'EB Garamond',serif;font-style:italic;font-size:1.08rem;color:var(--body);max-width:460px;margin:2.6rem auto 1.3rem;line-height:1.5;}
+.instr{font-family:'EB Garamond',serif;font-style:italic;font-size:1.25rem;color:var(--body);max-width:480px;margin:2.6rem auto 1.3rem;line-height:1.5;}
 .err{color:#e6b8a2;font-family:'EB Garamond',serif;font-style:italic;font-size:0.98rem;margin:0 auto 1rem;}
 input{display:block;width:100%;max-width:380px;margin:0 auto 1.4rem;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,0.45);color:#fff;font-family:'EB Garamond',serif;font-size:1.25rem;text-align:center;padding:0.8rem 0.4rem;letter-spacing:0.08em;}
 input::placeholder{color:rgba(255,255,255,0.5);letter-spacing:0.12em;font-size:1rem;text-transform:uppercase;font-family:'Raleway',sans-serif;}
@@ -40,6 +41,7 @@ button:hover{background:#000;color:#fff;}
   .eyb{font-size:0.74rem;margin-bottom:1rem;}
   h1{font-size:2.45rem;text-wrap:balance;margin-bottom:1rem;}
   .hbr{display:none;}
+  .l3{white-space:normal;}
   .sub{font-size:1.08rem;}
   .instr{font-size:0.96rem;margin:1.9rem auto 1.1rem;}
   input{max-width:300px;font-size:1.1rem;}
@@ -49,7 +51,7 @@ button:hover{background:#000;color:#fff;}
 <div class="inner">
   <img class="logo" src="${LOGO}" alt="Higher Love">
   <div class="eyb">By Application and Invitation</div>
-  <h1>Finally, An <br class="hbr">Intentional Room <br class="hbr">For Men Who Love Men.</h1>
+  <h1>Finally, An <br class="hbr">Intentional Room <br class="hbr"><span class="l3">For Men Who Love Men.</span></h1>
   <p class="sub">A 4-day immersive retreat where you are not just seen, but fully met intellectually, emotionally, and spiritually by other men at your level.</p>
   <p class="instr">If you’ve been invited, enter password below.</p>
   ${err}
