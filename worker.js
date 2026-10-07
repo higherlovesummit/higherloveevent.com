@@ -30,9 +30,11 @@ h1{font-family:'Cormorant Garamond',serif;font-weight:600;text-transform:upperca
 .sub{font-family:'EB Garamond',serif;font-size:1.4rem;line-height:1.55;color:#e7dcc8;max-width:720px;margin:0 auto;text-shadow:0 1px 10px rgba(0,0,0,0.6);}
 .instr{font-family:'EB Garamond',serif;font-style:italic;font-size:1.25rem;color:var(--body);max-width:480px;margin:2.6rem auto 1.3rem;line-height:1.5;}
 .err{color:#e6b8a2;font-family:'EB Garamond',serif;font-style:italic;font-size:0.98rem;margin:0 auto 1rem;}
-input{display:block;width:100%;max-width:380px;margin:0 auto 1.4rem;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,0.45);color:#fff;font-family:'EB Garamond',serif;font-size:1.25rem;text-align:center;padding:0.8rem 0.4rem;letter-spacing:0.08em;}
+input{display:block;width:100%;max-width:380px;margin:0 auto 0.7rem;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,0.45);color:#fff;font-family:'EB Garamond',serif;font-size:1.25rem;text-align:center;padding:0.8rem 0.4rem;letter-spacing:0.08em;}
 input::placeholder{color:rgba(255,255,255,0.5);letter-spacing:0.12em;font-size:1rem;text-transform:uppercase;font-family:'Raleway',sans-serif;}
 input:focus{outline:none;border-bottom-color:var(--gold);}
+.pwtoggle{display:inline-block;background:none;border:none;cursor:pointer;color:var(--gold);font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;opacity:0.85;margin:0 auto 1.5rem;padding:0.2rem 0.4rem;}
+.pwtoggle:hover{opacity:1;}
 button{font-family:'Raleway',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;padding:1.15rem 3rem;background:var(--gold);color:#111;border:1px solid var(--gold);cursor:pointer;transition:all .3s;}
 button:hover{background:#000;color:#fff;}
 @media(max-width:600px){
@@ -56,9 +58,11 @@ button:hover{background:#000;color:#fff;}
   <p class="instr">If you’ve been invited, enter password below.</p>
   ${err}
   <form method="POST" action="/__auth" autocomplete="off">
-    <input type="password" name="password" placeholder="Enter password" autofocus>
+    <input type="password" name="password" id="pw" placeholder="Enter password" autofocus>
+    <div><button type="button" class="pwtoggle" id="pwtoggle">Show password</button></div>
     <div><button type="submit">Enter</button></div>
   </form>
+  <script>(function(){var p=document.getElementById('pw'),t=document.getElementById('pwtoggle');if(p&&t){t.addEventListener('click',function(){var s=p.type==='password';p.type=s?'text':'password';t.textContent=s?'Hide password':'Show password';p.focus();});}})();</script>
 </div>
 </body></html>`;
 }
