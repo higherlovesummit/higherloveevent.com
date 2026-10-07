@@ -1,7 +1,10 @@
 {
   "name": "higherloveevent-com",
   "compatibility_date": "2026-05-31",
+  "main": "worker.js",
   "assets": {
-    "directory": "./_site"
+    "directory": "./_site",
+    "binding": "ASSETS",
+    "run_worker_first": true
   }
 }

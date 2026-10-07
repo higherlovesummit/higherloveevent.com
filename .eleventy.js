@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
   // Ignore non-template files
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.ignores.add("node_modules/**");
+  eleventyConfig.ignores.add("worker.js");
   eleventyConfig.ignores.add("_site/**");
   eleventyConfig.ignores.add("privacy.html");
   eleventyConfig.ignores.add("terms.html");
