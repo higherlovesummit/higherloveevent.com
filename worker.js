@@ -13,7 +13,7 @@ async function tokenFor(password) {
 }
 
 function loginPage(wrong) {
-  const err = wrong ? '<div class="err">That password wasn\u2019t right. Please try again.</div>' : '';
+  const err = wrong ? '<div class="err">That password wasn’t right. Please try again.</div>' : '';
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Higher Love</title><meta name="robots" content="noindex">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=EB+Garamond:ital@0;1&family=Raleway:wght@500;700&display=swap" rel="stylesheet">
@@ -21,26 +21,37 @@ function loginPage(wrong) {
 :root{--gold:#d8b478;--body:#cfc6ba;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{height:100%;}
-body{font-family:'EB Garamond',serif;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 22px;background:radial-gradient(ellipse 72% 62% at 50% 50%,rgba(0,0,0,0.72) 0%,rgba(0,0,0,0.30) 78%),linear-gradient(180deg,rgba(0,0,0,0.34) 0%,rgba(0,0,0,0.80) 100%),url(${BG});background-size:cover;background-position:center;}
-.inner{max-width:560px;width:100%;text-align:center;}
-.logo{width:210px;max-width:62vw;margin:0 auto 32px;display:block;}
-.eyb{font-family:'Raleway',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;text-shadow:0 1px 8px rgba(0,0,0,0.7);}
-h1{font-family:'Cormorant Garamond',serif;font-weight:600;text-transform:uppercase;letter-spacing:0.01em;font-size:clamp(1.9rem,6vw,2.7rem);line-height:1.08;margin:0 auto 1.1rem;max-width:520px;text-shadow:0 2px 14px rgba(0,0,0,0.6);}
-.sub{font-family:'EB Garamond',serif;font-size:1.12rem;line-height:1.6;color:#e7dcc8;max-width:460px;margin:0 auto;text-shadow:0 1px 10px rgba(0,0,0,0.6);}
-.instr{font-family:'EB Garamond',serif;font-style:italic;font-size:1rem;color:var(--body);max-width:420px;margin:2.3rem auto 1.1rem;line-height:1.5;}
+body{font-family:'EB Garamond',serif;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px 24px;background:radial-gradient(ellipse 72% 62% at 50% 50%,rgba(0,0,0,0.72) 0%,rgba(0,0,0,0.30) 78%),linear-gradient(180deg,rgba(0,0,0,0.34) 0%,rgba(0,0,0,0.80) 100%),url(${BG});background-size:cover;background-position:center;}
+.inner{max-width:720px;width:100%;text-align:center;}
+.logo{width:260px;max-width:70vw;margin:0 auto 40px;display:block;}
+.eyb{font-family:'Raleway',sans-serif;font-size:0.9rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;text-shadow:0 1px 8px rgba(0,0,0,0.7);}
+h1{font-family:'Cormorant Garamond',serif;font-weight:600;text-transform:uppercase;color:#fff;letter-spacing:0.01em;line-height:1.1;font-size:clamp(2.6rem,4.6vw,3.6rem);margin:0 auto 1.4rem;text-shadow:0 2px 14px rgba(0,0,0,0.6);}
+.sub{font-family:'EB Garamond',serif;font-size:1.4rem;line-height:1.55;color:#e7dcc8;max-width:720px;margin:0 auto;text-shadow:0 1px 10px rgba(0,0,0,0.6);}
+.instr{font-family:'EB Garamond',serif;font-style:italic;font-size:1.08rem;color:var(--body);max-width:460px;margin:2.6rem auto 1.3rem;line-height:1.5;}
 .err{color:#e6b8a2;font-family:'EB Garamond',serif;font-style:italic;font-size:0.98rem;margin:0 auto 1rem;}
-input{display:block;width:100%;max-width:340px;margin:0 auto 1.2rem;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,0.45);color:#fff;font-family:'EB Garamond',serif;font-size:1.15rem;text-align:center;padding:0.7rem 0.4rem;letter-spacing:0.08em;}
-input::placeholder{color:rgba(255,255,255,0.5);letter-spacing:0.12em;font-size:0.95rem;text-transform:uppercase;font-family:'Raleway',sans-serif;}
+input{display:block;width:100%;max-width:380px;margin:0 auto 1.4rem;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,0.45);color:#fff;font-family:'EB Garamond',serif;font-size:1.25rem;text-align:center;padding:0.8rem 0.4rem;letter-spacing:0.08em;}
+input::placeholder{color:rgba(255,255,255,0.5);letter-spacing:0.12em;font-size:1rem;text-transform:uppercase;font-family:'Raleway',sans-serif;}
 input:focus{outline:none;border-bottom-color:var(--gold);}
-button{font-family:'Raleway',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;padding:1.05rem 2.6rem;background:var(--gold);color:#111;border:1px solid var(--gold);cursor:pointer;transition:all .3s;}
+button{font-family:'Raleway',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;padding:1.15rem 3rem;background:var(--gold);color:#111;border:1px solid var(--gold);cursor:pointer;transition:all .3s;}
 button:hover{background:#000;color:#fff;}
+@media(max-width:600px){
+  body{padding:44px 20px;}
+  .logo{width:180px;margin-bottom:28px;}
+  .eyb{font-size:0.74rem;margin-bottom:1rem;}
+  h1{font-size:2.45rem;text-wrap:balance;margin-bottom:1rem;}
+  .hbr{display:none;}
+  .sub{font-size:1.08rem;}
+  .instr{font-size:0.96rem;margin:1.9rem auto 1.1rem;}
+  input{max-width:300px;font-size:1.1rem;}
+  button{font-size:0.8rem;padding:1rem 2.6rem;}
+}
 </style></head><body>
 <div class="inner">
   <img class="logo" src="${LOGO}" alt="Higher Love">
   <div class="eyb">By Application and Invitation</div>
-  <h1>Finally, An Intentional Room For Men Who Love Men.</h1>
+  <h1>Finally, An <br class="hbr">Intentional Room <br class="hbr">For Men Who Love Men.</h1>
   <p class="sub">A 4-day immersive retreat where you are not just seen, but fully met intellectually, emotionally, and spiritually by other men at your level.</p>
-  <p class="instr">If you\u2019ve been invited, enter your password below to step inside.</p>
+  <p class="instr">If you’ve been invited, enter password below.</p>
   ${err}
   <form method="POST" action="/__auth" autocomplete="off">
     <input type="password" name="password" placeholder="Enter password" autofocus>
