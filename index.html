@@ -646,15 +646,15 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
   }
   /* ════════════ TESTIMONIALS, What People Are Saying ════════════ */
   .tst-sec { padding: 7rem 0; background: var(--section-dark); }
-  .tst-row { display:grid; grid-template-columns:1fr 1fr; align-items:stretch; min-height:clamp(460px,60vh,600px); }
-  .tst-row.rev .tst-photo { order:2; }
-  .tst-photo { background-size:cover; background-position:center 25%; }
-  .tst-content { display:flex; flex-direction:column; justify-content:center; padding:3rem clamp(1.6rem,4.5vw,4.5rem); }
-  .tst-call { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; color:var(--gold); font-size:clamp(1.5rem,3.4vw,1.9rem); line-height:1.24; margin:0 0 1.1rem; }
-  .tst-q { font-family:'EB Garamond',Georgia,serif; font-size:var(--copy); line-height:1.7; color:var(--body); margin:0 0 1.1rem; }
-  .tst-nm { font-family:'Raleway',sans-serif; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); font-size:0.8rem; }
-  @media(max-width:760px){ .tst-row,.tst-row.rev{ grid-template-columns:1fr; } .tst-row.rev .tst-photo{ order:0; } .tst-photo{ height:clamp(300px,52vh,420px); } .tst-content{ padding:2.2rem 1.4rem 2.8rem; text-align:center; } }
-  @media(max-width:640px){ .tst-call{ font-size:1.45rem; } }
+  .tn-row { display:grid; grid-template-columns:1fr 1fr; align-items:stretch; min-height:clamp(460px,60vh,600px); }
+  .tn-row.rev .tn-photo { order:2; }
+  .tn-photo { background-size:cover; background-position:center 25%; min-height:clamp(460px,60vh,600px); }
+  .tn-content { display:flex; flex-direction:column; justify-content:center; padding:3rem clamp(1.6rem,4.5vw,4.5rem); }
+  .tn-call { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; color:var(--gold); font-size:clamp(1.5rem,3.4vw,1.9rem); line-height:1.24; margin:0 0 1.1rem; }
+  .tn-quote { font-family:'EB Garamond',Georgia,serif; font-size:var(--copy); line-height:1.7; color:var(--body); margin:0 0 1.1rem; }
+  .tn-name { font-family:'Raleway',sans-serif; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); font-size:0.8rem; }
+  @media(max-width:760px){ .tn-row,.tn-row.rev{ grid-template-columns:1fr; } .tn-row.rev .tn-photo{ order:0; } .tn-photo{ min-height:0; height:clamp(300px,52vh,420px); } .tn-content{ padding:2.2rem 1.4rem 2.8rem; text-align:center; } }
+  @media(max-width:640px){ .tn-call{ font-size:1.45rem; } }
   .faq-sec { padding:7rem 0; background:var(--section-dark); }
   .faq-head { text-align:center; max-width:720px; margin:0 auto 3rem; }
   .faq-eyebrow { font-family:'Raleway',sans-serif; font-size:0.8rem; font-weight:700; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); }
@@ -818,28 +818,28 @@ section .btn:not(.nav-cta), .letter .btn { display: none; }
       <p>Hear from men who&rsquo;ve experienced Higher Love.</p>
     </div>
   </div>
-  <div class="tst-row fade-in">
-    <div class="tst-photo" role="img" aria-label="Jumpei, Higher Love attendee" style="background-image:url(images/testimonial-jumpei-land.webp);background-position:center 25%;"></div>
-    <div class="tst-content">
-      <div class="tst-call">&ldquo;I said yes to investing in myself because this group embodies who I am becoming.&rdquo;</div>
-      <p class="tst-q">&ldquo;I love men, but gay culture has nothing to do with who I am. I’ve learned from Tony Robbins, Bob Proctor, and Joe Dispenza, and in all of those rooms I had never met a man I could speak to at that level. The investment was big for me, and I said yes to investing in myself because this group embodies who I am becoming. What I can only get at Higher Love is honest, heart to heart conversation with no agenda. As a man who loves other men, I had never been met that way.&rdquo;</p>
-      <div class="tst-nm">&mdash;&nbsp;Jumpei</div>
+  <div class="tn-row fade-in">
+    <div class="tn-photo" role="img" aria-label="Jumpei, Higher Love attendee" style="background-image:url(images/testimonial-jumpei-land.webp);background-position:center 25%;"></div>
+    <div class="tn-content">
+      <div class="tn-call">&ldquo;I said yes to investing in myself because this group embodies who I am becoming.&rdquo;</div>
+      <p class="tn-quote">&ldquo;I love men, but gay culture has nothing to do with who I am. I’ve learned from Tony Robbins, Bob Proctor, and Joe Dispenza, and in all of those rooms I had never met a man I could speak to at that level. The investment was big for me, and I said yes to investing in myself because this group embodies who I am becoming. What I can only get at Higher Love is honest, heart to heart conversation with no agenda. As a man who loves other men, I had never been met that way.&rdquo;</p>
+      <div class="tn-name">&mdash;&nbsp;Jumpei</div>
     </div>
   </div>
-  <div class="tst-row rev fade-in">
-    <div class="tst-photo" role="img" aria-label="Christopher, Higher Love attendee" style="background-image:url(images/testimonial-christopher-land.webp);background-position:center 22%;"></div>
-    <div class="tst-content">
-      <div class="tst-call">&ldquo;The growth started well before the retreat did.&rdquo;</div>
-      <p class="tst-q">&ldquo;I’ve done Vipassana, plant medicine ceremonies, and emotional intelligence training. The price was my biggest hesitation. I said yes to attending Higher Love because the vision and values aligned, and I knew this would be a worthwhile investment in myself. The growth started well before the retreat did, and it paid off in a huge way. What I got that I can’t get anywhere else is a brotherhood where I am fully embraced for who I am.&rdquo;</p>
-      <div class="tst-nm">&mdash;&nbsp;Christopher</div>
+  <div class="tn-row rev fade-in">
+    <div class="tn-photo" role="img" aria-label="Christopher, Higher Love attendee" style="background-image:url(images/testimonial-christopher-land.webp);background-position:center 22%;"></div>
+    <div class="tn-content">
+      <div class="tn-call">&ldquo;The growth started well before the retreat did.&rdquo;</div>
+      <p class="tn-quote">&ldquo;I’ve done Vipassana, plant medicine ceremonies, and emotional intelligence training. The price was my biggest hesitation. I said yes to attending Higher Love because the vision and values aligned, and I knew this would be a worthwhile investment in myself. The growth started well before the retreat did, and it paid off in a huge way. What I got that I can’t get anywhere else is a brotherhood where I am fully embraced for who I am.&rdquo;</p>
+      <div class="tn-name">&mdash;&nbsp;Christopher</div>
     </div>
   </div>
-  <div class="tst-row fade-in">
-    <div class="tst-photo" role="img" aria-label="Desi, Higher Love attendee" style="background-image:url(images/testimonial-desi-land.webp);background-position:center 25%;"></div>
-    <div class="tst-content">
-      <div class="tst-call">&ldquo;I found a level of self-mastery I haven’t been surrounded by anywhere else, with men so brilliant, studied, and wise.&rdquo;</div>
-      <p class="tst-q">&ldquo;I have a deep, soulful spiritual practice. My only hesitation was time, because I’m trying to do less rather than take on more. I said yes to attending Higher Love because I believe in what it is about. What I found was a level of self-mastery I haven’t been surrounded by anywhere else, with men so brilliant, studied, and wise that it was like learning 12 hours a day. I didn’t know how much I needed it until I received it.&rdquo;</p>
-      <div class="tst-nm">&mdash;&nbsp;Desi</div>
+  <div class="tn-row fade-in">
+    <div class="tn-photo" role="img" aria-label="Desi, Higher Love attendee" style="background-image:url(images/testimonial-desi-land.webp);background-position:center 25%;"></div>
+    <div class="tn-content">
+      <div class="tn-call">&ldquo;I found a level of self-mastery I haven’t been surrounded by anywhere else, with men so brilliant, studied, and wise.&rdquo;</div>
+      <p class="tn-quote">&ldquo;I have a deep, soulful spiritual practice. My only hesitation was time, because I’m trying to do less rather than take on more. I said yes to attending Higher Love because I believe in what it is about. What I found was a level of self-mastery I haven’t been surrounded by anywhere else, with men so brilliant, studied, and wise that it was like learning 12 hours a day. I didn’t know how much I needed it until I received it.&rdquo;</p>
+      <div class="tn-name">&mdash;&nbsp;Desi</div>
     </div>
   </div>
 </section>
