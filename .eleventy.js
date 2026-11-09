@@ -2,6 +2,7 @@ module.exports = function(eleventyConfig) {
   // Pass through all static assets untouched
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("styles.css");
+  eleventyConfig.addPassthroughCopy("hl.css");
   eleventyConfig.addPassthroughCopy("script.js");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("sitemap.xml");
