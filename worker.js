@@ -53,7 +53,7 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:48
 .fl{display:flex;gap:34px}
 .fl a{font-weight:700;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.8);text-decoration:none}
 .fl a:hover{color:var(--brown)}
-.fbot{border-top:1px solid rgba(255,255,255,.16);padding-top:24px;margin-top:28px;text-align:center;color:rgba(255,255,255,.55);font-size:13.5px}
+.fbot{border-top:1px solid rgba(255,255,255,.16);padding-top:24px;margin-top:28px;text-align:center;color:rgba(255,255,255,.55);font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
 @media(max-width:900px){nav{padding:0 24px}.nav-in{min-height:72px}.nav-in img{height:36px}header{padding:56px 24px 64px}form{padding:32px 24px 28px}footer{padding:40px 24px 28px}.ftop{justify-content:center;text-align:center}}
 </style></head><body>
 <nav><div class="nav-in"><img src="${LOGO}" alt="Higher Love"><span class="priv">Private</span></div></nav>
@@ -76,7 +76,7 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:48
 </header>
 <footer><div class="fin">
   <div class="ftop"><img src="${LOGO_STACKED}" alt="Higher Love"><div class="fl"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></div>
-  <div class="fbot">&copy; 2026 Higher Love, a creation by Category of One Branding, LLC &middot; All Rights Reserved</div>
+  <div class="fbot">&copy; 2026 Higher Love, a Creation by Category of One Branding, LLC &middot; All Rights Reserved</div>
 </div></footer>
 <script>(function(){var p=document.getElementById('pw'),t=document.getElementById('pwtoggle');if(p&&t){t.addEventListener('change',function(){p.type=t.checked?'text':'password';});}})();</script>
 </body></html>`;
