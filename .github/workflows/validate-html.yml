@@ -60,7 +60,7 @@ jobs:
           check_element "hero" "Hero section"
           check_element "youtube.com/embed\|vimeo.com\|wistia\|video" "Video embed"
           check_element "application/ld+json" "Structured data (JSON-LD)"
-          check_element "Apply Now\|APPLY NOW" "Apply Now CTA"
+          check_element "Request an Invitation" "Request an Invitation CTA"
           if [ "$ERRORS" -gt 0 ]; then
             echo "FAIL: $ERRORS critical elements missing from _site/index.html"
             exit 1
