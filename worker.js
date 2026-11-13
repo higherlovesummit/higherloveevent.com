@@ -12,15 +12,8 @@ async function tokenFor(password) {
   return Array.from(new Uint8Array(digest)).map(function (b) { return b.toString(16).padStart(2, "0"); }).join("");
 }
 
-function heroVariant(url) {
-  const hero = url.searchParams.get("hero");
-  return hero === "a" || hero === "b" || hero === "c" || hero === "ref" ? hero : "";
-}
-
-function loginPage(wrong, variant) {
-  const v = variant || "";
+function loginPage(wrong) {
   const err = wrong ? '<p class="err">That password wasn’t right. Please try again.</p>' : '';
-  const action = v ? "/__auth?hero=" + v : "/__auth";
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Higher Love</title><meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,27 +22,29 @@ function loginPage(wrong, variant) {
 :root{--k:#000;--egg:#FAF7F1;--brown:#A07F56;--dbrown:#7E6243;--ink:#1F1B16;--mute:rgba(31,27,22,.66);--line:rgba(0,0,0,.12);--serif:"Cormorant Garamond",Georgia,serif;--sans:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%}
-body{font-family:var(--sans);color:var(--ink);background:#fff;display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:#fff;background:#0c0a08;display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased}
 nav{background:var(--k);border-bottom:1px solid rgba(255,255,255,.12);padding:0 56px}
 .nav-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:92px}
 .nav-in img{height:44px;width:auto;display:block}
 .priv{font-weight:700;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
-header{flex:1 0 auto;padding:88px 56px 96px}
-.hin{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:56px 64px;align-items:center}
-.copy{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:26px}
-.ey{font-weight:700;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--dbrown)}
-h1{font-family:var(--serif);font-weight:600;text-transform:uppercase;letter-spacing:.02em;color:var(--k);font-size:clamp(44px,5.4vw,78px);line-height:.95;text-wrap:balance}
+header{flex:1 0 auto;padding:0}
+.hin{max-width:none;margin:0;min-height:calc(100dvh - 92px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);grid-template-rows:auto 1fr;gap:0;align-items:stretch}
+.photo{grid-column:1;grid-row:1 / span 2;min-height:100%;background:url("/images/hero-common.webp") 22% center/cover no-repeat;position:relative}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(0,0,0,.08) 40%,rgba(0,0,0,.5))}
+.copy{grid-column:2;grid-row:1;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;gap:14px;padding:36px 48px 8px}
+.ey{font-weight:700;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#C4A574}
+h1{font-family:var(--serif);font-weight:600;text-transform:uppercase;letter-spacing:.02em;color:#fff;font-size:clamp(2.4rem,5vw,3.5rem);line-height:1.05;text-wrap:balance}
 h1 em{font-style:normal;color:var(--brown)}
-.lead{font-weight:500;font-size:clamp(17px,1.3vw,20px);line-height:1.65;max-width:560px}
-.date{font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
-form{flex:1 1 420px;min-width:0;max-width:520px;background:var(--egg);border:1px solid var(--line);border-top:3px solid var(--brown);padding:44px 44px 40px;display:flex;flex-direction:column;gap:22px}
-.instr{font-family:var(--serif);font-weight:600;font-size:28px;line-height:1.15;color:var(--k)}
-label{font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--dbrown);display:block;margin-bottom:8px}
+.lead{font-weight:500;font-size:clamp(17px,1.3vw,20px);line-height:1.65;max-width:560px;color:rgba(255,255,255,.9)}
+.date{font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+form{grid-column:2;grid-row:2;min-width:0;max-width:none;margin:0;background:#0c0a08;border:0;padding:4px 48px 36px;display:flex;flex-direction:column;justify-content:flex-start;gap:14px}
+.instr{font-family:var(--serif);font-weight:600;font-size:28px;line-height:1.15;color:#fff}
+label{font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#C4A574;display:block;margin-bottom:8px}
 input[type=password],input[type=text]{font-family:var(--sans);font-size:16px;color:var(--ink);background:#fff;border:1px solid rgba(0,0,0,.18);padding:14px 16px;width:100%}
 input:focus{outline:none;border-color:var(--brown)}
-.show{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--mute)}
-.show input{width:16px;height:16px;margin:0;accent-color:var(--dbrown)}
-.show label{margin:0;letter-spacing:.12em;color:var(--mute)}
+.show{display:flex;align-items:center;gap:10px;font-size:13.5px;color:rgba(255,255,255,.75)}
+.show input{width:16px;height:16px;margin:0;accent-color:var(--brown)}
+.show label{margin:0;letter-spacing:.12em;color:rgba(255,255,255,.75)}
 button{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.22em;text-transform:uppercase;line-height:1;padding:17px 40px;width:100%;border:1px solid var(--dbrown);background:var(--dbrown);color:#fff;cursor:pointer;transition:background .2s,border-color .2s}
 button:hover{background:var(--k);border-color:var(--k)}
 .err{font-size:13.5px;color:#915335}
@@ -61,10 +56,23 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:48
 .fl a{font-weight:700;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.8);text-decoration:none}
 .fl a:hover{color:var(--brown)}
 .fbot{border-top:1px solid rgba(255,255,255,.16);padding-top:24px;margin-top:28px;text-align:center;color:rgba(255,255,255,.55);font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
-.photo{display:none}
-@media(max-width:900px){nav{padding:0 24px}.nav-in{min-height:72px}.nav-in img{height:36px}header{padding:56px 24px 64px}form{padding:32px 24px 28px}footer{padding:40px 24px 28px}.ftop{justify-content:center;text-align:center}}
-${gateVariantCss(v)}
-</style></head><body class="${v ? "gate-" + v : ""}">
+@media(max-width:900px){
+  nav{padding:0 16px}
+  .nav-in{min-height:52px}
+  .nav-in img{height:26px}
+  header{padding:0}
+  .hin{display:flex;flex-direction:column;min-height:0;gap:0}
+  .photo{order:-1;height:128px;min-height:0;width:100%}
+  .copy{padding:10px 16px 0;gap:4px;flex:none;justify-content:flex-start}
+  h1{font-size:22px;line-height:1}
+  .lead{font-size:12.5px;line-height:1.28}
+  form{padding:4px 16px 12px;gap:6px}
+  .instr{font-size:16px}
+  button{padding:11px 14px}
+  footer{padding:28px 16px 20px}
+  .ftop{justify-content:center;text-align:center}
+}
+</style></head><body>
 <nav><div class="nav-in"><img src="${LOGO}" alt="Higher Love"><span class="priv">Private</span></div></nav>
 <header>
   <div class="hin">
@@ -75,7 +83,7 @@ ${gateVariantCss(v)}
       <p class="lead">A 4-day immersive retreat where you are not just seen, but fully met intellectually, emotionally, and spiritually by other men at your level.</p>
       <p class="date">Next retreat &middot; March 8 to 12, 2027</p>
     </div>
-    <form method="POST" action="${action}" autocomplete="off">
+    <form method="POST" action="/__auth" autocomplete="off">
       <p class="instr">If you’ve been invited, enter your password below.</p>
       ${err}
       <div><label for="pw">Password</label><input type="password" name="password" id="pw" autofocus></div>
@@ -92,65 +100,8 @@ ${gateVariantCss(v)}
 </body></html>`;
 }
 
-function gateVariantCss(v) {
-  if (!v) return "";
-  return `
-.gate-a,.gate-b,.gate-c,.gate-ref{background:#000}
-.gate-a h1,.gate-b h1,.gate-c h1,.gate-ref h1{color:#fff;font-size:clamp(34px,3.4vw,56px)}
-.gate-a .ey,.gate-b .ey,.gate-c .ey,.gate-ref .ey{color:#C4A574}
-.gate-a .lead,.gate-b .lead,.gate-c .lead,.gate-ref .lead{color:rgba(255,255,255,.9)}
-.gate-a .date,.gate-b .date,.gate-c .date,.gate-ref .date{color:rgba(255,255,255,.72)}
-.gate-a,.gate-c,.gate-ref{position:relative}
-.gate-a::before,.gate-ref::before{content:"";position:fixed;inset:0;z-index:0;background:url("/images/hero-common.webp") center 48%/cover no-repeat}
-.gate-c::before{content:"";position:fixed;inset:0;z-index:0;background:url("/images/hero-common.webp") center 18%/cover no-repeat}
-.gate-a::after,.gate-ref::after{content:"";position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 72% 64% at 50% 48%,rgba(0,0,0,.42) 0%,rgba(0,0,0,.18) 58%,rgba(0,0,0,.62) 100%),linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.22) 42%,rgba(0,0,0,.58) 100%)}
-.gate-c::after{content:"";position:fixed;inset:0;z-index:0;background:linear-gradient(180deg,rgba(0,0,0,.28) 0%,rgba(0,0,0,.05) 36%,rgba(0,0,0,.78) 100%)}
-.gate-a nav,.gate-a header,.gate-a footer,.gate-c nav,.gate-c header,.gate-c footer,.gate-ref nav,.gate-ref header,.gate-ref footer{position:relative;z-index:1}
-.gate-a nav,.gate-c nav,.gate-ref nav{background:transparent;border-bottom-color:transparent}
-.gate-a form,.gate-c form,.gate-ref form{background:rgba(12,10,8,.78);border-color:rgba(255,255,255,.2);backdrop-filter:blur(8px)}
-.gate-a .instr,.gate-b .instr,.gate-c .instr,.gate-ref .instr{color:#fff}
-.gate-a label,.gate-b label,.gate-c label,.gate-ref label{color:#C4A574}
-.gate-a .show,.gate-a .show label,.gate-b .show,.gate-b .show label,.gate-c .show,.gate-c .show label,.gate-ref .show,.gate-ref .show label{color:rgba(255,255,255,.75)}
-.gate-a footer,.gate-c footer,.gate-ref footer{background:transparent}
-.gate-b{background:#0c0a08}
-.gate-b header{padding:0}
-.gate-b .hin{max-width:none;min-height:calc(100dvh - 92px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);grid-template-rows:auto 1fr;gap:0;align-items:stretch}
-.gate-b .photo{grid-column:1;grid-row:1 / span 2}
-.gate-b .copy{grid-column:2;grid-row:1;padding:36px 48px 8px;justify-content:flex-end;gap:14px}
-.gate-b form{grid-column:2;grid-row:2;max-width:none;margin:0;background:#0c0a08;border:0;padding:4px 48px 32px;justify-content:flex-start;gap:14px}
-.gate-b .photo{display:block;min-height:100%;background:url("/images/hero-common.webp") 22% center/cover no-repeat;position:relative}
-.gate-b .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.15),rgba(0,0,0,.4))}
-.gate-c header{min-height:calc(100dvh - 92px);display:flex;align-items:flex-end;padding:0 64px 48px}
-.gate-c .hin{width:100%;align-items:flex-end}
-.gate-c .copy{max-width:560px}
-.gate-ref h1{font-size:clamp(2.4rem,5vw,3.5rem)}
-@media(max-width:900px){
-  .gate-a header,.gate-c header,.gate-ref header{padding:12px 16px 16px}
-  .gate-a .hin,.gate-c .hin,.gate-ref .hin,.gate-b .hin{gap:12px}
-  .gate-a .copy,.gate-c .copy,.gate-ref .copy,.gate-b .copy{gap:8px}
-  .gate-a h1,.gate-b h1,.gate-c h1,.gate-ref h1{font-size:26px;line-height:1}
-  .gate-a .lead,.gate-b .lead,.gate-c .lead,.gate-ref .lead{font-size:13.5px;line-height:1.35}
-  .gate-a form,.gate-c form,.gate-ref form{padding:14px 14px 12px;gap:8px}
-  .gate-a .instr,.gate-b .instr,.gate-c .instr,.gate-ref .instr{font-size:18px}
-  .gate-a button,.gate-b button,.gate-c button,.gate-ref button{padding:13px 16px}
-  .gate-b .hin{display:flex;flex-direction:column;min-height:0}
-  .gate-b .photo{display:block;min-height:0;height:128px;order:-1}
-  .gate-b .copy{padding:10px 16px 0;gap:4px;flex:none;justify-content:flex-start}
-  .gate-b form{border-left:0;padding:4px 16px 10px;gap:6px}
-  .gate-b h1{font-size:22px}
-  .gate-b .lead{font-size:12.5px;line-height:1.28}
-  .gate-b .instr{font-size:16px}
-  .gate-b button{padding:11px 14px}
-  .gate-c header{min-height:calc(100dvh - 64px);align-items:flex-end;padding:12px 16px 18px}
-  .gate-a nav,.gate-b nav,.gate-c nav,.gate-ref nav{padding:0 16px}
-  .gate-a .nav-in,.gate-b .nav-in,.gate-c .nav-in,.gate-ref .nav-in{min-height:52px}
-  .gate-a .nav-in img,.gate-b .nav-in img,.gate-c .nav-in img,.gate-ref .nav-in img{height:26px}
-}
-`;
-}
-
-function loginResponse(wrong, variant) {
-  return new Response(loginPage(wrong, variant), { status: 401, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } });
+function loginResponse(wrong) {
+  return new Response(loginPage(wrong), { status: 401, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } });
 }
 
 export default {
@@ -163,13 +114,12 @@ export default {
     }
 
     // Legal pages stay public (linked from the gate's footer).
-    // The Havan hero photo is public so the gate mockups can paint it.
+    // The gathering-room photo is public so the gate can paint it before login.
     if (url.pathname === "/privacy.html" || url.pathname === "/terms.html" || url.pathname === "/images/hero-common.webp") {
       return env.ASSETS.fetch(request);
     }
 
     const password = env.CFP_PASSWORD;
-    const variant = heroVariant(url);
     if (password) {
       const token = await tokenFor(password);
 
@@ -178,16 +128,16 @@ export default {
         try { const form = await request.formData(); entered = (form.get("password") || "").toString(); } catch (e) {}
         if (entered === password) {
           return new Response(null, { status: 302, headers: {
-            "Location": variant ? "/?hero=" + variant : "/",
+            "Location": "/",
             "Set-Cookie": COOKIE + "=" + token + "; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=" + MAX_AGE
           }});
         }
-        return loginResponse(true, variant);
+        return loginResponse(true);
       }
 
       const cookie = request.headers.get("Cookie") || "";
       const authed = cookie.split(/;\s*/).indexOf(COOKIE + "=" + token) !== -1;
-      if (!authed) return loginResponse(false, variant);
+      if (!authed) return loginResponse(false);
     }
 
     // Authed (or gate off) -> serve the static site
