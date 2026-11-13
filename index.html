@@ -246,6 +246,32 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:64
   .sticky-cta{display:block}
   .marq-track p{font-size:24px}
 }
+
+/* Split hero: gathering-room film beside a near-black panel */
+.hero{padding:0;background:#0c0a08;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);min-height:calc(100dvh - 92px)}
+.havan{position:relative;min-height:calc(100dvh - 92px);overflow:hidden;background:#0c0a08}
+.havan img,.havan video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:22% center}
+.havan video{z-index:1}
+.havan::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(0,0,0,.08) 40%,rgba(0,0,0,.5))}
+.hero-in{display:contents}
+.hero-copy{background:#0c0a08;justify-content:center;padding:72px 64px;gap:18px;max-width:none}
+.hero h1{color:#fff;font-size:clamp(2.4rem,5vw,3.5rem);line-height:1.05;max-width:14ch}
+.hero .ey{color:#C4A574}
+.hero .lead{color:rgba(255,255,255,.9);font-weight:400}
+.hero .lbl{color:rgba(255,255,255,.72)}
+.hero .btn-ghost{border-color:rgba(255,255,255,.75);color:#fff}
+.hero .btn-ghost:hover{background:#fff;border-color:#fff;color:#000}
+.hero .btn:hover{background:#C4A574;border-color:#C4A574;color:#1a140e}
+@media (prefers-reduced-motion:reduce){
+  .havan video{display:none}
+}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;grid-template-rows:34vh auto;min-height:0;padding:0}
+  .havan{min-height:34vh;height:34vh}
+  .hero-copy{padding:28px 22px 40px;gap:12px}
+  .hero h1{font-size:clamp(1.95rem,7.4vw,2.4rem)}
+  .hero .lead{font-size:15px;line-height:1.45}
+}
 </style>
 </head>
 <body>
@@ -267,6 +293,12 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:64
 
 <!-- HERO -->
 <header class="hero" id="top">
+  <div class="havan">
+    <img src="images/hero-common.webp" alt="">
+    <video id="hero-film" autoplay muted loop playsinline poster="images/hero-common.webp">
+      <source src="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/6ac2625fbbad531ac8a38274.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="hero-in">
     <div class="hero-copy fade-in">
       <span class="ey" style="margin:0">By Application and Invitation</span>
@@ -278,14 +310,16 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:64
       </div>
       <p class="lbl">Next retreat &middot; March 8 to 12, 2027</p>
     </div>
-    <div class="hero-video fade-in" id="video">
-      <video controls preload="metadata" playsinline webkit-playsinline poster="images/video-poster.jpg">
-        <source src="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/6ac2625fbbad531ac8a38274.mp4" type="video/mp4">
-      </video>
-      <p class="note">Please watch this 3&frac12; minute overview from Re Perez, founder of Higher Love.</p>
-    </div>
   </div>
 </header>
+<script>
+  (function () {
+    var film = document.getElementById("hero-film");
+    if (!film) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { film.remove(); return; }
+    film.addEventListener("error", function () { film.remove(); });
+  })();
+</script>
 
 <!-- QUOTE MARQUEE -->
 <section class="marq" aria-label="What the brothers say">
