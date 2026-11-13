@@ -247,33 +247,29 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:64
   .marq-track p{font-size:24px}
 }
 
-/* Split hero: framed player over the gathering-room photo */
-.hero{padding:0;background:#0c0a08;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);min-height:calc(100dvh - 92px);overflow:hidden}
-.havan{position:relative;min-height:calc(100dvh - 92px);overflow:hidden;background:#0c0a08;display:flex;align-items:center;justify-content:center}
-.havan img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:22% center}
-.havan::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.34),rgba(0,0,0,.18) 46%,rgba(0,0,0,.42))}
-.hero-embed{position:relative;z-index:2;width:76%;max-width:640px;aspect-ratio:16/9;border:1px solid rgba(255,255,255,.22);box-shadow:0 18px 50px rgba(0,0,0,.45);background:#0c0a08}
+/* Full-bleed gathering room, one centered column */
+.hero{position:relative;display:flex;align-items:center;justify-content:center;min-height:calc(100dvh - 92px);padding:28px 32px 32px;overflow:hidden;background:#0c0a08}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.66) 0%,rgba(0,0,0,.58) 42%,rgba(0,0,0,.7) 100%)}
+.hero-in{position:relative;z-index:1;width:min(760px,100%);max-width:760px;margin:0 auto}
+.hero-copy{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;background:transparent;padding:0;max-width:none}
+.hero-embed{position:relative;width:min(640px,100%);margin:6px 0 2px;aspect-ratio:16/9;border:1px solid rgba(255,255,255,.28);box-shadow:0 18px 50px rgba(0,0,0,.5);background:#0c0a08}
 .hero-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
-.hero-in{display:contents}
-.hero-copy{background:#0c0a08;justify-content:center;padding:72px 64px;gap:18px;max-width:none}
-.hero h1{color:#fff;font-size:clamp(2.4rem,5vw,3.5rem);line-height:1.05;max-width:14ch}
-.hero .ey{color:#C4A574}
-.hero .lead{color:rgba(255,255,255,.9);font-weight:400}
-.hero .lbl{color:rgba(255,255,255,.72)}
+.hero h1{color:#fff;font-size:clamp(2.05rem,3.1vw,2.6rem);line-height:1.02;max-width:16em;text-shadow:0 2px 16px rgba(0,0,0,.55)}
+.hero .ey{color:#C4A574;text-shadow:0 1px 10px rgba(0,0,0,.55)}
+.hero .lead{color:rgba(255,255,255,.92);font-weight:400;max-width:38rem;text-shadow:0 1px 12px rgba(0,0,0,.55)}
+.hero .lbl{color:rgba(255,255,255,.78);text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.hero-ctas{justify-content:center}
 .hero .btn-ghost{border-color:rgba(255,255,255,.75);color:#fff}
 .hero .btn-ghost:hover{background:#fff;border-color:#fff;color:#000}
 .hero .btn:hover{background:#C4A574;border-color:#C4A574;color:#1a140e}
 @media (max-width:900px){
-  .hero{display:flex;flex-direction:column;min-height:0;padding:18px 22px 36px;gap:12px;overflow:hidden}
-  .hero-in,.hero-copy,.hero-ctas{display:contents}
-  .hero .ey{order:1;margin:0}
-  .hero h1{order:2;max-width:none;font-size:clamp(1.85rem,7.2vw,2.15rem);line-height:1.02}
-  .hero .lead{order:3;font-size:15px;line-height:1.4}
-  .hero .btn:not(.btn-ghost){order:4;width:100%}
-  .havan{order:5;width:calc(100% + 44px);margin:4px -22px;min-height:0;height:auto;aspect-ratio:5/4}
-  .hero-embed{width:78%;max-width:none}
-  .hero .btn-ghost{order:6;width:100%}
-  .hero .lbl{order:7;margin:0}
+  .hero{align-items:flex-start;min-height:calc(100dvh - 72px);padding:20px 22px 28px}
+  .hero h1{max-width:none;font-size:clamp(1.85rem,7.2vw,2.15rem)}
+  .hero .lead{font-size:15px;line-height:1.4}
+  .hero-embed{width:100%}
+  .hero-ctas{flex-direction:column;width:100%;align-items:stretch}
+  .hero-ctas .btn{width:100%}
 }
 </style>
 </head>
@@ -296,17 +292,16 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:64
 
 <!-- HERO -->
 <header class="hero" id="top">
-  <div class="havan">
-    <img src="images/hero-common.webp" alt="">
-    <div class="hero-embed">
-      <iframe src="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/6ac2625fbbad531ac8a38274.mp4" title="A message from Re Perez" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
+  <img class="hero-photo" src="images/hero-common.webp" alt="">
+  <div class="hero-shade" aria-hidden="true"></div>
   <div class="hero-in">
     <div class="hero-copy fade-in">
       <span class="ey" style="margin:0">By Application and Invitation</span>
       <h1>Finally, an intentional room <em>for men who love men</em></h1>
       <p class="lead">A 4-day immersive retreat where you are not just seen, but fully met intellectually, emotionally, and spiritually by other men at your level.</p>
+      <div class="hero-embed">
+        <iframe src="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/6ac2625fbbad531ac8a38274.mp4" title="A message from Re Perez" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
       <div class="hero-ctas">
         <a href="#application-form" class="btn" data-cta="hero">Request an Invitation</a>
         <a href="#who" class="btn btn-ghost" data-cta="hero-learn">Learn More</a>
