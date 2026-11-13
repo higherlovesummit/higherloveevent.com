@@ -99,15 +99,22 @@ p{font-family:var(--sans);font-size:17px;line-height:1.65;color:var(--ink);margi
 .nav-links a:hover{color:var(--brown)}
 .nav-cta{padding:11px 22px;font-size:11.5px;letter-spacing:.2em}
 
-/* HERO */
-.hero{background:var(--w);padding:88px 56px 96px}
+/* HERO — black above the fold. Lower sections keep their own backgrounds. */
+.hero{background:#000;color:#fff;padding:88px 56px 96px}
+.hero h1{color:#fff}
+.hero .ey{color:var(--brown)}
+.hero .lead{color:rgba(255,255,255,.92)}
+.hero .lbl{color:rgba(255,255,255,.78)}
+.hero .btn:hover{background:var(--brown);border-color:var(--brown);color:#fff}
+.hero .btn-ghost{border-color:#fff;color:#fff}
+.hero .btn-ghost:hover{background:#fff;border-color:#fff;color:#000}
 .hero-in{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:56px 64px;align-items:center}
 .hero-copy{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:26px}
 .hero-copy .lead{max-width:560px}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 .hero-video{flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:14px}
-.hero-video video{width:100%;aspect-ratio:16/9;display:block;background:var(--tile);border:1px solid var(--line);object-fit:cover}
-.hero-video .note{font-size:13.5px;color:var(--mute)}
+.hero-video video{width:100%;aspect-ratio:16/9;display:block;background:#14110e;border:1px solid rgba(255,255,255,.18);object-fit:cover}
+.hero-video .note{font-size:13.5px;color:rgba(255,255,255,.72)}
 
 /* QUOTE MARQUEE */
 .marq{background:var(--k);padding:40px 0 44px;overflow:hidden;position:relative}

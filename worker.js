@@ -22,7 +22,7 @@ function loginPage(wrong) {
 :root{--k:#000;--egg:#FAF7F1;--brown:#A07F56;--dbrown:#7E6243;--ink:#1F1B16;--mute:rgba(31,27,22,.66);--line:rgba(0,0,0,.12);--serif:"Cormorant Garamond",Georgia,serif;--sans:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%}
-body{font-family:var(--sans);color:var(--ink);background:#fff;display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:#fff;background:#000;display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased}
 nav{background:var(--k);border-bottom:1px solid rgba(255,255,255,.12);padding:0 56px}
 .nav-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:92px}
 .nav-in img{height:44px;width:auto;display:block}
@@ -30,22 +30,22 @@ nav{background:var(--k);border-bottom:1px solid rgba(255,255,255,.12);padding:0 
 header{flex:1 0 auto;padding:88px 56px 96px}
 .hin{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:56px 64px;align-items:center}
 .copy{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:26px}
-.ey{font-weight:700;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--dbrown)}
-h1{font-family:var(--serif);font-weight:600;text-transform:uppercase;letter-spacing:.02em;color:var(--k);font-size:clamp(44px,5.4vw,78px);line-height:.95;text-wrap:balance}
+.ey{font-weight:700;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--brown)}
+h1{font-family:var(--serif);font-weight:600;text-transform:uppercase;letter-spacing:.02em;color:#fff;font-size:clamp(44px,5.4vw,78px);line-height:.95;text-wrap:balance}
 h1 em{font-style:normal;color:var(--brown)}
-.lead{font-weight:500;font-size:clamp(17px,1.3vw,20px);line-height:1.65;max-width:560px}
-.date{font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
-form{flex:1 1 420px;min-width:0;max-width:520px;background:var(--egg);border:1px solid var(--line);border-top:3px solid var(--brown);padding:44px 44px 40px;display:flex;flex-direction:column;gap:22px}
-.instr{font-family:var(--serif);font-weight:600;font-size:28px;line-height:1.15;color:var(--k)}
-label{font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--dbrown);display:block;margin-bottom:8px}
+.lead{font-weight:500;font-size:clamp(17px,1.3vw,20px);line-height:1.65;max-width:560px;color:rgba(255,255,255,.92)}
+.date{font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+form{flex:1 1 420px;min-width:0;max-width:520px;background:#000;border:1px solid rgba(255,255,255,.18);border-top:3px solid var(--brown);padding:44px 44px 40px;display:flex;flex-direction:column;gap:22px}
+.instr{font-family:var(--serif);font-weight:600;font-size:28px;line-height:1.15;color:#fff}
+label{font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--brown);display:block;margin-bottom:8px}
 input[type=password],input[type=text]{font-family:var(--sans);font-size:16px;color:var(--ink);background:#fff;border:1px solid rgba(0,0,0,.18);padding:14px 16px;width:100%}
 input:focus{outline:none;border-color:var(--brown)}
-.show{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--mute)}
-.show input{width:16px;height:16px;margin:0;accent-color:var(--dbrown)}
-.show label{margin:0;letter-spacing:.12em;color:var(--mute)}
+.show{display:flex;align-items:center;gap:10px;font-size:13.5px;color:rgba(255,255,255,.72)}
+.show input{width:16px;height:16px;margin:0;accent-color:var(--brown)}
+.show label{margin:0;letter-spacing:.12em;color:rgba(255,255,255,.72)}
 button{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.22em;text-transform:uppercase;line-height:1;padding:17px 40px;width:100%;border:1px solid var(--dbrown);background:var(--dbrown);color:#fff;cursor:pointer;transition:background .2s,border-color .2s}
-button:hover{background:var(--k);border-color:var(--k)}
-.err{font-size:13.5px;color:#915335}
+button:hover{background:var(--brown);border-color:var(--brown)}
+.err{font-size:13.5px;color:#E7C4B4}
 footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:48px 56px 36px}
 .fin{max-width:1180px;margin:0 auto}
 .ftop{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
@@ -54,7 +54,47 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:48
 .fl a{font-weight:700;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.8);text-decoration:none}
 .fl a:hover{color:var(--brown)}
 .fbot{border-top:1px solid rgba(255,255,255,.16);padding-top:24px;margin-top:28px;text-align:center;color:rgba(255,255,255,.55);font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
-@media(max-width:900px){nav{padding:0 24px}.nav-in{min-height:72px}.nav-in img{height:36px}header{padding:56px 24px 64px}form{padding:32px 24px 28px}footer{padding:40px 24px 28px}.ftop{justify-content:center;text-align:center}}
+@media(max-width:900px){
+  nav{padding:0 16px}
+  .nav-in{min-height:52px}
+  .nav-in img{height:28px}
+  header{padding:14px 16px 18px}
+  .hin{gap:12px}
+  .copy{gap:8px}
+  h1{font-size:28px;line-height:.98}
+  .lead{font-size:13.5px;line-height:1.38}
+  form{padding:14px 14px 14px;gap:10px}
+  .instr{font-size:20px;line-height:1.15}
+  label{margin-bottom:5px}
+  input[type=password],input[type=text]{padding:11px 12px}
+  button{padding:13px 18px}
+  footer{padding:22px 16px 16px}
+  .ftop{justify-content:center;text-align:center}
+  .ftop img{height:48px}
+  .fbot{margin-top:14px;padding-top:14px}
+}
+@media(max-width:900px) and (max-height:720px){
+  .nav-in{min-height:42px}
+  .nav-in img{height:22px}
+  .priv{font-size:10px;letter-spacing:.16em}
+  header{padding:8px 14px 8px}
+  .hin{gap:8px}
+  .copy{gap:5px}
+  .ey{font-size:10px;letter-spacing:.16em}
+  h1{font-size:22px;line-height:.98}
+  .lead{font-size:12px;line-height:1.3}
+  .date{font-size:10px;letter-spacing:.14em}
+  form{padding:10px 12px 10px;gap:7px}
+  .instr{font-size:16px}
+  label{font-size:10px;margin-bottom:3px;letter-spacing:.14em}
+  input[type=password],input[type=text]{padding:8px 10px}
+  .show{font-size:12px;gap:8px}
+  button{padding:11px 14px}
+  footer{padding:12px 14px 10px}
+  .ftop img{height:36px}
+  .fl{gap:16px}
+  .fbot{margin-top:8px;padding-top:8px}
+}
 </style></head><body>
 <nav><div class="nav-in"><img src="${LOGO}" alt="Higher Love"><span class="priv">Private</span></div></nav>
 <header>
