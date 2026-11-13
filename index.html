@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  (function () {
+    var hero = new URLSearchParams(location.search).get("hero");
+    if (hero === "a" || hero === "b" || hero === "c" || hero === "ref") {
+      document.documentElement.setAttribute("data-hero", hero);
+    }
+  })();
+</script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ7G3P2PEK"></script>
@@ -246,6 +254,85 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:64
   .sticky-cta{display:block}
   .marq-track p{font-size:24px}
 }
+
+/* Havan hero mockups. Only when ?hero=a|b|c|ref. The default page is unchanged. */
+.havan{display:none}
+html[data-hero] .hero{background:#000;color:#fff;position:relative}
+html[data-hero] .hero h1{color:#fff;font-weight:600;font-size:clamp(2.15rem,4.2vw,3.35rem);line-height:1.02;letter-spacing:.01em}
+html[data-hero] .hero .ey{color:#C4A574}
+html[data-hero] .hero .lead{color:rgba(255,255,255,.9);font-weight:400}
+html[data-hero] .hero .lbl{color:rgba(255,255,255,.72)}
+html[data-hero] .hero .btn-ghost{border-color:rgba(255,255,255,.75);color:#fff}
+html[data-hero] .hero .btn-ghost:hover{background:#fff;border-color:#fff;color:#000}
+html[data-hero] .hero .btn:hover{background:#C4A574;border-color:#C4A574;color:#1a140e}
+html[data-hero] .hero-video{width:min(760px,100%);margin:0 auto;padding:8px 0 72px}
+html[data-hero] .hero-video .note{color:rgba(255,255,255,.72)}
+html[data-hero] .hero-video video{border-color:rgba(255,255,255,.18);background:#14110e}
+
+html[data-hero="a"] .nav,html[data-hero="c"] .nav,html[data-hero="ref"] .nav{position:absolute;left:0;right:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,0));border-bottom-color:transparent}
+
+/* A — full-bleed photo, dark gradient, centered type. The video starts below the fold. */
+html[data-hero="a"] .hero{padding:0;overflow:hidden;display:block}
+html[data-hero="a"] .havan{display:block;position:absolute;inset:0;height:100dvh}
+html[data-hero="a"] .havan img{width:100%;height:100%;object-fit:cover;object-position:center center}
+html[data-hero="a"] .havan::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 68% 58% at 50% 46%,rgba(0,0,0,.68) 0%,rgba(0,0,0,.28) 72%),linear-gradient(180deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.38) 42%,rgba(0,0,0,.78) 100%)}
+html[data-hero="a"] .hero-in{position:relative;z-index:1;max-width:none;display:flex;flex-direction:column;align-items:center;gap:0}
+html[data-hero="a"] .hero-copy{min-height:100dvh;justify-content:center;align-items:center;text-align:center;gap:18px;padding:108px 40px 48px;max-width:860px}
+html[data-hero="a"] .hero-copy .lead{max-width:38rem}
+html[data-hero="a"] .hero-ctas{justify-content:center}
+html[data-hero="a"] .hero-video{padding:28px 24px 72px}
+
+/* B — split: photograph beside a near-black panel */
+html[data-hero="b"] .hero{padding:0;background:#0c0a08;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);grid-template-rows:minmax(100dvh,auto) auto}
+html[data-hero="b"] .havan{display:block;grid-column:1;grid-row:1;position:relative;min-height:100dvh}
+html[data-hero="b"] .havan img{width:100%;height:100%;object-fit:cover;object-position:center center}
+html[data-hero="b"] .havan::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.08),rgba(0,0,0,.34))}
+html[data-hero="b"] .hero-in{display:contents}
+html[data-hero="b"] .hero-copy{grid-column:2;grid-row:1;background:#0c0a08;justify-content:center;padding:108px 64px 64px;gap:18px;max-width:none}
+html[data-hero="b"] .hero-video{grid-column:1 / -1;grid-row:2;padding:36px 56px 72px;background:#0c0a08}
+
+/* C — darkened photo, type anchored to the bottom left */
+html[data-hero="c"] .hero{padding:0;display:block;overflow:hidden}
+html[data-hero="c"] .havan{display:block;position:absolute;top:0;left:0;right:0;height:100dvh}
+html[data-hero="c"] .havan img{width:100%;height:100%;object-fit:cover;object-position:center 60%;filter:brightness(.58) saturate(.8)}
+html[data-hero="c"] .havan::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.34) 0%,rgba(0,0,0,.08) 42%,rgba(0,0,0,.86) 100%)}
+html[data-hero="c"] .hero-in{position:relative;z-index:1;max-width:none;display:flex;flex-direction:column;align-items:stretch}
+html[data-hero="c"] .hero-copy{min-height:100dvh;justify-content:flex-end;align-items:flex-start;text-align:left;gap:14px;max-width:40rem;padding:0 72px 56px}
+html[data-hero="c"] .hero h1{font-size:clamp(2rem,3.5vw,3rem)}
+html[data-hero="c"] .hero-video{padding:28px 72px 64px;margin:0}
+
+/* Recovered earlier hero: centered type at the earlier size, original overlay */
+html[data-hero="ref"] .hero{padding:0;overflow:hidden;display:block}
+html[data-hero="ref"] .havan{display:block;position:absolute;inset:0;height:100dvh}
+html[data-hero="ref"] .havan img{width:100%;height:100%;object-fit:cover;object-position:center center}
+html[data-hero="ref"] .havan::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.45) 45%,rgba(0,0,0,.85) 100%)}
+html[data-hero="ref"] .hero-in{position:relative;z-index:1;max-width:none;display:flex;flex-direction:column;align-items:center}
+html[data-hero="ref"] .hero-copy{min-height:100dvh;justify-content:center;align-items:center;text-align:center;gap:20px;padding:108px 32px 48px;max-width:880px}
+html[data-hero="ref"] .hero h1{font-size:clamp(2.4rem,5vw,3.5rem);max-width:860px}
+html[data-hero="ref"] .hero-ctas{justify-content:center}
+html[data-hero="ref"] .hero-video{padding:24px 24px 64px}
+
+@media (max-width:900px){
+  html[data-hero="a"] .hero-copy{padding:96px 22px 36px;gap:14px}
+  html[data-hero="a"] .hero h1{font-size:clamp(1.85rem,7.2vw,2.15rem)}
+  html[data-hero="a"] .hero .lead{font-size:15px;line-height:1.45}
+  html[data-hero="a"] .hero-ctas{flex-direction:column;align-items:stretch}
+  html[data-hero="a"] .hero-ctas .btn{width:100%}
+  html[data-hero="b"] .hero{grid-template-columns:1fr;grid-template-rows:34vh auto auto}
+  html[data-hero="b"] .havan{grid-column:1;grid-row:1;min-height:34vh}
+  html[data-hero="b"] .hero-copy{grid-column:1;grid-row:2;padding:28px 22px 36px;gap:12px}
+  html[data-hero="b"] .hero h1{font-size:clamp(1.85rem,7.2vw,2.15rem)}
+  html[data-hero="b"] .hero .lead{font-size:15px;line-height:1.45}
+  html[data-hero="b"] .hero-video{grid-column:1;grid-row:3;padding:8px 22px 48px}
+  html[data-hero="c"] .hero-copy{padding:0 22px 28px;gap:12px}
+  html[data-hero="c"] .hero h1{font-size:clamp(1.85rem,7.2vw,2.15rem)}
+  html[data-hero="c"] .hero .lead{font-size:15px;line-height:1.45}
+  html[data-hero="c"] .hero-ctas{flex-direction:column;align-items:stretch}
+  html[data-hero="c"] .hero-ctas .btn{width:100%}
+  html[data-hero="c"] .hero-video{padding:20px 22px 48px}
+  html[data-hero="ref"] .hero-copy{padding:96px 22px 36px}
+  html[data-hero="ref"] .hero h1{font-size:clamp(1.95rem,7.4vw,2.4rem)}
+}
 </style>
 </head>
 <body>
@@ -267,6 +354,7 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:64
 
 <!-- HERO -->
 <header class="hero" id="top">
+  <div class="havan" aria-hidden="true"><img src="images/hero-option-2-estate.jpg" alt=""></div>
   <div class="hero-in">
     <div class="hero-copy fade-in">
       <span class="ey" style="margin:0">By Application and Invitation</span>
