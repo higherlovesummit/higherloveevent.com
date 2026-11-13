@@ -1,0 +1,44 @@
+---
+permalink: /schedule/index.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schedule your call | Higher Love</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--k:#000;--brown:#A07F56;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--k);color:#fff}
+body{min-height:100vh;font-family:var(--sans);-webkit-font-smoothing:antialiased}
+main{width:min(920px,100%);margin:0 auto;padding:48px 24px 64px;display:flex;flex-direction:column;align-items:center;gap:28px}
+.logo{height:44px;width:auto;display:block}
+h1{font-family:var(--serif);font-weight:600;text-transform:uppercase;letter-spacing:.02em;line-height:.95;text-wrap:balance;font-size:clamp(34px,4.4vw,56px);color:#fff;margin:0;text-align:center;max-width:16em}
+.cal{width:100%;background:#fff}
+.cal iframe{display:block;width:100%;height:820px;border:0;background:#fff}
+@media (max-width:700px){
+  main{padding:32px 16px 40px;gap:22px}
+  .logo{height:32px}
+  h1{font-size:clamp(28px,8vw,36px)}
+  .cal iframe{height:900px}
+}
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="/images/logo-1line-white.svg" alt="Higher Love">
+  <h1>Now, please schedule your call below.</h1>
+  <div class="cal">
+    <iframe
+      src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1wpeyPWmT_aQHz90qrrN-Zx327hGtw1Vo2JDri5X01mWVSx5TyEX6Hehc54klRY0vlzkTRNOuI?gv=true"
+      title="Schedule your Higher Love interview"
+      loading="eager"></iframe>
+  </div>
+</main>
+</body>
+</html>
