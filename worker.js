@@ -101,9 +101,10 @@ function gateVariantCss(v) {
 .gate-a .lead,.gate-b .lead,.gate-c .lead,.gate-ref .lead{color:rgba(255,255,255,.9)}
 .gate-a .date,.gate-b .date,.gate-c .date,.gate-ref .date{color:rgba(255,255,255,.72)}
 .gate-a,.gate-c,.gate-ref{position:relative}
-.gate-a::before,.gate-c::before,.gate-ref::before{content:"";position:fixed;inset:0;z-index:0;background:url("/images/firepit-night.jpg") center center/cover no-repeat}
-.gate-a::after,.gate-ref::after{content:"";position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 70% 60% at 50% 42%,rgba(0,0,0,.66) 0%,rgba(0,0,0,.3) 70%),linear-gradient(180deg,rgba(0,0,0,.64) 0%,rgba(0,0,0,.4) 46%,rgba(0,0,0,.8) 100%)}
-.gate-c::after{content:"";position:fixed;inset:0;z-index:0;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,.28) 36%,rgba(0,0,0,.88) 100%)}
+.gate-a::before,.gate-ref::before{content:"";position:fixed;inset:0;z-index:0;background:url("/images/hero-common.webp") center 48%/cover no-repeat}
+.gate-c::before{content:"";position:fixed;inset:0;z-index:0;background:url("/images/hero-common.webp") center 18%/cover no-repeat}
+.gate-a::after,.gate-ref::after{content:"";position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 72% 64% at 50% 48%,rgba(0,0,0,.42) 0%,rgba(0,0,0,.18) 58%,rgba(0,0,0,.62) 100%),linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.22) 42%,rgba(0,0,0,.58) 100%)}
+.gate-c::after{content:"";position:fixed;inset:0;z-index:0;background:linear-gradient(180deg,rgba(0,0,0,.28) 0%,rgba(0,0,0,.05) 36%,rgba(0,0,0,.78) 100%)}
 .gate-a nav,.gate-a header,.gate-a footer,.gate-c nav,.gate-c header,.gate-c footer,.gate-ref nav,.gate-ref header,.gate-ref footer{position:relative;z-index:1}
 .gate-a nav,.gate-c nav,.gate-ref nav{background:transparent;border-bottom-color:transparent}
 .gate-a form,.gate-c form,.gate-ref form{background:rgba(12,10,8,.78);border-color:rgba(255,255,255,.2);backdrop-filter:blur(8px)}
@@ -117,7 +118,7 @@ function gateVariantCss(v) {
 .gate-b .photo{grid-column:1;grid-row:1 / span 2}
 .gate-b .copy{grid-column:2;grid-row:1;padding:36px 48px 8px;justify-content:flex-end;gap:14px}
 .gate-b form{grid-column:2;grid-row:2;max-width:none;margin:0;background:#0c0a08;border:0;padding:4px 48px 32px;justify-content:flex-start;gap:14px}
-.gate-b .photo{display:block;min-height:100%;background:url("/images/firepit-night.jpg") center center/cover no-repeat;position:relative}
+.gate-b .photo{display:block;min-height:100%;background:url("/images/hero-common.webp") 22% center/cover no-repeat;position:relative}
 .gate-b .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.15),rgba(0,0,0,.4))}
 .gate-c header{min-height:calc(100dvh - 92px);display:flex;align-items:flex-end;padding:0 64px 48px}
 .gate-c .hin{width:100%;align-items:flex-end}
@@ -163,7 +164,7 @@ export default {
 
     // Legal pages stay public (linked from the gate's footer).
     // The Havan hero photo is public so the gate mockups can paint it.
-    if (url.pathname === "/privacy.html" || url.pathname === "/terms.html" || url.pathname === "/images/firepit-night.jpg") {
+    if (url.pathname === "/privacy.html" || url.pathname === "/terms.html" || url.pathname === "/images/hero-common.webp") {
       return env.ASSETS.fetch(request);
     }
 
