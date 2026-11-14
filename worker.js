@@ -23,7 +23,7 @@ function loginPage(wrong) {
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%}
 body{font-family:var(--sans);color:#fff;background:#0c0a08;display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased}
-nav{background:var(--k);border-bottom:1px solid rgba(255,255,255,.12);padding:0 56px}
+nav{position:sticky;top:0;z-index:50;background:var(--k);border-bottom:1px solid rgba(255,255,255,.12);padding:0 56px}
 .nav-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:92px}
 .nav-in img{height:60px;width:auto;display:block}
 .priv{font-weight:700;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
@@ -59,11 +59,12 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:48
 .fbot{border-top:1px solid rgba(255,255,255,.16);padding-top:24px;margin-top:28px;text-align:center;color:rgba(255,255,255,.55);font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
 @media(max-width:900px){
   body{background:#000}
-  nav{display:none}
+  nav{padding:0 24px}
+  .nav-in{min-height:72px}
+  .nav-in img{height:40px}
   header{padding:0;background:#000}
-  .hin{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:100dvh;padding:40px 22px;gap:0;background:#000}
+  .hin{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:calc(100dvh - 72px);padding:40px 22px;gap:0;background:#000}
   .photo{display:none}
-  .glogo{display:block;height:60px;width:auto;margin:0 auto 28px}
   .copy{width:100%;max-width:420px;padding:0 0 22px;gap:12px;align-items:center;text-align:center;justify-content:flex-start}
   h1{font-size:46px;line-height:1}
   form{width:100%;max-width:420px;padding:0;gap:10px;background:#000;margin:0}
