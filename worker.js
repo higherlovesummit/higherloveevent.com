@@ -25,15 +25,15 @@ html,body{min-height:100%}
 body{font-family:var(--sans);color:#fff;background:#0c0a08;display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased}
 nav{background:var(--k);border-bottom:1px solid rgba(255,255,255,.12);padding:0 56px}
 .nav-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:92px}
-.nav-in img{height:44px;width:auto;display:block}
+.nav-in img{height:60px;width:auto;display:block}
 .priv{font-weight:700;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
 header{flex:1 0 auto;padding:0}
 .hin{max-width:none;margin:0;min-height:calc(100dvh - 92px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);grid-template-rows:auto 1fr;gap:0;align-items:stretch}
 .photo{grid-column:1;grid-row:1 / span 2;min-height:100%;background:url("/images/hero-common.webp") 22% center/cover no-repeat;position:relative}
 .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(0,0,0,.08) 40%,rgba(0,0,0,.5))}
-.copy{grid-column:2;grid-row:1;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;gap:14px;padding:36px 48px 8px}
+.copy{grid-column:2;grid-row:1;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;gap:18px;padding:48px 48px 16px}
 .ey{font-weight:700;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#C4A574}
-h1{font-family:var(--serif);font-weight:600;text-transform:uppercase;letter-spacing:.02em;color:#fff;font-size:clamp(2.4rem,5vw,3.5rem);line-height:1.05;text-wrap:balance}
+h1{font-family:var(--serif);font-weight:600;text-transform:uppercase;letter-spacing:.02em;color:#fff;font-size:clamp(2.4rem,5.4vw,4rem);line-height:1.02;text-wrap:balance}
 h1 em{font-style:normal;color:var(--brown)}
 .lead{font-weight:500;font-size:clamp(17px,1.3vw,20px);line-height:1.65;max-width:560px;color:rgba(255,255,255,.9)}
 .date{font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.72)}
@@ -58,30 +58,27 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:48
 .fbot{border-top:1px solid rgba(255,255,255,.16);padding-top:24px;margin-top:28px;text-align:center;color:rgba(255,255,255,.55);font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
 @media(max-width:900px){
   nav{padding:0 16px}
-  .nav-in{min-height:52px}
-  .nav-in img{height:26px}
+  .nav-in{min-height:64px}
+  .nav-in img{height:40px}
   header{padding:0}
   .hin{display:flex;flex-direction:column;min-height:0;gap:0}
   .photo{order:-1;height:128px;min-height:0;width:100%}
-  .copy{padding:10px 16px 0;gap:4px;flex:none;justify-content:flex-start}
-  h1{font-size:22px;line-height:1}
-  .lead{font-size:12.5px;line-height:1.28}
+  .copy{padding:20px 16px 6px;gap:12px;flex:none;justify-content:flex-start}
+  h1{font-size:36px;line-height:1.0}
   form{padding:4px 16px 12px;gap:6px}
-  .instr{font-size:16px}
+  .instr{font-size:18px}
   button{padding:11px 14px}
   footer{padding:28px 16px 20px}
   .ftop{justify-content:center;text-align:center}
 }
 </style></head><body>
-<nav><div class="nav-in"><img src="${LOGO}" alt="Higher Love"><span class="priv">Private</span></div></nav>
+<nav><div class="nav-in"><img src="${LOGO_STACKED}" alt="Higher Love"><span class="priv">Private</span></div></nav>
 <header>
   <div class="hin">
     <div class="photo" aria-hidden="true"></div>
     <div class="copy">
       <span class="ey">By Application and Invitation</span>
       <h1>Finally, an intentional room <em>for men who love men.</em></h1>
-      <p class="lead">A 4-day immersive retreat where you are not just seen, but fully met intellectually, emotionally, and spiritually by other men at your level.</p>
-      <p class="date">Next retreat &middot; March 8 to 12, 2027</p>
     </div>
     <form method="POST" action="/__auth" autocomplete="off">
       <p class="instr">If you’ve been invited, enter your password below.</p>
