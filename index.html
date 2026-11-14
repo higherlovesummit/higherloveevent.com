@@ -271,6 +271,36 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:64
   .hero-ctas{flex-direction:column;width:100%;align-items:stretch}
   .hero-ctas .btn{width:100%}
 }
+
+/* ── HERO · split, mirrors the password page (copy left, photo + video right) ── */
+.nav-logo img{height:60px}
+.hx{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);min-height:calc(100dvh - 92px);background:#0c0a08}
+.hx-copy{display:flex;flex-direction:column;justify-content:center;gap:18px;padding:56px 56px 56px max(56px,calc((100vw - 1180px)/2))}
+.hx .ey{color:#C4A574;margin:0}
+.hx h1{color:#fff;font-size:clamp(2.4rem,4.4vw,4rem);line-height:1.02}
+.hx-lead{color:rgba(255,255,255,.88);font-size:clamp(17px,1.3vw,19px);line-height:1.6;max-width:30em}
+.hx-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.hx-ctas .btn{padding:17px 28px}
+.hx .btn:hover{background:#000;border-color:#fff;color:#fff}
+.hx .btn-ghost{border-color:rgba(255,255,255,.75);color:#fff;background:transparent}
+.hx .btn-ghost:hover{background:#fff;border-color:#fff;color:#000}
+.hx-small{font-weight:700;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:6px}
+.hx-media{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:48px}
+.hx-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:grayscale(1)}
+.hx-shade{position:absolute;inset:0;background:rgba(12,10,8,.55)}
+.hx-embed{position:relative;z-index:1;width:min(640px,100%);aspect-ratio:16/9;border:1px solid rgba(255,255,255,.28);box-shadow:0 18px 50px rgba(0,0,0,.5);background:#0c0a08}
+.hx-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+@media (max-width:900px){
+  .nav-logo img{height:40px}
+  .hx{grid-template-columns:1fr;min-height:0}
+  .hx-copy{padding:40px 22px 32px;align-items:center;text-align:center;gap:14px}
+  .hx h1{font-size:40px;line-height:1}
+  .hx-lead{font-size:16px}
+  .hx-ctas{flex-direction:column;width:100%}
+  .hx-ctas .btn{width:100%}
+  .hx-media{padding:28px 22px}
+  .hx-embed{width:100%}
+}
 </style>
 </head>
 <body>
@@ -278,12 +308,10 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:64
 <!-- NAV -->
 <nav class="nav" id="main-nav">
   <div class="nav-in">
-    <div class="nav-logo"><a href="/" aria-label="Higher Love home"><img src="images/logo-1line-white.svg" alt="Higher Love"></a></div>
+    <div class="nav-logo"><a href="/" aria-label="Higher Love home"><img src="images/logo-white.svg" alt="Higher Love"></a></div>
     <div class="nav-links">
-      <a href="#who">Who It's For</a>
-      <a href="#why">Why</a>
-      <a href="#host">Host</a>
-      <a href="#brothers">Brothers</a>
+      <a href="#who">About</a>
+      <a href="#brothers">Testimonials</a>
       <a href="#faq">FAQ</a>
       <a href="#application-form" class="btn btn-onblack nav-cta" data-cta="nav">Request an Invitation</a>
     </div>
@@ -291,29 +319,28 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:64
 </nav>
 
 <!-- HERO -->
-<header class="hero" id="top">
-  <img class="hero-photo" src="images/hero-common.webp" alt="">
-  <div class="hero-shade" aria-hidden="true"></div>
-  <div class="hero-in">
-    <div class="hero-copy fade-in">
-      <span class="ey" style="margin:0">By Application and Invitation</span>
-      <h1>Finally, an intentional room <em>for men who love men</em></h1>
-      <p class="lead">A 4-day immersive retreat where you are not just seen, but fully met intellectually, emotionally, and spiritually by other men at your level.</p>
-      <div class="hero-embed">
-        <iframe src="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/6ac2625fbbad531ac8a38274.mp4" title="A message from Re Perez" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="hero-ctas">
-        <a href="#application-form" class="btn" data-cta="hero">Request an Invitation</a>
-        <a href="#who" class="btn btn-ghost" data-cta="hero-learn">Learn More</a>
-      </div>
-      <p class="lbl">Next retreat &middot; March 8 to 12, 2027</p>
+<header class="hx" id="top">
+  <div class="hx-copy fade-in">
+    <span class="ey">Next Retreat &middot; March 8 to 12, 2027</span>
+    <h1>Finally, an intentional room <em>for men who love men.</em></h1>
+    <p class="hx-lead">A 4-day immersive retreat where you are not just seen, but fully met intellectually, emotionally, and spiritually.</p>
+    <div class="hx-ctas">
+      <a href="#application-form" class="btn" data-cta="hero">Request an Invitation</a>
+      <a href="#who" class="btn btn-ghost" data-cta="hero-learn">Learn More</a>
+    </div>
+    <p class="hx-small">By Application and Invitation</p>
+  </div>
+  <div class="hx-media">
+    <img class="hx-photo" src="images/hero-common.webp" alt="">
+    <div class="hx-shade" aria-hidden="true"></div>
+    <div class="hx-embed">
+      <iframe src="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/6ac2625fbbad531ac8a38274.mp4" title="A message from Re Perez" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </header>
 
 <!-- QUOTE MARQUEE -->
 <section class="marq" aria-label="What the brothers say">
-  <span class="ey">By Application and Invitation</span>
   <div class="marq-track" aria-hidden="false">
     <p>&ldquo;I had never been met that way.&rdquo;<i>Jumpei</i></p>
     <p>&ldquo;A brotherhood where I am fully embraced for who I am.&rdquo;<i>Christopher</i></p>
