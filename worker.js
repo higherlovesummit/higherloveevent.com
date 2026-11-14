@@ -39,7 +39,7 @@ h1 em{font-style:normal;color:var(--brown)}
 .lead{font-weight:500;font-size:clamp(17px,1.3vw,20px);line-height:1.65;max-width:560px;color:rgba(255,255,255,.9)}
 .date{font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.72)}
 form{grid-column:2;grid-row:3;min-width:0;max-width:620px;margin:0;background:#0c0a08;border:0;padding:0 56px;display:flex;flex-direction:column;justify-content:flex-start;gap:14px}
-.instr{font-family:var(--serif);font-weight:600;font-size:28px;line-height:1.15;color:#fff}
+.instr{font-family:var(--serif);font-weight:600;font-size:clamp(20px,1.9vw,26px);line-height:1.15;color:#fff;white-space:nowrap}
 label{font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#C4A574;display:block;margin-bottom:8px}
 input[type=password],input[type=text]{font-family:var(--sans);font-size:16px;color:var(--ink);background:#fff;border:1px solid rgba(0,0,0,.18);padding:14px 16px;width:100%}
 input:focus{outline:none;border-color:var(--brown)}
@@ -67,7 +67,7 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:48
   .copy{width:100%;max-width:420px;padding:0 0 22px;gap:12px;align-items:center;text-align:center;justify-content:flex-start}
   h1{font-size:46px;line-height:1}
   form{width:100%;max-width:420px;padding:0;gap:10px;background:#000;margin:0}
-  .instr{font-size:17px;text-align:center}
+  .instr{font-size:clamp(14px,4.4vw,18px);text-align:center}
   button{padding:13px 14px}
 }
 </style></head><body>
@@ -81,7 +81,7 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:48
       <h1>Finally, an intentional room <em>for men who love men.</em></h1>
     </div>
     <form method="POST" action="/__auth" autocomplete="off">
-      <p class="instr">If you’ve been invited, enter your password below.</p>
+      <p class="instr">If you’ve been invited, enter password below.</p>
       ${err}
       <div><label for="pw">Password</label><input type="password" name="password" id="pw" autofocus></div>
       <div class="show"><input type="checkbox" id="pwtoggle"><label for="pwtoggle">Show password</label></div>
