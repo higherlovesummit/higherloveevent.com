@@ -28,16 +28,17 @@ nav{background:var(--k);border-bottom:1px solid rgba(255,255,255,.12);padding:0 
 .nav-in img{height:60px;width:auto;display:block}
 .priv{font-weight:700;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
 header{flex:1 0 auto;padding:0}
-.hin{max-width:none;margin:0;min-height:calc(100dvh - 92px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);grid-template-rows:auto 1fr;gap:0;align-items:stretch}
-.photo{grid-column:1;grid-row:1 / span 2;min-height:100%;background:url("/images/hero-common.webp") 22% center/cover no-repeat;position:relative}
+.hin{max-width:none;margin:0;min-height:calc(100dvh - 92px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);grid-template-rows:1fr auto auto 1fr;gap:0;align-items:stretch}
+.photo{grid-column:1;grid-row:1 / -1;min-height:100%;background:url("/images/hero-common.webp") 22% center/cover no-repeat;position:relative}
 .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(0,0,0,.08) 40%,rgba(0,0,0,.5))}
-.copy{grid-column:2;grid-row:1;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;gap:18px;padding:48px 48px 16px}
+.copy{grid-column:2;grid-row:2;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;gap:18px;padding:0 56px 24px}
 .ey{font-weight:700;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#C4A574}
 h1{font-family:var(--serif);font-weight:600;text-transform:uppercase;letter-spacing:.02em;color:#fff;font-size:clamp(2.4rem,5.4vw,4rem);line-height:1.02;text-wrap:balance}
 h1 em{font-style:normal;color:var(--brown)}
+.glogo{display:none}
 .lead{font-weight:500;font-size:clamp(17px,1.3vw,20px);line-height:1.65;max-width:560px;color:rgba(255,255,255,.9)}
 .date{font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.72)}
-form{grid-column:2;grid-row:2;min-width:0;max-width:none;margin:0;background:#0c0a08;border:0;padding:4px 48px 36px;display:flex;flex-direction:column;justify-content:flex-start;gap:14px}
+form{grid-column:2;grid-row:3;min-width:0;max-width:620px;margin:0;background:#0c0a08;border:0;padding:0 56px;display:flex;flex-direction:column;justify-content:flex-start;gap:14px}
 .instr{font-family:var(--serif);font-weight:600;font-size:28px;line-height:1.15;color:#fff}
 label{font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#C4A574;display:block;margin-bottom:8px}
 input[type=password],input[type=text]{font-family:var(--sans);font-size:16px;color:var(--ink);background:#fff;border:1px solid rgba(0,0,0,.18);padding:14px 16px;width:100%}
@@ -46,7 +47,7 @@ input:focus{outline:none;border-color:var(--brown)}
 .show input{width:16px;height:16px;margin:0;accent-color:var(--brown)}
 .show label{margin:0;letter-spacing:.12em;color:rgba(255,255,255,.75)}
 button{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.22em;text-transform:uppercase;line-height:1;padding:17px 40px;width:100%;border:1px solid var(--dbrown);background:var(--dbrown);color:#fff;cursor:pointer;transition:background .2s,border-color .2s}
-button:hover{background:var(--k);border-color:var(--k)}
+button:hover{background:var(--k);border-color:#fff}
 .err{font-size:13.5px;color:#915335}
 footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:48px 56px 36px}
 .fin{max-width:1180px;margin:0 auto}
@@ -57,26 +58,25 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:48
 .fl a:hover{color:var(--brown)}
 .fbot{border-top:1px solid rgba(255,255,255,.16);padding-top:24px;margin-top:28px;text-align:center;color:rgba(255,255,255,.55);font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
 @media(max-width:900px){
-  nav{padding:0 16px}
-  .nav-in{min-height:64px}
-  .nav-in img{height:40px}
-  header{padding:0}
-  .hin{display:flex;flex-direction:column;min-height:0;gap:0}
-  .photo{order:-1;height:128px;min-height:0;width:100%}
-  .copy{padding:20px 16px 6px;gap:12px;flex:none;justify-content:flex-start}
-  h1{font-size:36px;line-height:1.0}
-  form{padding:4px 16px 12px;gap:6px}
-  .instr{font-size:18px}
-  button{padding:11px 14px}
-  footer{padding:28px 16px 20px}
-  .ftop{justify-content:center;text-align:center}
+  body{background:#000}
+  nav{display:none}
+  header{padding:0;background:#000}
+  .hin{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:100dvh;padding:40px 22px;gap:0;background:#000}
+  .photo{display:none}
+  .glogo{display:block;height:60px;width:auto;margin:0 auto 28px}
+  .copy{width:100%;max-width:420px;padding:0 0 22px;gap:12px;align-items:center;text-align:center;justify-content:flex-start}
+  h1{font-size:46px;line-height:1}
+  form{width:100%;max-width:420px;padding:0;gap:10px;background:#000;margin:0}
+  .instr{font-size:17px;text-align:center}
+  button{padding:13px 14px}
 }
 </style></head><body>
-<nav><div class="nav-in"><img src="${LOGO_STACKED}" alt="Higher Love"><span class="priv">Private</span></div></nav>
+<nav><div class="nav-in"><img src="${LOGO_STACKED}" alt="Higher Love"></div></nav>
 <header>
   <div class="hin">
     <div class="photo" aria-hidden="true"></div>
     <div class="copy">
+      <img class="glogo" src="${LOGO_STACKED}" alt="Higher Love">
       <span class="ey">By Application and Invitation</span>
       <h1>Finally, an intentional room <em>for men who love men.</em></h1>
     </div>
@@ -89,10 +89,6 @@ footer{background:var(--k);border-top:1px solid rgba(255,255,255,.16);padding:48
     </form>
   </div>
 </header>
-<footer><div class="fin">
-  <div class="ftop"><img src="${LOGO_STACKED}" alt="Higher Love"><div class="fl"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></div>
-  <div class="fbot">&copy; 2026 Higher Love, a Creation by Category of One Branding, LLC &middot; All Rights Reserved</div>
-</div></footer>
 <script>(function(){var p=document.getElementById('pw'),t=document.getElementById('pwtoggle');if(p&&t){t.addEventListener('change',function(){p.type=t.checked?'text':'password';});}})();</script>
 </body></html>`;
 }
@@ -110,7 +106,7 @@ export default {
       return Response.redirect(new URL("/", url).toString(), 301);
     }
 
-    // Legal pages stay public (linked from the gate's footer).
+    // Legal pages stay public.
     // The gathering-room photo is public so the gate can paint it before login.
     if (url.pathname === "/privacy.html" || url.pathname === "/terms.html" || url.pathname === "/images/hero-common.webp") {
       return env.ASSETS.fetch(request);
